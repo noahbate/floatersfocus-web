@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="About Floaters Focus" description="Who we are, our mission, and our commitment to evidence-based eye health information.">
+  <Header currentPath="/about" slot="header" />
+  <Footer slot="footer" />
+
+  <section class="py-12 md:py-20" aria-labelledby="about-title">
+    <div class="container max-w-3xl">
+      <header class="mb-12">
+        <h1 id="about-title" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          About Floaters Focus
+        </h1>
+        <p class="text-lg text-text leading-relaxed">
+          We built this because we were frustrated. Every time we had an eye question, the options were:
+          medical journal articles written for PhDs, or TikTok videos claiming castor oil cures glaucoma.
+          Nothing in between.
+        </p>
+      </header>
+
+      <article class="prose prose-lg prose-charcoal max-w-none space-y-10">
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Our Mission</h2>
+          <p class="text-text leading-relaxed">
+            Translate peer-reviewed ophthalmology research into plain English so you can make confident,
+            affordable choices for your eyes.
+          </p>
+          <p class="text-text leading-relaxed">
+            No miracle cures. No fear-mongering. No "one weird trick." Just:
+          </p>
+          <ul class="space-y-2 text-text" role="list">
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> What the evidence actually says (RCTs, major guidelines, FDA labels)</li>
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> What's a waste of money (and why)</li>
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> When to see a doctor—yesterday, this week, or next year</li>
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Products that match the science, with affiliate links that fund the site</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Our Evidence Standards</h2>
+          <p class="text-text leading-relaxed mb-4">
+            We grade every claim using a simple hierarchy:
+          </p>
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="card card-bordered p-6 text-center">
+              <div class="text-3xl font-bold text-green mb-2">Grade A</div>
+              <p class="text-text"><strong>RCT + Guideline:</strong> Multiple randomized controlled trials + AAO/TFOS/AREDS guidelines</p>
+            </div>
+            <div class="card card-bordered p-6 text-center">
+              <div class="text-3xl font-bold text-amber mb-2">Grade B</div>
+              <p class="text-text"><strong>RCT (limited):</strong> One or a few RCTs, or conflicting results</p>
+            </div>
+            <div class="card card-bordered p-6 text-center">
+              <div class="text-3xl font-bold text-red mb-2">Grade C/D/F</div>
+              <p class="text-text"><strong>Observational / Animal / Theory only:</strong> Not enough for a recommendation</p>
+            </div>
+          </div>
+          <p class="text-text leading-relaxed mt-6">
+            We cite the actual studies (PMID, DOI) so you can verify. If we say "study shows,"
+            you can click through and read the abstract yourself.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Affiliate Links — How We Stay Free</h2>
+          <p class="text-text leading-relaxed mb-4">
+            When we recommend a product, we link to retailers (Amazon, Walmart, brand sites) using
+            affiliate tracking. If you buy through our link, we earn a small commission—<strong>at no extra cost to you.</strong>
+          </p>
+          <p class="text-text leading-relaxed mb-4">
+            This does <strong>not</strong> influence which products we recommend. Our process:
+          </p>
+          <ol class="list-decimal list-inside space-y-3 text-text" role="list">
+            <li>Identify the evidence-based treatment for a condition</li>
+            <li>Find products that match the study formula/form/dose</li>
+            <li>Verify third-party testing, label accuracy, and bioavailability</li>
+            <li>Add affiliate links for the ones that pass</li>
+          </ol>
+          <p class="text-text leading-relaxed mt-4">
+            If a better product comes along, we swap it. If a product is discontinued or reformulated,
+            we remove it. Our quarterly audit keeps things current.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Medical Disclaimer</h2>
+          <div class="card card-bordered bg-amber/5 border-amber/30 p-6">
+            <p class="text-text leading-relaxed mb-3">
+              <strong>This website is for informational purposes only and does not constitute medical advice.</strong>
+            </p>
+            <p class="text-text leading-relaxed mb-3">
+              We are not doctors. We are not your doctors. Nothing on this site creates a doctor-patient relationship.
+              The information here is based on published research and major society guidelines, but it cannot replace
+              a personalized examination by a licensed eye care professional.
+            </p>
+            <p class="text-text leading-relaxed">
+              <strong>Always consult your ophthalmologist or optometrist before starting any supplement,
+              treatment, or lifestyle change for an eye condition.</strong> If you have sudden vision changes,
+              pain, flashes, or a curtain in your vision—go to the ER or call your retina specialist immediately.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Who's Behind This</h2>
+          <p class="text-text leading-relaxed">
+            A small team of people who've dealt with floaters, dry eye, and family AMD ourselves.
+            We got tired of the gap between "here's a PubMed link" and "here's what to buy at Target."
+            So we built the bridge.
+          </p>
+          <p class="text-text leading-relaxed mt-4">
+            Questions? Corrections? Study we missed? <a href="mailto:hello@floatersfocus.org" class="text-primary hover:underline">Email us</a>.
+            We read everything.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Sources We Trust</h2>
+          <ul class="space-y-2 text-text" role="list">
+            <li><strong>American Academy of Ophthalmology (AAO)</strong> — Preferred Practice Patterns, EyeSmart</li>
+            <li><strong>TFOS DEWS II / MGD Workshop</strong> — Dry eye & MGD global consensus</li>
+            <li><strong>AREDS / AREDS2 Research Groups (NEI/NIH)</strong> — AMD supplement trials</li>
+            <li><strong>Cochrane Eyes & Vision</strong> — Systematic reviews</li>
+            <li><strong>FDA</strong> — Drug/device approvals, supplement regulations</li>
+            <li><strong>Peer-reviewed journals</strong> — <em>Ophthalmology, JAMA Ophthalmology, Retina, Cornea, Ocular Surface</em></li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

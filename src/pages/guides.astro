@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const guides = [
+  {
+    slug: 'sudden-floater-emergency',
+    title: 'Sudden Dark Floater in One Eye? Start Here',
+    description: 'Woke up with a new floater? Panic level: high. Here\'s what it likely is, the red flags, and what to do right now.',
+    icon: '🚨',
+  },
+  {
+    slug: 'pvd-survival-guide',
+    title: 'The PVD Survival Guide',
+    description: 'Just diagnosed with PVD? The honest, data-backed truth about what to expect, neuroadaptation, and getting your life back.',
+    icon: '📖',
+  },
+  {
+    slug: 'screen-setup-floaters',
+    title: 'Screen Setup for Floaters',
+    description: 'Dark mode, font scaling, IDE tweaks — make your digital life floater-friendly.',
+    icon: '🖥️',
+  },
+  {
+    slug: 'sunglasses-floaters',
+    title: 'Sunglasses for Floaters',
+    description: 'High-contrast tints, polarization, and specific lenses that make floaters vanish outdoors.',
+    icon: '🕶️',
+  },
+  {
+    slug: 'supplement-quality',
+    title: 'How to Read a Supplement Label',
+    description: 'Spot fillers, check forms (rTG vs ethyl ester), verify doses match studies.',
+    icon: '🔍',
+  },
+  {
+    slug: 'eye-anatomy-basics',
+    title: 'Eye Anatomy 101',
+    description: 'Vitreous, macula, meibomian glands—what they are and why they matter.',
+    icon: '👁️',
+  },
+  {
+    slug: 'when-to-see-doctor',
+    title: 'When to See a Doctor (Full Guide)',
+    description: 'Complete red flag list with photos, urgency levels, and what to expect.',
+    icon: '🚨',
+  },
+];
+---
+
+<BaseLayout title="Guides & How-Tos — Floaters Focus" description="Deep-dive guides: reading supplement labels, eye anatomy basics, and when to see a doctor.">
+  <Header currentPath="/guides" slot="header" />
+  <Footer slot="footer" />
+
+  <section class="py-12 md:py-20" aria-labelledby="guides-heading">
+    <div class="container">
+      <header class="text-center mb-12">
+        <h1 id="guides-heading" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          Guides & How-Tos
+        </h1>
+        <p class="text-lg text-text max-w-2xl mx-auto">
+          Deeper dives on the topics that matter. Plain English, evidence-backed, no fluff.
+        </p>
+      </header>
+
+      <div class="grid gap-8 md:grid-cols-3 max-w-4xl mx-auto">
+        {guides.map((guide) => (
+          <a href={`/guides/${guide.slug}`} class="card card-bordered group flex flex-col">
+            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">{guide.icon}</div>
+            <h2 class="text-xl font-bold text-charcoal mb-2 group-hover:text-primary transition-colors">
+              {guide.title}
+            </h2>
+            <p class="text-text flex-1">{guide.description}</p>
+            <span class="btn btn-primary mt-4 w-full text-center">Read Guide →</span>
+          </a>
+        ))}
+      </div>
+
+      <!-- Coming Soon Notice -->
+      <div class="mt-16 text-center">
+        <div class="card card-bordered max-w-xl mx-auto">
+          <div class="p-8">
+            <svg class="w-12 h-12 text-amber mx-auto mb-4" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            <h3 class="text-xl font-bold text-charcoal mb-2">These guides are in progress</h3>
+            <p class="text-text mb-6">
+              We're writing them right now. Want to be notified when they're live?
+            </p>
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-3" action="#" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="guide-notify" />
+              <input type="hidden" name="bot-field" />
+              <label for="guide-email" class="visually-hidden">Email address</label>
+              <input
+                type="email"
+                id="guide-email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                class="flex-1 px-4 py-3 text-base rounded-lg border-0 bg-warm-white text-charcoal focus:outline-none focus:ring-2 focus:ring-gold"
+              />
+              <button type="submit" class="btn btn-accent px-8 py-3 whitespace-nowrap">
+                Notify Me
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

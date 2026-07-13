@@ -1,0 +1,51 @@
+---
+import { type HTMLAttributes } from 'astro';
+interface Props extends HTMLAttributes<'footer'> {}
+---
+
+<footer {...Astro.props} class="bg-charcoal text-cream py-12" role="contentinfo">
+  <div class="container">
+    <div class="grid gap-8 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl font-bold mb-4">Floaters Focus</h2>
+        <p class="text-warm-gray leading-relaxed max-w-md">
+          Friendly, evidence-backed guidance for floaters, PVD, and eye discomfort.
+          No medical jargon, no miracle cures—just real options that work.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-4">Conditions</h3>
+        <ul class="space-y-2 text-warm-gray">
+          <li><a href="/conditions/floaters" class="hover:text-gold transition">Floaters & PVD</a></li>
+          <li><a href="/conditions/macular" class="hover:text-gold transition">Macular Health (AMD)</a></li>
+          <li><a href="/conditions/discomfort" class="hover:text-gold transition">Dry Eye & Discomfort</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-4">Resources</h3>
+        <ul class="space-y-2 text-warm-gray">
+          <li><a href="/guides" class="hover:text-gold transition">Guides & How-Tos</a></li>
+          <li><a href="/about" class="hover:text-gold transition">About Us</a></li>
+          <li><a href="/disclaimer" class="hover:text-gold transition">Medical Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-charcoal-light mt-8 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <p class="text-warm-gray text-sm">&copy; {new Date().getFullYear()} Floaters Focus. All rights reserved.</p>
+
+      <div class="flex items-center gap-4 text-warm-gray text-sm">
+        <p>
+          <strong>Affiliate Disclosure:</strong> We may earn a small commission if you purchase through our links,
+          at no extra cost to you. As an Amazon Associate we earn from qualifying purchases.
+        </p>
+        <p>
+          <strong>Medical Disclaimer:</strong> This content is for informational purposes only and does not constitute
+          medical advice. Consult your eye doctor before starting any supplement or treatment.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Eye Anatomy 101 — Floaters Focus" description="A friendly tour of the eye parts that matter for floaters, macular degeneration, and dry eye. No medical degree required.">
+  <Header currentPath="/guides" slot="header" />
+  <Footer slot="footer" />
+
+  <section class="py-12 md:py-20" aria-labelledby="anatomy-title">
+    <div class="container max-w-4xl">
+      <header class="mb-12">
+        <nav class="text-sm text-warm-gray mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2" role="list">
+            <li><a href="/" class="hover:text-primary">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/guides" class="hover:text-primary">Guides</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-charcoal font-medium" aria-current="page">Eye Anatomy 101</li>
+          </ol>
+        </nav>
+        <h1 id="anatomy-title" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          Eye Anatomy 101 (The Parts That Actually Matter)
+        </h1>
+        <p class="text-lg text-text leading-relaxed">
+          Your eye is about the size of a ping-pong ball, but it's packed with specialized structures.
+          Here's the friendly tour of the parts you'll hear about when dealing with floaters, macular issues, and dry eye.
+        </p>
+      </header>
+
+      <article class="prose prose-lg prose-charcoal max-w-none space-y-12">
+        <!-- Overview -->
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Big Picture</h2>
+          <p class="text-text leading-relaxed">
+            Think of your eye like a camera, but one that's alive and constantly repairing itself.
+            Light comes in through the <strong>cornea</strong> (clear front window), gets focused by the <strong>lens</strong>,
+            passes through the <strong>vitreous</strong> (clear gel), and lands on the <strong>retina</strong> (the sensor).
+            The <strong>macula</strong> is the sweet spot in the center for sharp detail vision.
+          </p>
+          <div class="card card-bordered my-8 p-6">
+            <p class="text-text leading-relaxed">
+              <strong>Quick orientation:</strong> If you're looking at someone's right eye, their nasal side is on <em>your</em> left.
+              "Anterior" = front (near eyelids), "Posterior" = back (near optic nerve).
+            </p>
+          </div>
+        </section>
+
+        <!-- Vitreous -->
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">💧 Vitreous Humor — The Gel</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="text-text leading-relaxed space-y-4">
+              <p>
+                The vitreous fills ~80% of your eye's volume. It's 99% water + 1% collagen/hyaluronic acid mesh —
+                like a very soft Jell-O. It's crystal clear when young, firmly attached to the retina.
+              </p>
+              <p>
+                <strong>What happens with age:</strong> The collagen mesh shrinks (syneresis), water pockets form (liquefaction),
+                and the gel pulls away from the retina — <em>posterior vitreous detachment (PVD)</em>. This is normal!
+                75% of people over 65 have it.
+              </p>
+              <p>
+                <strong>Floaters =</strong> clumps of collagen casting shadows on your retina. They live in the vitreous,
+                which is why no eye drop can reach them — the vitreous has <em>no blood supply</em>.
+              </p>
+            </div>
+            <div class="card card-bordered p-6 bg-blue/5">
+              <h3 class="font-bold text-charcoal mb-3">Key Facts</h3>
+              <ul class="space-y-2 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>No blood vessels = no immune cells = no way for drops to penetrate</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>PVD is a normal aging change, not a disease</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Weiss ring = the circular floater from the optic nerve attachment</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Macula -->
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">🎯 Macula — Your High-Def Zone</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="text-text leading-relaxed space-y-4">
+              <p>
+                The macula is a tiny (~5.5 mm) yellowish spot in the center of your retina.
+                It's packed with cones (color/detail photoreceptors) and has ZERO rods (night vision).
+                That's why you can read this text but can't see stars in your peripheral vision.
+              </p>
+              <p>
+                <strong>Why it's special:</strong> Highest metabolic rate in the body. Relies on the <strong>choroid</strong>
+                (blood vessel layer behind retina) and <strong>RPE</strong> (retinal pigment epithelium — the support crew)
+                for nutrients and waste removal.
+              </p>
+              <p>
+                <strong>AMD attacks the support system:</strong> Drusen (debris) build up under the RPE → RPE struggles →
+                photoreceptors starve → central vision fades. Wet AMD = abnormal blood vessels grow through cracks (choroidal neovascularization).
+              </p>
+            </div>
+            <div class="card card-bordered p-6 bg-green/5">
+              <h3 class="font-bold text-charcoal mb-3">Macula vs. Peripheral Retina</h3>
+              <table class="w-full text-sm text-text">
+                <thead>
+                  <tr class="border-b border-border"><th class="text-left pb-2">Feature</th><th class="text-left pb-2">Macula</th><th class="text-left pb-2">Peripheral Retina</th></tr>
+                </thead>
+                <tbody class="divide-y divide-border">
+                  <tr><td class="py-2 font-medium">Photoreceptors</td><td class="py-2">Cones only (detail/color)</td><td class="py-2">Rods (motion/night)</td></tr>
+                  <tr><td class="py-2 font-medium">Ganglion cells</td><td class="py-2">1:1 (high acuity)</td><td class="py-2">Many:1 (sensitivity)</td></tr>
+                  <tr><td class="py-2 font-medium">Blood vessels</td><td class="py-2">None in center (fovea)</td><td class="py-2">Rich supply</td></tr>
+                  <tr><td class="py-2 font-medium">Damage effect</td><td class="py-2">Central blur/blind spot</td><td class="py-2">Side vision loss</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Meibomian Glands -->
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">🛢️ Meibomian Glands — The Oil Factories</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="text-text leading-relaxed space-y-4">
+              <p>
+                You have ~25–40 of these in your <strong>upper lid</strong> and ~20–30 in the <strong>lower lid</strong>.
+                They run vertically along the lid margin, opening right at the lash line.
+              </p>
+              <p>
+                <strong>Job:</strong> Pump out <strong>meibum</strong> (oil) every time you blink. This forms the <strong>lipid layer</strong>
+                of your tear film — the top coat that stops tears from evaporating in seconds.
+              </p>
+              <p>
+                <strong>MGD (Meibomian Gland Dysfunction):</strong> Oil thickens (like toothpaste instead of olive oil),
+                glands clog, then atrophy. Result: tears evaporate → dry, burning, blurry eyes. This is <strong>86% of dry eye</strong>.
+              </p>
+              <p>
+                <strong>Why warm compresses work:</strong> Heat melts the waxy meibum back to liquid so it can flow.
+                That's why 10 minutes 2×/day is the gold standard — it's physics, not magic.
+              </p>
+            </div>
+            <div class="card card-bordered p-6 bg-amber/5">
+              <h3 class="font-bold text-charcoal mb-3">MGD = The Root of Most "Dry Eye"</h3>
+              <ul class="space-y-2 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Glands don't regenerate once atrophied — early treatment saves them</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Lipid tears (Refresh Mega-3, Systane Complete) replace what glands can't</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Omega-3 rTG improves oil quality from the inside (6–12 weeks)</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>IPL/LipiFlow = physical unclogging for stubborn cases</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lens -->
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">🔍 Lens — The Flexible Focus</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="text-text leading-relaxed space-y-4">
+              <p>
+                The lens sits behind the iris, suspended by <strong>zonules</strong> (tiny fibers) attached to the ciliary body.
+                It's made of layered crystallin proteins — transparent, flexible, and <strong>continually growing</strong> throughout life.
+              </p>
+              <p>
+                <strong>Accommodation:</strong> Ciliary muscle contracts → zonules relax → lens gets rounder → near focus.
+                Young lens = soft & flexible. Age 40+ = proteins cross-link, stiffen → <strong>presbyopia</strong>.
+              </p>
+              <p>
+                <strong>Cataract:</strong> Those same proteins eventually clump and yellow. The lens loses transparency.
+                No drop reverses this — the proteins are <strong>covalently cross-linked</strong>. Surgery replaces the lens with an IOL.
+              </p>
+            </div>
+            <div class="card card-bordered p-6 bg-purple/5">
+              <h3 class="font-bold text-charcoal mb-3">Presbyopia ≠ "Weak Eyes"</h3>
+              <ul class="space-y-2 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-purple" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>It's universal — starts ~40, done ~55</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-purple" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>NOT caused by "not exercising your eyes"</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-purple" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Reading glasses / Vuity drops / premium IOLs = optical workarounds</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Retina/RPE/Choroid -->
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">🎨 Retina, RPE & Choroid — The Support Team</h2>
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="card card-bordered p-6">
+              <h3 class="text-lg font-bold text-charcoal mb-2">Retina (Neural Layer)</h3>
+              <p class="text-text text-sm">Photoreceptors (rods/cones) → bipolar cells → ganglion cells → optic nerve. <strong>Brain tissue, basically.</strong></p>
+            </article>
+            <article class="card card-bordered p-6">
+              <h3 class="text-lg font-bold text-charcoal mb-2">RPE (Retinal Pigment Epithelium)</h3>
+              <p class="text-text text-sm">Single layer of support cells. Feeds photoreceptors, recycles visual pigment, hauls away trash. <strong>First to fail in AMD.</strong></p>
+            </article>
+            <article class="card card-bordered p-6">
+              <h3 class="text-lg font-bold text-charcoal mb-2">Choroid (Blood Supply)</h3>
+              <p class="text-text text-sm">High-flow vascular bed behind RPE. Delivers oxygen/nutrients, removes heat. <strong>Fastest blood flow per gram in body.</strong></p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="bg-charcoal text-cream rounded-2xl p-8 md:p-12">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">The Cheat Sheet</h2>
+          <div class="grid gap-6 md:grid-cols-3 text-center">
+            <div>
+              <div class="text-4xl mb-3">💧</div>
+              <h3 class="font-bold text-lg mb-2">Vitreous</h3>
+              <p class="text-warm-gray">Floaters live here. No drops reach it. Time or surgery only fixes.</p>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">🎯</div>
+              <h3 class="font-bold text-lg mb-2">Macula</h3>
+              <p class="text-warm-gray">Central vision HQ. AREDS2 helps intermediate AMD. Wet AMD = injections.</p>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">🛢️</div>
+              <h3 class="font-bold text-lg mb-2">Meibomian Glands</h3>
+              <p class="text-warm-gray">Oil factories in lids. MGD = 86% of dry eye. Heat + lipids + omega-3.</p>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">🔍</div>
+              <h3 class="font-bold text-lg mb-2">Lens</h3>
+              <p class="text-warm-gray">Focuses light. Stiffens with age (presbyopia). Clouds (cataract) = surgery.</p>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">🎨</div>
+              <h3 class="font-bold text-lg mb-2">Retina/RPE/Choroid</h3>
+              <p class="text-warm-gray">Sensor + support + fuel line. RPE fails first in AMD.</p>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">👁️</div>
+              <h3 class="font-bold text-lg mb-2">Cornea</h3>
+              <p class="text-warm-gray">Clear front window. First refractive surface. Needs tears to stay smooth.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- Navigation -->
+      <nav class="mt-12 flex flex-col sm:flex-row gap-4 justify-center" aria-label="Guide navigation">
+        <a href="/guides/supplement-quality" class="btn btn-secondary">← How to Read Labels</a>
+        <a href="/guides/when-to-see-doctor" class="btn btn-primary">When to See a Doctor →</a>
+      </nav>
+    </div>
+  </section>
+</BaseLayout>

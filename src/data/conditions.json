@@ -1,0 +1,97 @@
+{
+  "conditions": [
+    {
+      "id": "floaters",
+      "name": "Floaters & PVD",
+      "description": "Posterior vitreous detachment—the gel in your eye shrinks and pulls away, leaving clumps that cast shadows.",
+      "slug": "floaters",
+      "key_points": [
+        "Most floaters are benign and fade with time (your brain learns to ignore them)",
+        "No drop or supplement reaches the vitreous to 'dissolve' them—the vitreous has no blood supply",
+        "YAG laser works for discrete Weiss rings (single large ring), not diffuse clouds",
+        "Sudden shower + flashes + curtain = retinal tear (go to ER immediately)"
+      ],
+      "evidence_based_treatments": [
+        "Observation / neuroadaptation (60–90% improve subjectively by 6 months)",
+        "YAG laser vitreolysis for discrete Weiss ring >6 months post-PVD",
+        "Pars plana vitrectomy for severe, refractory cases (cataract risk ~90%)"
+      ],
+      "what_doesnt_work": [
+        "Castor oil drops (cannot reach vitreous; corneal toxicity risk)",
+        "Floater supplements (no vitreous bioavailability)",
+        "Eye exercises / Bates method (cannot change axial length)",
+        "Collagen or hyaluronic acid supplements"
+      ],
+      "red_flags": [
+        "Sudden onset of many new floaters (like a shaken snow globe)",
+        "Flashes of light in peripheral vision (especially in dark)",
+        "Curtain or shadow creeping across vision from any side",
+        "Vision loss or distortion (straight lines look wavy)"
+      ],
+      "when_to_see_doctor": "New floaters with flashes? Go today. Sudden shower of floaters + curtain in vision? ER now—retinal detachment can cause permanent vision loss in hours. Routine floaters that are stable for months? Annual dilated exam is fine."
+    },
+    {
+      "id": "macular",
+      "name": "Macular Health (AMD)",
+      "description": "Age-related macular degeneration affects the central vision. Early action with the right formula matters.",
+      "slug": "macular",
+      "key_points": [
+        "AREDS2 formula ONLY helps intermediate AMD (large drusen ≥125µm or pigment changes)",
+        "Does NOT prevent AMD in healthy eyes, does NOT treat wet AMD",
+        "Smoking = 2–4× risk. Quitting is the single best 'supplement'",
+        "Wet AMD needs anti-VEGF injections—no supplement replaces this"
+      ],
+      "evidence_based_treatments": [
+        "AREDS2 formula: Vit C 500mg, Vit E 400IU, Lutein 10mg, Zeaxanthin 2mg, Zinc 25–80mg, Copper 2mg",
+        "Anti-VEGF injections for wet AMD (Eylea, Lucentis, Avastin, Vabysmo)",
+        "Lifestyle: Mediterranean diet, leafy greens daily, exercise, BP control, UV protection"
+      ],
+      "what_doesnt_work": [
+        "AREDS2 for early AMD or prevention",
+        "Beta-carotene (increases lung cancer in smokers)",
+        "Bilberry, saffron, astaxanthin for AMD (insufficient evidence)",
+        "Stem cell clinics / unproven 'vision restoration' therapies"
+      ],
+      "red_flags": [
+        "Wavy/distorted straight lines (metamorphopsia)",
+        "New central blind spot or blur",
+        "Sudden change in color perception",
+        "Any sudden vision change in one eye"
+      ],
+      "when_to_see_doctor": "If you're over 50: get a dilated exam every 1–2 years. If you have intermediate AMD: take AREDS2, use Amsler grid weekly, see retina specialist if lines go wavy. Wet AMD? Same-day specialist referral—treatment window is days."
+    },
+    {
+      "id": "discomfort",
+      "name": "Dry Eye & Discomfort",
+      "description": "Burning, gritty, blurry vision—especially after screens. Usually evaporative dry eye from clogged oil glands (MGD).",
+      "slug": "discomfort",
+      "key_points": [
+        "86% of dry eye is evaporative (MGD)—oil glands clog, tears evaporate too fast",
+        "Trifecta: Lipid tears + Omega-3 rTG (2g+) + Warm compresses 2×/day",
+        "Prescription drops (Restasis, Xiidra, Tyrvaya) if OTC fails 3 months",
+        "Don't put straight castor oil in eyes (corneal toxicity, infection risk)"
+      ],
+      "evidence_based_treatments": [
+        "Lipid-containing artificial tears (Refresh Mega-3, Systane Complete, Blink Triple Care)",
+        "Omega-3 rTG form ≥2g EPA+DHA daily (Nordic Naturals, PRN De3) — takes 6–12 weeks",
+        "Warm compresses 10 min 2×/day + lid hygiene (hypochlorous spray)",
+        "Prescription: Cyclosporine (Restasis/Cequa), Lifitegrast (Xiidra), Varenicline (Tyrvaya)",
+        "In-office: IPL, Thermal pulsation (LipiFlow/TearCare), Meibomian gland probing"
+      ],
+      "what_doesnt_work": [
+        "Straight castor oil in eyes (toxic to cornea, infection risk)",
+        "Baby shampoo lid scrubs (destroys lipid layer, use hypochlorous)",
+        "Vasoconstrictor drops (Visine, Clear Eyes) — rebound redness",
+        "Ethyl ester fish oil (poor absorption)",
+        "Blue light glasses for dry eye (weak evidence)"
+      ],
+      "red_flags": [
+        "Eye pain + light sensitivity + vision change",
+        "Severe redness + discharge",
+        "Foreign body sensation not improving",
+        "Contact lens intolerance developing"
+      ],
+      "when_to_see_doctor": "If OTC tears 4×/day for 3 months don't help: see an optometrist or ophthalmologist. Ask about MGD workup (meibography), prescription drops, or in-office treatments. Dry eye is treatable—you don't have to live with it."
+    }
+  ]
+}

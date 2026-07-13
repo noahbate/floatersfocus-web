@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="The PVD Survival Guide — Floaters Focus" description="Just diagnosed with PVD? The honest, data-backed truth about what to expect, neuroadaptation, and getting your life back.">
+  <Header currentPath="/guides" slot="header" />
+  <Footer slot="footer" />
+
+  <section class="py-12 md:py-20" aria-labelledby="pvd-title">
+    <div class="container max-w-3xl">
+      <header class="mb-12">
+        <nav class="text-sm text-warm-gray mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2" role="list">
+            <li><a href="/" class="hover:text-primary">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/guides" class="hover:text-primary">Guides</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-charcoal font-medium" aria-current="page">PVD Survival Guide</li>
+          </ol>
+        </nav>
+        <h1 id="pvd-title" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          The PVD Survival Guide
+        </h1>
+        <p class="text-lg text-text leading-relaxed">
+          You've been diagnosed with Posterior Vitreous Detachment. Now what? Here's the honest, data-backed roadmap for the weeks and months ahead.
+        </p>
+      </header>
+
+      <article class="prose prose-lg prose-charcoal max-w-none space-y-12">
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">You Are Not Alone, and You Are Not Going Blind</h2>
+          <p class="text-text leading-relaxed mb-4">
+            If you are reading this, chances are you recently swatted at a bug that wasn't there, or you suddenly noticed a dark, annoying cobweb drifting across your line of sight. You probably rushed to Google, panicked, and ended up here.
+          </p>
+          <p class="text-text leading-relaxed mb-4">
+            Take a deep breath. You are not alone, and you are not going blind.
+          </p>
+          <p class="text-text leading-relaxed">
+            My own journey with this started in 2020. I remember the exact terror of those sudden visual changes, the anxiety of not knowing what was happening, and the eventual diagnosis: a Posterior Vitreous Detachment (PVD) that progressed into a retinal tear. Navigating the medical system, sorting through the "miracle cures" on social media, and trying to figure out how to just read a computer screen again was exhausting.
+          </p>
+          <p class="text-text leading-relaxed">
+            I built this guide because I wanted to create the resource I desperately needed back then. Here is the absolute, data-backed truth about what is happening inside your eye right now, what you need to watch out for, and how you will get through this.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">What is Actually Happening? (The Science)</h2>
+          <p class="text-text leading-relaxed mb-4">
+            Your eye is filled with a substance called the vitreous humor—a gel-like fluid with the consistency of raw egg white. When we are young, this gel is firm and completely attached to the retina (the light-sensitive wallpaper at the back of the eye).
+          </p>
+          <p class="text-text leading-relaxed mb-4">
+            As we age, this gel naturally begins to liquefy and shrink. Eventually, it shrinks enough that it peels away from the retina. This peeling process is a <strong>Posterior Vitreous Detachment (PVD)</strong>.
+          </p>
+          <p class="text-text leading-relaxed mb-4">
+            When the gel pulls away, protein clumps and cellular debris cast shadows on your retina. Those shadows are the floaters you are seeing. Often, the very first thing people notice is a massive, highly distracting ring or C-shaped floater called a <strong>Weiss Ring</strong>. It is incredibly annoying, but it is a normal part of the human eye's aging process.
+          </p>
+        </section>
+
+        <section class="card card-bordered bg-red/5 border-red/30 p-6">
+          <h2 class="text-2xl font-bold text-red mb-4 flex items-center gap-3">
+            <svg class="w-7 h-7" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+            The Red Flags: When to See a Doctor IMMEDIATELY
+          </h2>
+          <p class="text-text leading-relaxed mb-4">
+            While a PVD itself is completely harmless, the <em>process</em> of the gel peeling away can sometimes pull too hard and tear the retina. This is exactly what happened to me, and it is a medical emergency that requires prompt treatment to prevent retinal detachment.
+          </p>
+          <p class="text-text leading-relaxed mb-4 font-medium">
+            <strong>If you experience any of the following, stop reading and contact an eye doctor immediately:</strong>
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-text leading-relaxed" role="list">
+            <li><strong>A Sudden "Shower" of Floaters:</strong> A massive burst of hundreds of tiny new dots, resembling pepper or coffee grounds.</li>
+            <li><strong>Flashes of Light:</strong> Bright, camera-like flashes or lightning streaks in your peripheral vision, especially in the dark.</li>
+            <li><strong>A Dark Shadow or Curtain:</strong> A dark veil encroaching on your peripheral or central vision.</li>
+          </ul>
+          <p class="text-text leading-relaxed mt-4 font-medium">
+            <strong>Rule of Thumb:</strong> If you have new floaters, you must get a dilated eye exam. Only a doctor looking into your fully dilated pupil can confirm if your retina is perfectly safe or if it has sustained a tear. Do not skip this step.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">The Timeline: Will They Ever Go Away?</h2>
+          <p class="text-text leading-relaxed mb-4">
+            Here is where I need to be completely honest with you: those floaters are likely physical, permanent changes inside your eye. However, your <em>perception</em> of them will change drastically.
+          </p>
+          <p class="text-text leading-relaxed mb-4">
+            This brings us to the most important word in your recovery: <strong>Neuroadaptation</strong>.
+          </p>
+          <p class="text-text leading-relaxed mb-4">
+            Over the next few months, your brain will realize that these floating shadows are not a threat. Just like your brain actively chooses to ignore your nose in your field of vision, it will slowly learn to tune out the floaters.
+          </p>
+          <p class="text-text leading-relaxed mb-4">
+            The first few weeks are a mental rollercoaster. Some days you won't notice them; other days, they will drive you crazy. But the anxiety will fade. The floaters will begin to settle lower into the vitreous fluid, out of your direct line of sight, and your brain will start to filter the rest.
+          </p>
+          <div class="card card-bordered p-6 bg-green/5">
+            <h3 class="text-xl font-bold text-charcoal mb-3">What the Data Says About Neuroadaptation</h3>
+            <ul class="space-y-2 text-text" role="list">
+              <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>60–90% of patients report significant subjective improvement by 6 months without intervention (Johnson et al., Ophthalmology 2010)</li>
+              <li class="float items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>fMRI studies show reduced visual cortex response to floater shadows over time — your brain literally "turns down the volume"</li>
+              <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Most annoying in the first 4–12 weeks; significant drop-off after 3 months</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Your Next Steps: Practical Daily Habits</h2>
+          <p class="text-text leading-relaxed mb-4">
+            You don't have to just sit around and wait for your brain to adapt. There are data-backed tools and practical daily habits that can make living with a fresh PVD significantly easier.
+          </p>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="card card-bordered group">
+              <div class="w-14 h-14 bg-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue/20 transition-colors">
+                <svg class="w-7 h-7 text-blue" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">Adjust Your Screens</h3>
+              <p class="text-text text-sm mb-4">Learn how to optimize your digital life to make floaters invisible.</p>
+              <a href="/guides/screen-setup-floaters" class="btn btn-primary text-sm w-full">Read Guide →</a>
+            </article>
+
+            <article class="card card-bordered group">
+              <div class="w-14 h-14 bg-amber/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber/20 transition-colors">
+                <svg class="w-7 h-7 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">The Right Sunglasses</h3>
+              <p class="text-text text-sm mb-4">How high-contrast lenses can provide immediate relief outdoors.</p>
+              <a href="/guides/sunglasses-floaters" class="btn btn-primary text-sm w-full">Read Guide →</a>
+            </article>
+
+            <article class="card card-bordered group">
+              <div class="w-14 h-14 bg-green/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green/20 transition-colors">
+                <svg class="w-7 h-7 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">Supplements & Nutrition</h3>
+              <p class="text-text text-sm mb-4">What the clinical data <em>actually</em> says about eye vitamins (and what is just a scam).</p>
+              <a href="/guides/supplement-quality" class="btn btn-primary text-sm w-full">Read Guide →</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="bg-charcoal text-cream rounded-2xl p-8 md:p-12 text-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6">You Will Get Through This</h2>
+          <p class="text-lg text-warm-gray max-w-2xl mx-auto mb-8">
+            The first few weeks feel endless. But the data is clear: your brain <em>will</em> adapt. The anxiety <em>will</em> fade. And you <em>will</em> go back to reading, working, and living your life without constantly checking for that cobweb.
+          </p>
+          <a href="/conditions/floaters" class="btn btn-primary text-lg px-8 py-4">
+            See All Evidence-Based Floater Treatments →
+          </a>
+        </section>
+      </article>
+
+      <nav class="mt-12 flex flex-col sm:flex-row gap-4 justify-center" aria-label="Guide navigation">
+        <a href="/guides/sudden-floater-emergency" class="btn btn-secondary">← Sudden Floater? Start Here</a>
+        <a href="/guides/screen-setup-floaters" class="btn btn-primary">Screen Setup for Floaters →</a>
+      </nav>
+    </div>
+  </section>
+</BaseLayout>

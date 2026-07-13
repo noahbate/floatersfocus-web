@@ -1,0 +1,327 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="When to See an Eye Doctor — Floaters Focus" description="Red flags, urgency levels, and what to expect. Don't guess with your vision—know when to go.">
+  <Header currentPath="/guides" slot="header" />
+  <Footer slot="footer" />
+
+  <section class="py-12 md:py-20" aria-labelledby="doctor-title">
+    <div class="container max-w-4xl">
+      <header class="mb-12">
+        <nav class="text-sm text-warm-gray mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2" role="list">
+            <li><a href="/" class="hover:text-primary">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/guides" class="hover:text-primary">Guides</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-charcoal font-medium" aria-current="page">When to See a Doctor</li>
+          </ol>
+        </nav>
+        <h1 id="doctor-title" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          When to See an Eye Doctor
+        </h1>
+        <p class="text-lg text-text leading-relaxed">
+          Your eyes don't have pain receptors in the back—so serious problems can be silent until it's late.
+          This guide breaks down urgency levels so you don't under-react (or over-panic).
+        </p>
+      </header>
+
+      <!-- Go Now (ER/Urgent) -->
+      <section class="mb-16" aria-labelledby="go-now-heading">
+        <h2 id="go-now-heading" class="text-2xl md:text-3xl font-bold text-red mb-6 flex items-center gap-3">
+          <svg class="w-7 h-7" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          Go Now (ER or Retina Specialist Today)
+        </h2>
+        <p class="text-text leading-relaxed mb-6">
+          These are vision emergencies where <strong>hours matter</strong>. Don't wait for an appointment. Don't "see how it goes."
+          Go to the nearest ER with an ophthalmology consult, or call a retina specialist's emergency line.
+        </p>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          {[
+            {
+              title: "Sudden shower of new floaters + flashes",
+              detail: "Like someone shook a snow globe in your eye. Often means the vitreous tore the retina (retinal tear). Laser today = no detachment. Wait = possible surgery."
+            },
+            {
+              title: "Curtain, shadow, or veil in peripheral vision",
+              detail: "A dark curtain creeping from the side, top, or bottom. Classic retinal detachment. Vision loss spreads toward center. Emergency surgery needed."
+            },
+            {
+              title: "Sudden painless vision loss in one eye",
+              detail: "Central retinal artery occlusion (eye stroke). 90-minute window for any chance of recovery. Go to ER with stroke protocol."
+            },
+            {
+              title: "Severe eye pain + nausea + vomiting + halos",
+              detail: "Acute angle-closure glaucoma. Pressure spikes to 40–60 mmHg. Optic nerve damage in hours. ER for pressure-lowering meds + laser iridotomy."
+            },
+            {
+              title: "Chemical splash or foreign body",
+              detail: "Irrigate IMMEDIATELY with clean water/saline for 15+ minutes WHILE someone calls 911 or drives you to ER. Don't wait to finish rinsing."
+            },
+            {
+              title: "Sudden double vision + droopy pupil",
+              detail: "Could be cranial nerve palsy, aneurysm, or tumor. ER for imaging. Don't drive yourself."
+            }
+          ].map(item => (
+            <article class="card card-bordered border-red/30 bg-red/5">
+              <h3 class="font-bold text-charcoal mb-2">{item.title}</h3>
+              <p class="text-text text-sm">{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- See Soon (This Week) -->
+      <section class="mb-16" aria-labelledby="see-soon-heading">
+        <h2 id="see-soon-heading" class="text-2xl md:text-3xl font-bold text-amber mb-6 flex items-center gap-3">
+          <svg class="w-7 h-7" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          See Soon (Within 1–7 Days)
+        </h2>
+        <p class="text-text leading-relaxed mb-6">
+          Not an emergency, but don't put it off. These often mean something treatable is brewing.
+        </p>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          {[
+            {
+              title: "New floaters (stable, no flashes)",
+              detail: "Likely PVD. Needs dilated exam to confirm no retinal tear. Schedule within 1–2 weeks. If flashes start → ER."
+            },
+            {
+              title: "Persistent blurred or distorted vision",
+              detail: "Wavy lines, central blur, trouble reading. Could be wet AMD, macular edema, or cataract progression. Retina or comprehensive exam within 1–2 weeks."
+            },
+            {
+              title: "Eye pain + light sensitivity + redness",
+              detail: "Could be uveitis, keratitis, or scleritis. Needs slit-lamp exam and often steroid drops. Don't wait— inflammation damages tissue."
+            },
+            {
+              title: "Sudden increase in prescription (myopia)",
+              detail: "Could be cataracts (nuclear sclerosis), diabetes (lens swelling), or keratoconus. Comprehensive exam within 1–2 weeks."
+            },
+            {
+              title: "Chronic red eye not improving with OTC drops",
+              detail: "If Visine/clear eyes makes it worse (rebound), or if it's been weeks: could be dry eye disease, blepharitis, or something else. See OD/MD."
+            },
+            {
+              title: "Diabetic? Any vision change = now.",
+              detail: "Diabetic retinopathy/macular edema progresses fast. Don't wait for annual exam. Retina specialist within days."
+            }
+          ].map(item => (
+            <article class="card card-bordered border-amber/30 bg-amber/5">
+              <h3 class="font-bold text-charcoal mb-2">{item.title}</h3>
+              <p class="text-text text-sm">{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- Routine (Annual/As Scheduled) -->
+      <section class="mb-16" aria-labelledby="routine-heading">
+        <h2 id="routine-heading" class="text-2xl md:text-3xl font-bold text-green mb-6 flex items-center gap-3">
+          <svg class="w-7 h-7" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Routine (Annual or As Recommended)
+        </h2>
+        <p class="text-text leading-relaxed mb-6">
+          No symptoms? You still need checks. Many sight-threatening diseases are silent until late.
+        </p>
+
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            { group: "Age 40–54", interval: "Every 2–4 years", reason: "Baseline for glaucoma, cataract, presbyopia" },
+            { group: "Age 55–64", interval: "Every 1–3 years", reason: "Glaucoma, AMD, cataract risk rises" },
+            { group: "Age 65+", interval: "Every 1–2 years", reason: "High AMD, glaucoma, cataract, PVD prevalence" },
+            { group: "Diabetes (any age)", interval: "Annual (min)", reason: "Diabetic retinopathy — often no symptoms until advanced" },
+            { group: "Family history of glaucoma/AMD", interval: "Every 1–2 years", reason: "Genetic risk = earlier, more frequent screening" },
+            { group: "High myopia (>−6.00 D)", interval: "Annual", reason: "Retinal tear/detachment, glaucoma, myopic maculopathy risk" },
+            { group: "Contact lens wearers", interval: "Annual", reason: "Corneal health, fit, GPC, neovascularization check" },
+            { group: "On high-risk meds (steroids, plaquenil, tamoxifen)", interval: "Per doctor (often 6–12 mo)", reason: "Drug toxicity screening" },
+          ].map(item => (
+            <article class="card card-bordered p-6">
+              <h3 class="font-bold text-charcoal mb-1">{item.group}</h3>
+              <p class="text-green font-semibold mb-1">{item.interval}</p>
+              <p class="text-text text-sm">{item.reason}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- What Kind of Doctor? -->
+      <section class="mb-16" aria-labelledby="doctor-type-heading">
+        <h2 id="doctor-type-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-6">
+          Which Doctor Do You Need?
+        </h2>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="card card-bordered">
+            <div class="w-14 h-14 bg-blue/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-blue" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-2">Ophthalmologist (MD/DO)</h3>
+            <p class="text-text text-sm mb-4"><strong>Medical doctor + surgical training.</strong> Diagnoses and treats ALL eye diseases. Does surgery (cataract, glaucoma, retina, LASIK, etc.).</p>
+            <ul class="space-y-2 text-sm text-text" role="list">
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Retinal tears/detachment</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Wet AMD (injections)</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Glaucoma surgery</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Cataract surgery</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Complex infections/trauma</li>
+            </ul>
+          </article>
+
+          <article class="card card-bordered">
+            <div class="w-14 h-14 bg-green/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-2">Optometrist (OD)</h3>
+            <p class="text-text text-sm mb-4"><strong>Doctor of Optometry.</strong> Primary eye care. Exams, prescriptions, diagnoses/manages most eye diseases (glaucoma, dry eye, AMD monitoring), refers for surgery.</p>
+            <ul class="space-y-2 text-sm text-text" role="list">
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Routine exams + glasses/contacts</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Dry eye management</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Glaucoma monitoring (most states)</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>AMD monitoring / referrals</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Pre/post-op care</li>
+            </ul>
+          </article>
+
+          <article class="card card-bordered">
+            <div class="w-14 h-14 bg-amber/10 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8" />
+                <path d="M12 17v4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-2">Retina Specialist (MD)</h3>
+            <p class="text-text text-sm mb-4"><strong>Ophthalmologist + 1–2 yr fellowship.</strong> Only retina. The "cardiologist of the eye." You're referred by your OD or general ophthalmologist.</p>
+            <ul class="space-y-2 text-sm text-text" role="list">
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Retinal detachment/tears</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Wet AMD (injections)</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Diabetic retinopathy/edema</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Macular holes/puckers</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Complex vitreous surgery</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- What to Bring / Expect -->
+      <section class="mb-16" aria-labelledby="prepare-heading">
+        <h2 id="prepare-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-6">
+          Before You Go: What to Bring & Expect
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-2">
+          <article class="card card-bordered p-6">
+            <h3 class="text-xl font-bold text-charcoal mb-4">📋 Bring These</h3>
+            <ul class="space-y-3 text-text" role="list">
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-blue flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Current glasses & contact lens boxes</strong> (not just prescription)</li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-blue flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Sunglasses</strong> — you'll be dilated (light sensitive for 4–6 hrs)</li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-blue flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Medication list</strong> (including supplements, eye drops, steroids, plaquenil, tamoxifen)</li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-blue flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Insurance cards</strong> (medical + vision — they're different!)</li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-blue flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>List of symptoms</strong> with dates (when started, triggers, what helps/worsens)</li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-blue flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Family eye history</strong> (glaucoma, AMD, retinal detachment, keratoconus)</li>
+            </ul>
+          </article>
+
+          <article class="card card-bordered p-6">
+            <h3 class="text-xl font-bold text-charcoal mb-4">⏱️ What to Expect</h3>
+            <ol class="space-y-4 text-text" role="list">
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 bg-blue text-cream rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                <div>
+                  <strong>Check-in & history</strong> — technician asks about symptoms, meds, history.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 bg-blue text-cream rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                <div>
+                  <strong>Vision check</strong> — read the chart (with/without glasses), refraction ("better 1 or 2?").
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 bg-blue text-cream rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                <div>
+                  <strong>Eye pressure</strong> — puff of air (NCT) or yellow drop + blue light (Goldmann). Painless.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 bg-blue text-cream rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                <div>
+                  <strong>Dilation drops</strong> — takes 15–30 min to work. You'll wait in waiting room (bring audiobook/podcast).
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 bg-blue text-cream rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                <div>
+                  <strong>Dilated exam</strong> — doctor looks at retina, optic nerve, macula, vessels with bright light & lens.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 bg-blue text-cream rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                <div>
+                  <strong>Discussion & plan</strong> — findings, treatment, follow-up. Ask questions! "What would you do if it were your mom?"
+                </div>
+              </li>
+            </ol>
+            <div class="mt-6 p-4 bg-amber/10 border border-amber/30 rounded-lg">
+              <p class="text-text text-sm"><strong>Pro tip:</strong> Can't drive dilated? Bring a driver or plan for rideshare. Bring a hat/sunglasses for the ride home.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Questions to Ask -->
+      <section class="mb-16" aria-labelledby="questions-heading">
+        <h2 id="questions-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-6">
+          Questions Worth Asking
+        </h2>
+        <div class="grid gap-4 md:grid-cols-2">
+          {[
+            "What exactly do I have? (Get the medical name)",
+            "What caused it? Is it hereditary?",
+            "What are my treatment options — all of them?",
+            "What happens if I do nothing?",
+            "What are the risks and benefits of each option?",
+            "How will this affect my daily life (driving, reading, work)?",
+            "What symptoms mean I should call you immediately?",
+            "When is my next check, and what are we looking for?",
+            "Are there lifestyle changes that help (diet, smoking, supplements)?",
+            "Can I get a copy of my images/OCT for my records?"
+          ].map(q => (
+            <div class="card card-bordered p-4">
+              <p class="text-text">"{q}"</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="bg-charcoal text-cream rounded-2xl p-8 md:p-12 text-center" aria-labelledby="cta-heading">
+        <h2 id="cta-heading" class="text-2xl md:text-3xl font-bold mb-4">
+          Still Not Sure? Start Here.
+        </h2>
+        <p class="text-lg text-warm-gray max-w-2xl mx-auto mb-8">
+          Pick the condition that matches your symptoms. We'll walk you through what's normal,
+          what's not, and what to do next.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/conditions/floaters" class="btn btn-primary">Floaters & PVD</a>
+          <a href="/conditions/macular" class="btn btn-secondary">Macular Health</a>
+          <a href="/conditions/discomfort" class="btn btn-accent">Dry Eye & Discomfort</a>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

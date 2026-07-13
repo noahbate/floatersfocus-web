@@ -1,0 +1,45 @@
+---
+import { type HTMLAttributes } from 'astro';
+interface Props extends HTMLAttributes<'header'> {
+  currentPath?: string;
+}
+const { currentPath = '/', ...attrs } = Astro.props;
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/conditions/floaters', label: 'Floaters' },
+  { href: '/conditions/macular', label: 'Macular Health' },
+  { href: '/conditions/discomfort', label: 'Eye Discomfort' },
+  { href: '/guides', label: 'Guides' },
+  { href: '/about', label: 'About' },
+];
+---
+
+<header {...attrs} class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-border">
+  <nav class="container" aria-label="Main navigation">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 py-4">
+      <div class="flex items-center gap-3">
+        <svg class="w-8 h-8 text-primary" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
+        </svg>
+        <span class="font-bold text-2xl text-charcoal">Floaters Focus</span>
+      </div>
+
+      <ul class="flex flex-wrap justify-center gap-2 md:gap-4" role="menubar">
+        {navItems.map(item => (
+          <li role="none">
+            <a
+              href={item.href}
+              role="menuitem"
+              class={`px-4 py-2 rounded-md font-medium transition-colors ${currentPath === item.href ? 'bg-primary text-cream' : 'text-text hover:bg-bg-alt'}`}
+              aria-current={currentPath === item.href ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+</header>

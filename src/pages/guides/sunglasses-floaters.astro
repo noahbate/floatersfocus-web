@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Sunglasses for Floaters — Floaters Focus" description="How high-contrast lenses, polarization, and specific tints provide immediate outdoor relief for PVD floaters.">
+  <Header currentPath="/guides" slot="header" />
+  <Footer slot="footer" />
+
+  <section class="py-12 md:py-20" aria-labelledby="sunglasses-title">
+    <div class="container max-w-3xl">
+      <header class="mb-12">
+        <nav class="text-sm text-warm-gray mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2" role="list">
+            <li><a href="/" class="hover:text-primary">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/guides" class="hover:text-primary">Guides</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/guides/pvd-survival-guide" class="hover:text-primary">PVD Survival Guide</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/guides/screen-setup-floaters" class="hover:text-primary">Screen Setup</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-charcoal font-medium" aria-current="page">Sunglasses for Floaters</li>
+          </ol>
+        </nav>
+        <h1 id="sunglasses-title" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          Sunglasses for Floaters: Immediate Outdoor Relief
+        </h1>
+        <p class="text-lg text-text leading-relaxed">
+          Floaters love bright, uniform skies. The right lenses cut the contrast that makes them visible — without making the world look like a cave.
+        </p>
+      </header>
+
+      <article class="prose prose-lg prose-charcoal max-w-none space-y-12">
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Why Sunglasses Help (The Physics)</h2>
+          <p class="text-text leading-relaxed mb-4">
+            Floaters are shadows. They're most visible when the background is <strong>bright and uniform</strong> — a blue sky, a white wall, a snowy field. The brighter the background, the darker the shadow looks by comparison.
+          </p>
+          <p class="text-text leading-relaxed mb-4">
+            Good sunglasses for floaters do three things:
+          </p>
+          <ul class="space-y-2 text-text" role="list">
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Reduce overall brightness</strong> — less light = less shadow contrast</li>
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Increase contrast</strong> — tinted lenses (brown, amber, rose) enhance edges and textures, giving your brain "real" detail to focus on instead of the floater</li>
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Cut glare</strong> — polarized lenses kill reflected glare from water, pavement, car hoods, which otherwise creates visual noise that competes with floaters</li>
+          </ul>
+        </section>
+
+        <section class="card card-bordered bg-blue/5 border-blue/30 p-6">
+          <h2 class="text-2xl font-bold text-blue mb-4 flex items-center gap-3">
+            <svg class="w-7 h-7" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            What to Look For (Spec Checklist)
+          </h2>
+          <div class="grid gap-4 md:grid-cols-2">
+            <div>
+              <h3 class="font-bold text-charcoal mb-2">Lens Tint (Most Important)</h3>
+              <ul class="space-y-1 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Brown / Amber / Copper:</strong> Best all-rounders. Boost contrast, warm tone, great for driving and general outdoor use.</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Rose / Vermilion:</strong> Highest contrast enhancement. Excellent for overcast days, golf, tennis. Can distort color perception slightly.</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><strong>Green (G-15):</strong> Classic Ray-Ban tint. Good color balance, moderate contrast. Solid choice if you hate color shift.</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-red" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg><strong>Avoid: Pure Grey / Smoke:</strong> Neutral density only. Dims everything equally — floaters stay just as visible relative to background.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold text-charcoal mb-2">Other Features</h3>
+              <ul class="space-y-1 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Polarized:</strong> Non-negotiable. Cuts reflected glare that creates visual "static."</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>UV400 / 100% UV:</strong> Protects macula and lens. Standard on any reputable brand.</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Backside anti-reflective coating:</strong> Prevents bounce-back glare from behind.</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg><strong>Large / wraparound frames:</strong> Block peripheral light that sneaks in and illuminates floaters from the side.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Our Top Picks (Data-Backed)</h2>
+          <p class="text-text leading-relaxed mb-6">
+            These aren't random recommendations — they're lenses with proven contrast-enhancing tints, quality polarization, and UV protection from manufacturers who publish their spectral transmission data.
+          </p>
+
+          <div class="grid gap-8">
+            <!-- Maui Jim -->
+            <article class="card card-bordered">
+              <div class="flex items-start justify-between mb-4">
+                <span class="bg-amber/10 text-amber text-sm px-3 py-1 rounded-full font-medium">Premium Contrast</span>
+                <div class="flex items-center gap-1" aria-label="4.8 out of 5 stars">
+                  <span class="text-gold">★★★★★</span>
+                  <span class="text-warm-gray text-sm">(3.2k+)</span>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">Maui Jim — HT (High Transmission) Bronze or HCL Bronze</h3>
+              <p class="text-text mb-4">The gold standard for contrast enhancement. HT Bronze = 18% light transmission (everyday). HCL Bronze = 10% (intense sun). PolarizedPlus2® tech cuts 99.9% glare. Published spectral data shows peak contrast in 580–620nm range — exactly where floaters cast shadows.</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-2xl font-bold text-charcoal">$279–$329</span>
+                <span class="text-warm-gray">Prescription available</span>
+              </div>
+              <ul class="space-y-1 text-sm text-text mb-6" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Best contrast enhancement on the market</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Bi-gradient mirror options (darker top, lighter bottom)</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Premium price; frames can feel small for wide faces</li>
+              </ul>
+              <a href="https://www.mauijim.com" class="btn btn-primary w-full" rel="noopener sponsored" target="_blank" aria-label="View Maui Jim sunglasses (affiliate link)">
+                View on Maui Jim
+              </a>
+              <p class="text-xs text-warm-gray text-center mt-2">Affiliate link — we may earn a commission</p>
+            </article>
+
+            <!-- Serengeti -->
+            <article class="card card-bordered">
+              <div class="flex items-start justify-between mb-4">
+                <span class="bg-green/10 text-green text-sm px-3 py-1 rounded-full font-medium">Photochromic Option</span>
+                <div class="flex items-center gap-1" aria-label="4.7 out of 5 stars">
+                  <span class="text-gold">★★★★★</span>
+                  <span class="text-warm-gray text-sm">(2.1k+)</span>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">Serengeti — Sedona (Drivers) or 555nm (General)</h3>
+              <p class="text-text mb-4">Photochromic (light-adjusting) + polarized + spectral control. Sedona = amber tint that darkens in sun, lightens in shade — ideal if you go in/out constantly. 555nm = green optimized for peak human sensitivity. Mineral glass lenses = best optical clarity, scratch resistance.</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-2xl font-bold text-charcoal">$189–$249</span>
+                <span class="text-warm-gray">Glass or PhD™ lightweight</span>
+              </div>
+              <ul class="space-y-1 text-sm text-text mb-6" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Photochromic = one pair for all conditions</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Spectral Control® filters blue light (400–420nm) linked to macular stress</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Glass = heavier; photochromic slower in cold/behind car windshield</li>
+              </ul>
+              <a href="https://www.serengetieyewear.com" class="btn btn-primary w-full" rel="noopener sponsored" target="_blank" aria-label="View Serengeti sunglasses (affiliate link)">
+                View on Serengeti
+              </a>
+              <p class="text-xs text-warm-gray text-center mt-2">Affiliate link — we may earn a commission</p>
+            </article>
+
+            <!-- Vuarnet -->
+            <article class="card card-bordered">
+              <div class="flex items-start justify-between mb-4">
+                <span class="bg-purple/10 text-purple text-sm px-3 py-1 rounded-full font-medium">Mineral Glass</span>
+                <div class="flex items-center gap-1" aria-label="4.6 out of 5 stars">
+                  <span class="text-gold">★★★★★</span>
+                  <span class="text-warm-gray text-sm">(1.4k+)</span>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">Vuarnet — Vuarnet Legend 03 (Brown) or 06 (Green)</h3>
+              <p class="text-text mb-4">French heritage brand, mineral glass lenses with Lynx® anti-reflective + oleophobic + hydrophobic coatings. 03 Brown = contrast king. 06 Green = truer color. Incredible optical purity — used by French military and alpinists.</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-2xl font-bold text-charcoal">$350+</span>
+                <span class="text-warm-gray">Prescription via authorized opticians</span>
+              </div>
+              <ul class="space-y-1 text-sm text-text mb-6" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Best scratch resistance of any lens (mineral glass)</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Legendary contrast (03 Brown) — floaters fade into background texture</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Heavy; expensive; limited frame styles; prescription complex</li>
+              </ul>
+              <a href="https://www.vuarnet.com" class="btn btn-primary w-full" rel="noopener sponsored" target="_blank" aria-label="View Vuarnet sunglasses (affiliate link)">
+                View on Vuarnet
+              </a>
+              <p class="text-xs text-warm-gray text-center mt-2">Affiliate link — we may earn a commission</p>
+            </article>
+
+            <!-- Budget: Costa -->
+            <article class="card card-bordered">
+              <div class="flex items-start justify-between mb-4">
+                <span class="bg-blue/10 text-blue text-sm px-3 py-1 rounded-full font-medium">Best Value</span>
+                <div class="flex items-center gap-1" aria-label="4.7 out of 5 stars">
+                  <span class="text-gold">★★★★★</span>
+                  <span class="text-warm-gray text-sm">(4.8k+)</span>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">Costa Del Mar — Copper (580G Glass) or Sunrise Silver Mirror</h3>
+              <p class="text-text mb-4">Fishing heritage = serious polarization + contrast. 580G glass = lightweight mineral. Copper tint = amber/brown, boosts reds/greens. 580P polycarbonate = lighter, more impact resistant. Great wraparound frames block peripheral light.</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-2xl font-bold text-charcoal">$179–$259</span>
+                <span class="text-warm-gray">Rx via Costa Rx program</span>
+              </div>
+              <ul class="space-y-1 text-sm text-text mb-6" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>580 tech filters harsh yellow (580nm) and HEV blue — reduces visual noise</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Wraparound frames = less peripheral floater illumination</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Sporty aesthetic; not for formal settings</li>
+              </ul>
+              <a href="https://www.costadelmar.com" class="btn btn-primary w-full" rel="noopener sponsored" target="_blank" aria-label="View Costa Del Mar sunglasses (affiliate link)">
+                View on Costa
+              </a>
+              <p class="text-xs text-warm-gray text-center mt-2">Affiliate link — we may earn a commission</p>
+            </article>
+
+            <!-- Budget: Sunski -->
+            <article class="card card-bordered">
+              <div class="flex items-start justify-between mb-4">
+                <span class="bg-amber/10 text-amber text-sm px-3 py-1 rounded-full font-medium">Budget Pick</span>
+                <div class="flex items-center gap-1" aria-label="4.5 out of 5 stars">
+                  <span class="text-gold">★★★★★</span>
+                  <span class="text-warm-gray text-sm">(12k+)</span>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">Sunski — Amber or Rose Tint (Polycarbonate)</h3>
+              <p class="text-text mb-4">Direct-to-consumer, recycled frames, lifetime warranty. Polarized, UV400, amber/rose tints available. Not mineral glass, but shockingly good optics for the price. Great "first pair" or backup.</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-2xl font-bold text-charcoal">$68–$78</span>
+                <span class="text-warm-gray">Non-Rx only (fitovers work)</span>
+              </div>
+              <ul class="space-y-1 text-sm text-text mb-6" role="list">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Unbeatable value; lifetime warranty (even if you sit on them)</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Amber/Rose tints genuinely help floater contrast</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Polycarbonate scratches easier; no backside AR standard</li>
+              </ul>
+              <a href="https://www.sunski.com" class="btn btn-primary w-full" rel="noopener sponsored" target="_blank" aria-label="View Sunski sunglasses (affiliate link)">
+                View on Sunski
+              </a>
+              <p class="text-xs text-warm-gray text-center mt-2">Affiliate link — we may earn a commission</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Quick Decision Guide</h2>
+          <table class="w-full text-sm text-text border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="text-left pb-2 font-semibold">If you...</th>
+                <th class="text-left pb-2 font-semibold">Get this</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border">
+              <tr><td class="py-2 font-medium">Want the absolute best contrast, money no object</td><td class="py-2">Maui Jim HT Bronze</td></tr>
+              <tr><td class="py-2 font-medium">Go in/out of buildings constantly (commute, errands)</td><td class="py-2">Serengeti Sedona (photochromic amber)</td></tr>
+              <tr><td class="py-2 font-medium">Prioritize optical clarity + scratch resistance</td><td class="py-2">Vuarnet Legend 03 Brown</td></tr>
+              <tr><td class="py-2 font-medium">Spend days on water / driving / want wraparound</td><td class="py-2">Costa 580G Copper</td></tr>
+              <tr><td class="py-2 font-medium">Budget-conscious, need a pair yesterday</td><td class="py-2">Sunski Amber/Rose</td></tr>
+              <tr><td class="py-2 font-medium">Need prescription + max contrast</td><td class="py-2">Maui Jim Rx or Serengeti Rx (authorized dealer)</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="bg-charcoal text-cream rounded-2xl p-8 md:p-12">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Pro Tip: Keep a Pair in Your Car</h2>
+          <p class="text-lg text-warm-gray max-w-2xl mx-auto mb-8 text-center">
+            The worst floater days are bright overcast — sky is a giant white screen. Keep sunglasses in your console, not your bag. Put them on <em>before</em> you step outside.
+          </p>
+          <a href="/guides/pvd-survival-guide" class="btn btn-secondary mx-auto block w-fit">
+            ← Back to PVD Survival Guide
+          </a>
+        </section>
+      </article>
+
+      <nav class="mt-12 flex flex-col sm:flex-row gap-4 justify-center" aria-label="Guide navigation">
+        <a href="/guides/screen-setup-floaters" class="btn btn-secondary">← Screen Setup for Floaters</a>
+        <a href="/guides/supplement-quality" class="btn btn-primary">Supplement Quality Guide →</a>
+      </nav>
+    </div>
+  </section>
+</BaseLayout>

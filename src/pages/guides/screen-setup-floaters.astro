@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Screen Setup for Floaters — Floaters Focus" description="Optimize your monitors, dark mode, font scaling, and contrast to make floaters disappear from your daily workflow.">
+  <Header currentPath="/guides" slot="header" />
+  <Footer slot="footer" />
+
+  <section class="py-12 md:py-20" aria-labelledby="screen-title">
+    <div class="container max-w-3xl">
+      <header class="mb-12">
+        <nav class="text-sm text-warm-gray mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2" role="list">
+            <li><a href="/" class="hover:text-primary">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/guides" class="hover:text-primary">Guides</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/guides/pvd-survival-guide" class="hover:text-primary">PVD Survival Guide</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-charcoal font-medium" aria-current="page">Screen Setup for Floaters</li>
+          </ol>
+        </nav>
+        <h1 id="screen-title" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          Screen Setup for Floaters: Make Them Disappear While You Work
+        </h1>
+        <p class="text-lg text-text leading-relaxed">
+          Floaters are shadows. They show up bright backgrounds. Here's how to flip the script so your brain stops seeing them.
+        </p>
+      </header>
+
+      <article class="prose prose-lg prose-charcoal max-w-none space-y-12">
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Why Screens Make Floaters Worse</h2>
+          <p class="text-text leading-relaxed mb-4">
+            Floaters are shadows cast by clumps in your vitreous. They're most visible against <strong>bright, uniform backgrounds</strong> — exactly what a white webpage, blank document, or light-mode IDE gives you.
+          </p>
+          <p class="text-text leading-relaxed mb-4">
+            The higher the contrast between the floater and the background, the more your visual system flags it as "object to track." Dark mode doesn't eliminate floaters, but it dramatically reduces the contrast that makes them pop.
+          </p>
+        </section>
+
+        <section class="card card-bordered bg-green/5 border-green/30 p-6">
+          <h2 class="text-2xl font-bold text-green mb-4 flex items-center gap-3">
+            <svg class="w-7 h-7" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Quick Win: Turn on Dark Mode Everywhere (5 minutes)
+          </h2>
+          <p class="text-text leading-relaxed mb-4">This is the single highest-impact change. Do it now:</p>
+          <ul class="space-y-3 text-text" role="list">
+            <li class="flex items-start gap-3"><span class="bg-green text-cream w-6 h-6 rounded-full flex items-center justify-center font-bold flex-shrink-0 text-sm">1</span><div><strong>OS-level:</strong> macOS → System Settings → Appearance → Dark. Windows → Settings → Personalization → Colors → Dark.</div></li>
+            <li class="flex items-start gap-3"><span class="bg-green text-cream w-6 h-6 rounded-full flex items-center justify-center font-bold flex-shrink-0 text-sm">2</span><div><strong>Browser:</strong> Chrome/Edge/Safari all follow OS. Firefox: Menu → Settings → General → Dark.</div></li>
+            <li class="flex items-start gap-3"><span class="bg-green text-cream w-6 h-6 rounded-full flex items-center justify-center font-bold flex-shrink-0 text-sm">3</span><div><strong>Code editor:</strong> VS Code: Ctrl+K Ctrl+T → "Dark+". Cursor: same. JetBrains: View → Theme → Darcula.</div></li>
+            <li class="flex items-start gap-3"><span class="bg-green text-cream w-6 h-6 rounded-full flex items-center justify-center font-bold flex-shrink-0 text-sm">4</span><div><strong>Docs/Office:</strong> Google Docs: View → Theme → Dark. Notion: Settings → Appearance → Dark. Obsidian: Settings → Appearance → Dark.</div></li>
+            <li class="flex items-start gap-3"><span class="bg-green text-cream w-6 h-6 rounded-full flex items-center justify-center font-bold flex-shrink-0 text-sm">5</span><div><strong>Terminal:</strong> iTerm2/Windows Terminal/Warping → Dark profile. Your logs will thank you.</div></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Monitor Settings That Actually Help</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="card card-bordered">
+              <h3 class="text-xl font-bold text-charcoal mb-3">Brightness & Contrast</h3>
+              <ul class="space-y-2 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Lower brightness to 30–50% (match room lighting)</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Reduce contrast slightly (70–80%) — less "pop" = less floater visibility</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Enable "Night Shift" / "Night Light" / f.lux — warmer tones = less blue scatter = easier on vitreous</li>
+              </ul>
+            </article>
+
+            <article class="card card-bordered">
+              <h3 class="text-xl font-bold text-charcoal mb-3">Color Profile</h3>
+              <ul class="space-y-2 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>sRGB mode (not "Vivid" or "Game") — accurate, lower contrast</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>If your monitor has "Low Blue Light" hardware mode, use it (software filters dim the image; hardware shifts the backlight spectrum)</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Matte screen > glossy. Glossy = reflections = more visual noise for your brain to sort</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Font Scaling: Bigger Text = Less Floater Hunting</h2>
+          <p class="text-text leading-relaxed mb-4">
+            When text is small, your eyes make more micro-saccades (tiny jumps) to read it. Every saccade moves the vitreous, which moves the floaters, which grabs your attention. Larger text = fewer saccades = less floater motion = less distraction.
+          </p>
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="card card-bordered">
+              <h3 class="text-xl font-bold text-charcoal mb-3">macOS</h3>
+              <ul class="space-y-2 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>System Settings → Displays → Scaled → "Larger Text" (or hold Option + click Scaled for more options)</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Safari: View → Zoom In (Cmd++) or set default zoom in Settings → Websites → Page Zoom</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Accessibility → Display → "Increase contrast" + "Reduce transparency" (helps some)</li>
+              </ul>
+            </article>
+
+            <article class="card card-bordered">
+              <h3 class="text-xl font-bold text-charcoal mb-3">Windows</h3>
+              <ul class="space-y-2 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Settings → System → Display → Scale: 125% or 150%</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Edge/Chrome: Settings → Appearance → Font size: Large / Very Large</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Ease of Access → Display → "Make text bigger" slider</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Browser Extensions That Help</h2>
+          <div class="grid gap-4 md:grid-cols-2">
+            <article class="card card-bordered">
+              <h3 class="font-bold text-charcoal mb-2">Dark Reader (Chrome/Firefox/Edge/Safari)</h3>
+              <p class="text-text text-sm mb-3">Forces dark mode on every site. Highly customizable: brightness, contrast, sepia, font settings per-site.</p>
+              <p class="text-text text-sm"><strong>Pro tip:</strong> Set "Brightness: 85%, Contrast: 85%" for a softer dark mode that's easier on floaters than pure black.</p>
+            </article>
+            <article class="card card-bordered">
+              <h3 class="font-bold text-charcoal mb-2">Midnight Lizard (Firefox/Chrome)</h3>
+              <p class="text-text text-sm mb-3">More granular color transformation engine. Good if Dark Reader breaks a site you use daily.</p>
+            </article>
+            <article class="card card-bordered">
+              <h3 class="font-bold text-charcoal mb-2">High Contrast (Chrome) / Windows High Contrast Mode</h3>
+              <p class="text-text text-sm">Forces system colors. Extreme but effective for bad days. Win+Shift+PrintScreen toggles it on Windows.</p>
+            </article>
+            <article class="card card-bordered">
+              <h3 class="font-bold text-charcoal mb-2">Stylus + UserStyles.world</h3>
+              <p class="text-text text-sm">Custom CSS per site. Search "dark mode" + site name. More work, total control.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">IDE / Editor Specifics</h2>
+          <div class="grid gap-4 md:grid-cols-2">
+            <article class="card card-bordered p-4">
+              <h3 class="font-bold text-charcoal mb-2">VS Code / Cursor</h3>
+              <ul class="space-y-1 text-sm text-text" role="list">
+                <li>Theme: "Dark+ (default dark)" or "One Dark Pro"</li>
+                <li>Settings: <code class="bg-bg-alt px-1 rounded">"editor.fontSize": 16</code> (or 18+)</li>
+                <li>Settings: <code class="bg-bg-alt px-1 rounded">"editor.lineHeight": 1.6</code></li>
+                <li>Minimap: Disable (Ctrl+Shift+P → "View: Toggle Minimap") — moving code = moving floaters</li>
+                <li>Line highlights: <code class="bg-bg-alt px-1 rounded">"editor.renderLineHighlight": "gutter"</code> (less visual noise)</li>
+              </ul>
+            </article>
+            <article class="card card-bordered p-4">
+              <h3 class="font-bold text-charcoal mb-2">JetBrains (IntelliJ, PyCharm, etc.)</h3>
+              <ul class="space-y-1 text-sm text-text" role="list">
+                <li>Theme: Darcula (built-in dark)</li>
+                <li>Settings → Editor → Font → Size: 16+, Line spacing: 1.4</li>
+                <li>Disable "Show method separators" and "Show vertical indent guides"</li>
+                <li>Minimap: Right-click → Uncheck "Show Minimap"</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="bg-charcoal text-cream rounded-2xl p-8 md:p-12">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Your Homework This Week</h2>
+          <div class="grid gap-4 md:grid-cols-2 text-left max-w-2xl mx-auto">
+            <div class="flex items-start gap-3">
+              <span class="bg-gold text-charcoal w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+              <div>Enable OS-level dark mode + browser dark mode</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="bg-gold text-charcoal w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+              <div>Set monitor brightness to 40%, enable hardware low-blue-light</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="bg-gold text-charcoal w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+              <div>Bump editor/browser font size to 16–18px minimum</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="bg-gold text-charcoal w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+              <div>Install Dark Reader, set to 85% brightness/contrast</div>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <nav class="mt-12 flex flex-col sm:flex-row gap-4 justify-center" aria-label="Guide navigation">
+        <a href="/guides/pvd-survival-guide" class="btn btn-secondary">← PVD Survival Guide</a>
+        <a href="/guides/sunglasses-floaters" class="btn btn-primary">Sunglasses for Floaters →</a>
+      </nav>
+    </div>
+  </section>
+</BaseLayout>

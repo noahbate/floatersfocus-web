@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Supplement Quality Guide — Floaters Focus" description="How to read supplement labels, spot fillers, verify forms (rTG vs ethyl ester), and check doses match clinical studies.">
+  <Header currentPath="/guides" slot="header" />
+  <Footer slot="footer" />
+
+  <section class="py-12 md:py-20" aria-labelledby="quality-title">
+    <div class="container max-w-3xl">
+      <header class="mb-12">
+        <nav class="text-sm text-warm-gray mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2" role="list">
+            <li><a href="/" class="hover:text-primary">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/guides" class="hover:text-primary">Guides</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-charcoal font-medium" aria-current="page">Supplement Quality</li>
+          </ol>
+        </nav>
+        <h1 id="quality-title" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          How to Read a Supplement Label (Without a PhD)
+        </h1>
+        <p class="text-lg text-text leading-relaxed">
+          The supplement aisle is a minefield. Here's how to tell if a product actually matches the research—or if you're paying for expensive urine.
+        </p>
+      </header>
+
+      <article class="prose prose-lg prose-charcoal max-w-none">
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-charcoal mb-4">The 5-Second Rule</h2>
+          <p class="text-text leading-relaxed mb-4">
+            Flip the bottle. Look at the <strong>Supplement Facts</strong> panel. If you see any of these red flags, put it back:
+          </p>
+          <ul class="space-y-3 list-disc list-inside text-text" role="list">
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>Proprietary blend</strong> — hides individual doses. You have no idea if you're getting a therapeutic amount.</li>
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>"Fish oil concentrate" without "rTG" or "re-esterified triglyceride"</strong> — almost certainly ethyl ester (poor absorption).</li>
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>Beta-carotene</strong> in an eye formula — increases lung cancer risk in smokers and recent quitters.</li>
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>Zinc >40 mg</strong> without copper — causes copper deficiency anemia over time.</li>
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>No third-party testing seal</strong> (NSF, USP, IFOS, ConsumerLab) — you're trusting the manufacturer's word.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-charcoal mb-4">What to Look For (The Green Flags)</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="card card-bordered">
+              <h3 class="text-xl font-bold text-charcoal mb-3">🔬 Ingredient Form Matters</h3>
+              <table class="w-full text-sm text-text">
+                <thead>
+                  <tr class="border-b border-border">
+                    <th class="text-left pb-2 font-semibold">Ingredient</th>
+                    <th class="text-left pb-2 font-semibold">Good Form</th>
+                    <th class="text-left pb-2 font-semibold">Avoid</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-border">
+                  <tr><td class="py-2 font-medium">Omega-3</td><td class="py-2 text-green">rTG (re-esterified TG)</td><td class="py-2 text-red">Ethyl ester (EE)</td></tr>
+                  <tr><td class="py-2 font-medium">Vitamin E</td><td class="py-2 text-green">d-alpha-tocopherol (natural)</td><td class="py-2 text-red">dl-alpha-tocopherol (synthetic)</td></tr>
+                  <tr><td class="py-2 font-medium">Vitamin B12</td><td class="py-2 text-green">Methylcobalamin</td><td class="py-2 text-red">Cyanocobalamin</td></tr>
+                  <tr><td class="py-2 font-medium">Magnesium</td><td class="py-2 text-green">Glycinate, threonate</td><td class="py-2 text-red">Oxide</td></tr>
+                  <tr><td class="py-2 font-medium">Zinc</td><td class="py-2 text-green">Picolinate, citrate</td><td class="py-2 text-red">Oxide</td></tr>
+                  <tr><td class="py-2 font-medium">Folate</td><td class="py-2 text-green">Methylfolate (5-MTHF)</td><td class="py-2 text-red">Folic acid</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="card card-bordered">
+              <h3 class="text-xl font-bold text-charcoal mb-3">📊 Dose Matching</h3>
+              <p class="text-text mb-3">Compare the label to the study that matters:</p>
+              <ul class="space-y-2 text-text" role="list">
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> <strong>AREDS2:</strong> Lutein 10 mg + Zeaxanthin 2 mg + Zinc 25–80 mg + Copper 2 mg</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> <strong>Dry eye (DREAM/omega-3 studies):</strong> EPA + DHA ≥2,000 mg/day as rTG</li>
+                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> <strong>Vitamin D:</strong> 1,000–2,000 IU D3 (target blood level 40–60 ng/mL)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-charcoal mb-4">🏷️ Third-Party Testing Seals</h2>
+          <p class="text-text mb-4">These organizations test for: label accuracy, contaminants (heavy metals, PCBs), and dissolution. Look for their logos:</p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <div class="card card-bordered px-6 py-4 text-center min-w-[140px]">
+              <div class="text-2xl font-bold text-blue">NSF</div>
+              <p class="text-sm text-warm-gray">Certified for Sport</p>
+            </div>
+            <div class="card card-bordered px-6 py-4 text-center min-w-[140px]">
+              <div class="text-2xl font-bold text-green">USP</div>
+              <p class="text-sm text-warm-gray">Verified</p>
+            </div>
+            <div class="card card-bordered px-6 py-4 text-center min-w-[140px]">
+              <div class="text-2xl font-bold text-amber">IFOS</div>
+              <p class="text-sm text-warm-gray">5-Star (fish oil)</p>
+            </div>
+            <div class="card card-bordered px-6 py-4 text-center min-w-[140px]">
+              <div class="text-2xl font-bold text-purple">ConsumerLab</div>
+              <p class="text-sm text-warm-gray">Tested</p>
+            </div>
+          </div>
+          <p class="text-sm text-warm-gray text-center mt-4"><em>No seal = no independent verification.</em></p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-charcoal mb-4">🏷️ "Other Ingredients" — What's Fine vs. Suspect</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="card card-bordered">
+              <h3 class="text-xl font-bold text-charcoal mb-3">✅ Generally Fine</h3>
+              <ul class="space-y-1 text-text" role="list">
+                <li>• Rice flour / cellulose (capsule filler)</li>
+                <li>• Silica (anti-caking)</li>
+                <li>• Vegetable capsule (HPMC) — vegan, clean</li>
+                <li>• Gelatin capsule — fine if not vegan</li>
+                <li>• Natural flavors (usually trivial amounts)</li>
+              </ul>
+            </div>
+
+            <div class="card card-bordered bg-red/5 border-red/20">
+              <h3 class="text-xl font-bold text-red mb-3">⚠️ Avoid When Possible</h3>
+              <ul class="space-y-1 text-text" role="list">
+                <li>• Titanium dioxide (whitener — banned in EU)</li>
+                <li>• Artificial colors (FD&C Red #40, Blue #1, etc.)</li>
+                <li>• Hydrogenated oils</li>
+                <li>• Magnesium stearate (controversial, some avoid)</li>
+                <li>• Carrageenan (some GI sensitivity)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-charcoal mb-4">💡 Quick Label Audit Checklist</h2>
+          <p class="text-text mb-4">Screenshot this. Next time you're shopping, run the label through these 5 questions:</p>
+          <ol class="space-y-4 text-text" role="list">
+            <li class="flex items-start gap-3"><span class="bg-blue text-cream w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span><div><strong>Does it have the form I need?</strong> (rTG omega-3, methylcobalamin B12, d-alpha-tocopherol E)</div></li>
+            <li class="flex items-start gap-3"><span class="bg-blue text-cream w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span><div><strong>Are doses ≥ study doses?</strong> (Check the table above)</div></li>
+            <li class="flex items-start gap-3"><span class="bg-blue text-cream w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span><div><strong>No proprietary blends?</strong> Every ingredient listed with exact amount.</div></li>
+            <li class="flex items-start gap-3"><span class="bg-blue text-cream w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span><div><strong>Third-party tested?</strong> NSF, USP, IFOS, or ConsumerLab seal.</div></li>
+            <li class="flex items-start gap-3"><span class="bg-blue text-cream w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span><div><strong>Clean "other ingredients"?</strong> No titanium dioxide, artificial colors, hydrogenated oils.</div></li>
+          </ol>
+        </section>
+
+        <section class="bg-charcoal text-cream rounded-2xl p-8 md:p-12">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Want Our Pre-Vetted Picks?</h2>
+          <p class="text-lg text-warm-gray max-w-2xl mx-auto mb-8 text-center">
+            We only recommend products that pass every check above. Doses match studies. Forms are bioavailable.
+            Third-party tested. Affiliate links support the site at no cost to you.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/conditions/macular" class="btn btn-primary">AREDS2 Supplements (Macular)</a>
+            <a href="/conditions/discomfort" class="btn btn-secondary">Omega-3 & Lipid Tears (Dry Eye)</a>
+          </div>
+        </section>
+      </article>
+
+      <nav class="mt-12 flex flex-col sm:flex-row gap-4 justify-center" aria-label="Guide navigation">
+        <a href="/guides/eye-anatomy-basics" class="btn btn-secondary">← Eye Anatomy 101</a>
+        <a href="/guides/when-to-see-doctor" class="btn btn-primary">When to See a Doctor →</a>
+      </nav>
+    </div>
+  </section>
+</BaseLayout>
