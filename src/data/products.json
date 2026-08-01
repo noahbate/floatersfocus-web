@@ -1,0 +1,121 @@
+{
+  "products": [
+    {
+      "id": "preservision-areds2",
+      "name": "PreserVision AREDS 2 Softgels",
+      "category": "supplement",
+      "condition_ids": ["macular"],
+      "evidence": "The exact vitamin/mineral formula from the NIH AREDS2 trial. Softgels absorb better than tablets. No beta-carotene, so safe for smokers.",
+      "price_usd": 28.99,
+      "servings_per_container": 60,
+      "serving_size": "2 softgels",
+      "rating_avg": 4.7,
+      "review_count": 12400,
+      "key_ingredients": {
+        "Lutein": "10 mg",
+        "Zeaxanthin": "2 mg",
+        "Zinc": "25 mg",
+        "Vitamin E": "400 IU"
+      },
+      "pros": [
+        "Exact AREDS2 doses",
+        "Trusted pharma brand (Bausch + Lomb)",
+        "Take with food (zinc nausea)"
+      ],
+      "cons": [
+        "Only helps intermediate AMD",
+        "Large softgels for some"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/s?k=PreserVision+AREDS+2+softgels"
+      }
+    },
+    {
+      "id": "nordic-ultimate-omega-2x",
+      "name": "Nordic Naturals Ultimate Omega 2X",
+      "category": "omega-3",
+      "condition_ids": ["discomfort", "macular"],
+      "evidence": "High-EPA re-esterified triglyceride (rTG) form — ~70% better absorption than drugstore ethyl ester. IFOS 5-star third-party tested. Matches the ≥2g EPA+DHA dry-eye dose.",
+      "price_usd": 48.95,
+      "servings_per_container": 60,
+      "serving_size": "2 softgels",
+      "rating_avg": 4.8,
+      "review_count": 15600,
+      "key_ingredients": {
+        "EPA": "1125 mg",
+        "DHA": "690 mg",
+        "Total Omega-3": "2150 mg"
+      },
+      "pros": [
+        "rTG form = high absorption",
+        "High EPA:DHA ratio for inflammation",
+        "Third-party tested (IFOS 5-star)"
+      ],
+      "cons": [
+        "Pricier than ethyl ester",
+        "Not a quick fix (6–12 weeks)"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/s?k=Nordic+Naturals+Ultimate+Omega+2X"
+      }
+    },
+    {
+      "id": "systane-complete-pf",
+      "name": "Systane Complete PF",
+      "category": "artificial-tear",
+      "condition_ids": ["discomfort"],
+      "evidence": "Nano-droplet lipid technology that spreads evenly over the tear film. Preservative-free single-use vials. Alcon trials show improved tear breakup time (TBUT) for mixed dry eye.",
+      "price_usd": 24.99,
+      "servings_per_container": 30,
+      "serving_size": "1 vial",
+      "rating_avg": 4.6,
+      "review_count": 8700,
+      "key_ingredients": {
+        "Lipid": "nano-droplet",
+        "Preservative": "none (PF)",
+        "Type": "mixed dry eye"
+      },
+      "pros": [
+        "Nano-lipid spreads evenly",
+        "Preservative-free",
+        "Alcon = eye-care specialist"
+      ],
+      "cons": [
+        "Single-use only (more waste)",
+        "Vials not refillable"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/s?k=Systane+Complete+PF+preservative+free"
+      }
+    },
+    {
+      "id": "refresh-mega-3",
+      "name": "Refresh Mega-3 Advanced",
+      "category": "artificial-tear",
+      "condition_ids": ["discomfort"],
+      "evidence": "Lipid-enhanced artificial tear with flaxseed oil (omega-3) to stabilize the tear film. Good daytime option alongside warm compresses for evaporative dry eye (MGD).",
+      "price_usd": 19.99,
+      "servings_per_container": 30,
+      "serving_size": "1 vial",
+      "rating_avg": 4.5,
+      "review_count": 5400,
+      "key_ingredients": {
+        "Flaxseed oil": "omega-3",
+        "Preservative": "none (PF)",
+        "Type": "evaporative dry eye"
+      },
+      "pros": [
+        "Lipid + omega-3 formula",
+        "Preservative-free vials",
+        "Budget-friendly"
+      ],
+      "cons": [
+        "Mild film blur for some",
+        "Less potent than prescription drops"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/s?k=Refresh+Mega-3+Advanced+preservative+free"
+      }
+    }
+  ]
+}

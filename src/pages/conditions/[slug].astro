@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import conditionsData from '../../data/conditions.json';
+import productsData from '../../data/products.json';
 
 interface Props {
   condition: any;
@@ -15,10 +16,14 @@ const pageDescription = condition.description;
 // Generate static paths for each condition
 export async function getStaticPaths() {
   const conditions = conditionsData.conditions || [];
-  
+  const allProducts = productsData.products || [];
+
   return conditions.map((condition: any) => ({
     params: { slug: condition.slug },
-    props: { condition, products: [] }
+    props: {
+      condition,
+      products: allProducts.filter((p: any) => (p.condition_ids || []).includes(condition.id))
+    }
   }));
 }
 ---
@@ -146,7 +151,7 @@ export async function getStaticPaths() {
                   product.category === 'supplement' ? 'bg-blue/10 text-blue' :
                   product.category === 'omega-3' ? 'bg-amber/10 text-amber' :
                   product.category === 'artificial-tear' ? 'bg-green/10 text-green' :
-                  'bg-purple/10 text-purple'
+                  'bg-teal/10 text-teal'
                 }`}>
                   {product.category.replace('-', ' ')}
                 </span>
