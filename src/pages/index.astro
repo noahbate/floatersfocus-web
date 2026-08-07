@@ -1,268 +1,82 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="Floaters Focus — Friendly, Evidence-Backed Eye Care" description="Floaters, PVD, dry eye—we translate the research into plain English. Affiliate links support the site at no cost to you.">
-  <Header currentPath="/" slot="header" />
-  <Footer slot="footer" />
-
-  <!-- Hero -->
-  <section class="bg-gradient-to-b from-cream via-cream to-warm-white py-16 md:py-24" aria-labelledby="hero-heading">
-    <div class="container">
-      <div class="max-w-3xl mx-auto text-center">
-        <h1 id="hero-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-tight mb-6">
-          Eye Health That Makes Sense
-        </h1>
-        <p class="text-xl md:text-2xl text-text leading-relaxed mb-8">
-          Floaters driving you nuts? Macular degeneration in the family? Eyes feel like sandpaper after screens?
-          We translate the research into plain English—so you can make confident choices.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a href="#conditions" class="btn btn-primary text-lg px-8 py-4">
-            Explore Conditions
-          </a>
-          <a href="/guides/when-to-see-doctor" class="btn btn-secondary text-lg px-8 py-4">
-            When to See a Doctor
-          </a>
-        </div>
-        <p class="text-warm-gray text-sm">
-          <strong>No miracle cures.</strong> No fear-mongering. Just science you can actually use.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust/Disclaimer Bar -->
-  <section class="bg-gold/10 border-y border-gold/30 py-4" aria-label="Important disclaimers">
-    <div class="container">
-      <div class="grid gap-4 md:grid-cols-3 text-sm text-charcoal">
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 text-gold flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-          <span><strong>Medical Disclaimer:</strong> We're not doctors. This is information, not advice. See your eye doctor.</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 text-gold flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-          <span><strong>Evidence-Based:</strong> We cite RCTs, guidelines (AAO, TFOS), and FDA labels—not testimonials.</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 text-gold flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-          <span><strong>Affiliate Links:</strong> We earn a small commission if you buy via our links—no extra cost to you.</span>
+<BaseLayout title="Floaters Focus — Evidence-Based Eye Health" description="Floaters, PVD, macular health, and dry eye guidance backed by clinical evidence.">
+  <main class="flex-1">
+    <!-- Hero -->
+    <section class="bg-white border-b border-gray-200">
+      <div class="container mx-auto px-4 py-12 md:py-16">
+        <div class="max-w-3xl">
+          <h1 class="text-3xl md:text-4xl font-semibold text-charcoal mb-4">Eye health that makes sense.</h1>
+          <p class="text-lg text-text mb-6">
+            Floaters driving you nuts? Macular degeneration in the family? Eyes feel like sandpaper after screens?
+            We translate the research into plain English—so you can make confident choices.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="#conditions" class="btn btn-primary">Explore Conditions</a>
+            <a href="/guides/when-to-see-doctor" class="btn btn-secondary">When to See a Doctor</a>
+          </div>
+          <p class="mt-4 text-sm text-text-muted">No miracle cures. No fear-mongering. Just science you can actually use.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Conditions Section -->
-  <section id="conditions" class="py-16 md:py-24" aria-labelledby="conditions-heading">
-    <div class="container">
-      <header class="text-center mb-12">
-        <h2 id="conditions-heading" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-          Start with What's Bothering You
-        </h2>
-        <p class="text-lg text-text max-w-2xl mx-auto">
-          Pick the condition that matches your symptoms. Each page has: what it is, what actually works (with evidence),
-          what's a waste of money, and when to call your doctor.
-        </p>
-      </header>
+    <!-- Conditions -->
+    <section id="conditions" class="py-12 md:py-16 bg-cream">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-semibold text-charcoal mb-8">Start with what's bothering you</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="card">
+            <h3 class="text-xl font-semibold text-charcoal mb-2">Floaters & PVD</h3>
+            <p class="text-sm text-text-muted mb-3">Posterior vitreous detachment—the usual suspect</p>
+            <ul class="space-y-2 text-sm text-text mb-4">
+              <li>• Most floaters are benign and fade with time (neuroadaptation)</li>
+              <li>• No drop or supplement reaches the vitreous to dissolve them</li>
+              <li>• YAG laser works for discrete Weiss rings, not diffuse clouds</li>
+              <li class="text-error"><strong>Red flag:</strong> Sudden shower + flashes + curtain = retinal tear (ER now)</li>
+            </ul>
+            <a href="/conditions/floaters" class="btn btn-primary w-full">Learn More</a>
+          </article>
 
-      <div class="grid gap-8 md:grid-cols-3">
-        <!-- Floaters Card -->
-        <article class="card card-bordered group">
-          <div class="flex items-start gap-4 mb-6">
-            <div class="w-10 h-10 md:w-14 md:h-14 bg-blue/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue/20 transition-colors">
-              <svg class="w-5 h-5 md:w-7 md:h-7 text-blue" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10" />
-                <circle cx="12" cy="12" r="3" />
-                <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
-                <circle cx="12" cy="12" r="6" stroke-dasharray="4 4" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-charcoal">Floaters & PVD</h3>
-              <p class="text-warm-gray mt-1">Posterior vitreous detachment—the usual suspect</p>
-            </div>
-          </div>
-          <ul class="space-y-3 text-text mb-6" role="list">
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Most floaters are benign and fade with time (neuroadaptation)</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>No drop or supplement reaches the vitreous to "dissolve" them</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>YAG laser works for <em>discrete</em> Weiss rings (not diffuse clouds)</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-red flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg><strong>Red flag:</strong> Sudden shower + flashes + curtain = retinal tear (ER now)</li>
-          </ul>
-          <a href="/conditions/floaters" class="btn btn-primary w-full" aria-label="Learn more about floaters and PVD">
-            Learn What Works →
-          </a>
-        </article>
+          <article class="card">
+            <h3 class="text-xl font-semibold text-charcoal mb-2">Macular Health (AMD)</h3>
+            <p class="text-sm text-text-muted mb-3">Age-related macular degeneration—early action matters</p>
+            <ul class="space-y-2 text-sm text-text mb-4">
+              <li>• AREDS2 formula only helps intermediate AMD</li>
+              <li>• Does NOT prevent AMD in healthy eyes</li>
+              <li>• Smoking = 2–4× risk. Quitting is the best “supplement”</li>
+              <li class="text-error"><strong>Red flag:</strong> Wavy lines, new blind spot, sudden blur = wet AMD</li>
+            </ul>
+            <a href="/conditions/macular" class="btn btn-primary w-full">Learn More</a>
+          </article>
 
-        <!-- Macular Card -->
-        <article class="card card-bordered group">
-          <div class="flex items-start gap-4 mb-6">
-            <div class="w-10 h-10 md:w-14 md:h-14 bg-green/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green/20 transition-colors">
-              <svg class="w-5 h-5 md:w-7 md:h-7 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M8 12l2 2 4-4" />
-                <circle cx="12" cy="12" r="3" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-charcoal">Macular Health (AMD)</h3>
-              <p class="text-warm-gray mt-1">Age-related macular degeneration—early action matters</p>
-            </div>
-          </div>
-          <ul class="space-y-3 text-text mb-6" role="list">
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>AREDS2 formula <strong>only helps intermediate AMD</strong> (large drusen ≥125µm)</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Does NOT prevent AMD in healthy eyes, does NOT treat wet AMD</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Smoking = 2–4× risk. Quitting is the single best "supplement"</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-red flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg><strong>Red flag:</strong> Wavy lines, new blind spot, sudden blur = wet AMD (urgent)</li>
-          </ul>
-          <a href="/conditions/macular" class="btn btn-primary w-full" aria-label="Learn more about macular health and AMD">
-            Learn What Works →
-          </a>
-        </article>
-
-        <!-- Discomfort Card -->
-        <article class="card card-bordered group">
-          <div class="flex items-start gap-4 mb-6">
-            <div class="w-10 h-10 md:w-14 md:h-14 bg-amber/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-amber/20 transition-colors">
-              <svg class="w-5 h-5 md:w-7 md:h-7 text-amber" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                <path d="M12 12v-4M12 12h4M12 12v4M12 12h-4" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-charcoal">Dry Eye & Discomfort</h3>
-              <p class="text-warm-gray mt-1">Burning, gritty, blurry—especially after screens</p>
-            </div>
-          </div>
-          <ul class="space-y-3 text-text mb-6" role="list">
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>86% is evaporative (MGD)—oil glands clog, tears evaporate too fast</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Trifecta: Lipid tears + Omega-3 rTG (2g+) + Warm compresses 2×/day</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Prescription drops (Restasis, Xiidra, Tyrvaya) if OTC fails 3 months</li>
-            <li class="flex items-start gap-2"><svg class="w-5 h-5 text-red flex-shrink-0 mt-0.5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg><strong>Don't:</strong> Put straight castor oil in eyes (corneal toxicity, infection risk)</li>
-          </ul>
-          <a href="/conditions/discomfort" class="btn btn-primary w-full" aria-label="Learn more about dry eye and discomfort">
-            Learn What Works →
-          </a>
-        </article>
+          <article class="card">
+            <h3 class="text-xl font-semibold text-charcoal mb-2">Dry Eye & Discomfort</h3>
+            <p class="text-sm text-text-muted mb-3">Burning, gritty, blurry—especially after screens</p>
+            <ul class="space-y-2 text-sm text-text mb-4">
+              <li>• 86% is evaporative (MGD)—oil glands clog</li>
+              <li>• Trifecta: Lipid tears + Omega-3 rTG + Warm compresses</li>
+              <li>• Prescription drops if OTC fails 3 months</li>
+              <li class="text-error"><strong>Don't:</strong> Put straight castor oil in eyes</li>
+            </ul>
+            <a href="/conditions/discomfort" class="btn btn-primary w-full">Learn More</a>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Top Picks -->
-  <section class="py-16 md:py-24 bg-warm-white" aria-labelledby="picks-heading">
-    <div class="container">
-      <header class="text-center mb-12">
-        <h2 id="picks-heading" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-          Our Current Top Picks
-        </h2>
-        <p class="text-lg text-text max-w-2xl mx-auto">
-          Products with solid data behind them. We update these quarterly. Prices are approximate.
-        </p>
-      </header>
-
-      <div class="grid gap-8 md:grid-cols-3">
-        <!-- PreserVision -->
-        <article class="card card-bordered">
-          <div class="flex items-start justify-between mb-4">
-            <span class="bg-blue/10 text-blue text-sm px-3 py-1 rounded-full font-medium">Macular</span>
-            <div class="flex items-center gap-1" aria-label="4.7 out of 5 stars">
-              <span class="text-gold">★★★★★</span>
-              <span class="text-warm-gray text-sm">(12.4k)</span>
-            </div>
-          </div>
-          <h3 class="text-xl font-bold text-charcoal mb-2">PreserVision AREDS 2</h3>
-          <p class="text-text mb-4">The exact formula from the NIH study. Softgels absorb better than tablets. No beta-carotene = safe for smokers.</p>
-          <div class="flex items-baseline gap-2 mb-4">
-            <span class="text-2xl font-bold text-charcoal">$28.99</span>
-            <span class="text-warm-gray">/ 60 softgels</span>
-          </div>
-          <ul class="space-y-2 text-sm text-text mb-6" role="list">
-            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Exact AREDS2 doses</li>
-            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Trusted pharma brand</li>
-            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Take with food (zinc nausea)</li>
-          </ul>
-          <a href="https://www.amazon.com/s?k=PreserVision+AREDS+2+softgels" class="btn btn-primary w-full" rel="noopener sponsored" target="_blank" aria-label="View PreserVision AREDS 2 on Amazon (affiliate link)">
-            Check Price on Amazon
-          </a>
-          <p class="text-xs text-warm-gray text-center mt-3">Affiliate link — we may earn a commission</p>
-        </article>
-
-        <!-- Nordic Naturals -->
-        <article class="card card-bordered">
-          <div class="flex items-start justify-between mb-4">
-            <span class="bg-amber/10 text-amber text-sm px-3 py-1 rounded-full font-medium">Discomfort</span>
-            <div class="flex items-center gap-1" aria-label="4.8 out of 5 stars">
-              <span class="text-gold">★★★★★</span>
-              <span class="text-warm-gray text-sm">(15.6k)</span>
-            </div>
-          </div>
-          <h3 class="text-xl font-bold text-charcoal mb-2">Nordic Naturals Ultimate Omega 2X</h3>
-          <p class="text-text mb-4">High-EPA rTG form (70% better absorption than drugstore ethyl ester). IFOS 5-star tested.</p>
-          <div class="flex items-baseline gap-2 mb-4">
-            <span class="text-2xl font-bold text-charcoal">$48.95</span>
-            <span class="text-warm-gray">/ 120 softgels</span>
-          </div>
-          <ul class="space-y-2 text-sm text-text mb-6" role="list">
-            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>rTG form = 70% better absorption</li>
-            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>High EPA:DHA ratio for inflammation</li>
-            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Third-party tested (IFOS 5-star)</li>
-          </ul>
-          <a href="https://www.amazon.com/s?k=Nordic+Naturals+Ultimate+Omega+2X" class="btn btn-primary w-full" rel="noopener sponsored" target="_blank" aria-label="View Nordic Naturals Ultimate Omega 2X on Amazon (affiliate link)">
-            Check Price on Amazon
-          </a>
-          <p class="text-xs text-warm-gray text-center mt-3">Affiliate link — we may earn a commission</p>
-        </article>
-
-        <!-- Systane Complete -->
-        <article class="card card-bordered">
-          <div class="flex items-start justify-between mb-4">
-            <span class="bg-green/10 text-green text-sm px-3 py-1 rounded-full font-medium">Discomfort</span>
-            <div class="flex items-center gap-1" aria-label="4.6 out of 5 stars">
-              <span class="text-gold">★★★★★</span>
-              <span class="text-warm-gray text-sm">(8.7k)</span>
-            </div>
-          </div>
-          <h3 class="text-xl font-bold text-charcoal mb-2">Systane Complete PF</h3>
-          <p class="text-text mb-4">Nano-droplet lipid tech. Preservative-free vials. Alcon trials show improved TBUT for mixed dry eye.</p>
-          <div class="flex items-baseline gap-2 mb-4">
-            <span class="text-2xl font-bold text-charcoal">$24.99</span>
-            <span class="text-warm-gray">/ 30 vials</span>
-          </div>
-          <ul class="space-y-2 text-sm text-text mb-6" role="list">
-            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Nano-lipid spreads evenly</li>
-            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Preservative-free</li>
-            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Alcon = eye care specialists</li>
-          </ul>
-          <a href="https://www.amazon.com/s?k=Systane+Complete+PF+preservative+free" class="btn btn-primary w-full" rel="noopener sponsored" target="_blank" aria-label="View Systane Complete PF on Amazon (affiliate link)">
-            Check Price on Amazon
-          </a>
-          <p class="text-xs text-warm-gray text-center mt-3">Affiliate link — we may earn a commission</p>
-        </article>
+    <!-- CTA -->
+    <section class="py-12 md:py-16 bg-charcoal text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl font-semibold mb-3">Questions? We've got guides.</h2>
+        <p class="text-sm text-gray-300 max-w-2xl mx-auto mb-6">How to read supplement labels. When to worry about that flash. Eye anatomy in plain English.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="/guides/supplement-quality" class="btn btn-secondary">How to Read Labels</a>
+          <a href="/guides/eye-anatomy-basics" class="btn btn-outline">Eye Anatomy 101</a>
+          <a href="/guides/when-to-see-doctor" class="btn btn-accent">When to See a Doctor</a>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer CTA -->
-  <section class="py-16 md:py-24 bg-charcoal text-cream" aria-labelledby="cta-heading">
-    <div class="container text-center">
-      <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-4">
-        Questions? We've Got Guides.
-      </h2>
-      <p class="text-lg text-warm-gray max-w-2xl mx-auto mb-8">
-        How to read supplement labels. When to worry about that flash. Eye anatomy in plain English.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/guides/supplement-quality" class="btn btn-secondary">
-          How to Read Labels
-        </a>
-        <a href="/guides/eye-anatomy-basics" class="btn btn-outline">
-          Eye Anatomy 101
-        </a>
-        <a href="/guides/when-to-see-doctor" class="btn btn-accent">
-          When to See a Doctor
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </BaseLayout>
