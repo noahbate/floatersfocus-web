@@ -73,6 +73,21 @@
         "Anti-VEGF injections for wet AMD (Eylea, Lucentis, Avastin, Vabysmo)",
         "Lifestyle: Mediterranean diet, leafy greens daily, exercise, BP control, UV protection"
       ],
+      "amsler_grid": {
+        "intro": "The Amsler grid is an at-home eye test that can help detect early signs of retinal disease such as AMD. If you already have dry AMD, it helps you catch progression to the wet form at an early, treatable stage — when anti-VEGF injections can still dry up the leaking fluid and save vision.",
+        "how_to_use": [
+          "Hold the grid about 12–14 inches away (book-reading distance), with reading glasses on if you wear them.",
+          "Cover one eye and stare at the black dot in the center of the grid.",
+          "Repeat with the other eye. Test each eye separately — with both eyes open, the good eye can mask changes in the bad one.",
+          "Do this once a week. If lines look wavy, dim, irregular, fuzzy, or a section seems blocked out, schedule an eye exam immediately."
+        ],
+        "what_changes_mean": "An eye without wet AMD usually sees all lines as straight. With wet AMD, fluid accumulates within or under the retina and can form a blister, making straight lines look curved (wavy). Sometimes the fluid interferes with retinal function enough to cause a gray, white, black, or red blind spot in or near the center of the visual field.",
+        "why_it_matters": "The fluid comes from new, leaky blood vessels in the retina. It can often be dried up by treatment with anti-VEGF injections (Beovu, Eylea, Lucentis, Avastin) — but only if caught early. Left untreated for months, wet AMD can scar the retina, causing irreversible vision loss. That is why weekly home monitoring matters.",
+        "baseline_note": "If your doctor tells you the grid looks fine, check it shortly after your exam to establish your personal baseline. Small areas of waviness can exist from large drusen. The warning sign is a new area, an enlarged area, or a new blind spot — that is when you call the retina specialist.",
+        "source_name": "BrightFocus Foundation — Macular Degeneration Research",
+        "source_url": "https://www.brightfocus.org/resource/amsler-grid-eye-test/",
+        "printable_url": "https://www.brightfocus.org/wp-content/uploads/2026/08/Amsler-Grid-Magnet-Aug2026_WCAG.pdf"
+      },
       "what_doesnt_work": [
         "AREDS2 for early AMD or prevention",
         "Beta-carotene (increases lung cancer in smokers)",

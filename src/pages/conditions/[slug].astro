@@ -135,6 +135,92 @@ export async function getStaticPaths() {
     </div>
   </section>
 
+  <!-- Amsler Grid (monitoring section; currently only macular has data) -->
+  {condition.amsler_grid && (
+    <section class="py-12 md:py-16 bg-white border-y border-gray-200" aria-labelledby="amsler-heading">
+      <div class="container">
+        <header class="text-center mb-10">
+          <h2 id="amsler-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-3">
+            The Amsler Grid: Your Weekly Home Test
+          </h2>
+          <p class="text-text max-w-2xl mx-auto">
+            {condition.amsler_grid.intro}
+          </p>
+        </header>
+
+        <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 max-w-4xl mx-auto mb-10">
+          <figure class="text-center">
+            <img
+              src="/images/amsler-grid-normal.png"
+              alt="Normal Amsler grid: straight lines with a black dot in the center"
+              class="w-full max-w-xs mx-auto rounded-lg border border-gray-200"
+              loading="lazy"
+              width="1000"
+              height="1000"
+            />
+            <figcaption class="text-sm text-text mt-3"><strong>Normal</strong> — straight lines, clear center</figcaption>
+          </figure>
+          <figure class="text-center">
+            <img
+              src="/images/amsler-grid-wavy.png"
+              alt="Amsler grid as it may appear with wet AMD: lines appear wavy and bent near the center"
+              class="w-full max-w-xs mx-auto rounded-lg border border-gray-200"
+              loading="lazy"
+              width="1000"
+              height="1000"
+            />
+            <figcaption class="text-sm text-text mt-3"><strong>Wavy lines</strong> — fluid blister under the retina bends straight lines</figcaption>
+          </figure>
+          <figure class="text-center">
+            <img
+              src="/images/amsler-grid-scotoma.png"
+              alt="Amsler grid as it may appear with wet AMD: a gray blurred region obscures part of the grid"
+              class="w-full max-w-xs mx-auto rounded-lg border border-gray-200"
+              loading="lazy"
+              width="1000"
+              height="1000"
+            />
+            <figcaption class="text-sm text-text mt-3"><strong>Gray area</strong> — a blind spot (scotoma) blocks part of the grid</figcaption>
+          </figure>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+          <article class="card card-bordered">
+            <h3 class="text-xl font-bold text-charcoal mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-blue flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              How to Use It
+            </h3>
+            <ol class="space-y-2 text-text list-decimal pl-5" role="list">
+              {condition.amsler_grid.how_to_use.map(step => (
+                <li class="leading-relaxed">{step}</li>
+              ))}
+            </ol>
+            <div class="mt-4">
+              <a href={condition.amsler_grid.printable_url} target="_blank" rel="noopener" class="btn btn-primary">
+                Download the Free Printable Amsler Grid (PDF)
+              </a>
+            </div>
+          </article>
+
+          <article class="card card-bordered">
+            <h3 class="text-xl font-bold text-charcoal mb-3">What the Changes Mean</h3>
+            <p class="text-text leading-relaxed">{condition.amsler_grid.what_changes_mean}</p>
+          </article>
+
+          <article class="card card-bordered">
+            <h3 class="text-xl font-bold text-charcoal mb-3">Why Weekly Monitoring Matters</h3>
+            <p class="text-text leading-relaxed mb-4">{condition.amsler_grid.why_it_matters}</p>
+            <p class="text-text leading-relaxed bg-cream border border-border rounded-lg p-4">{condition.amsler_grid.baseline_note}</p>
+          </article>
+
+          <p class="text-xs text-warm-gray">
+            Source: <a href={condition.amsler_grid.source_url} target="_blank" rel="noopener" class="text-primary hover:underline">{condition.amsler_grid.source_name}</a>. This test does not replace regular eye exams.
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- Product Recommendations -->
   {products && products.length > 0 && (
     <section class="py-12 md:py-16" aria-labelledby="products-heading">
