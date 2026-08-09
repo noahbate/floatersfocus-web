@@ -6,6 +6,7 @@
       "category": "supplement",
       "condition_ids": ["macular"],
       "evidence": "The exact vitamin/mineral formula from the NIH AREDS2 trial. Softgels absorb better than tablets. No beta-carotene, so safe for smokers.",
+      "evidence_url": "https://doi.org/10.1001/jama.2013.4997",
       "price_usd": 28.99,
       "servings_per_container": 60,
       "serving_size": "2 softgels",
@@ -36,6 +37,7 @@
       "category": "omega-3",
       "condition_ids": ["discomfort", "macular"],
       "evidence": "High-EPA re-esterified triglyceride (rTG) form — ~70% better absorption than drugstore ethyl ester. IFOS 5-star third-party tested. Matches the ≥2g EPA+DHA dry-eye dose.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/26075346",
       "price_usd": 48.95,
       "servings_per_container": 60,
       "serving_size": "2 softgels",
@@ -65,6 +67,7 @@
       "category": "artificial-tear",
       "condition_ids": ["discomfort"],
       "evidence": "Nano-droplet lipid technology that spreads evenly over the tear film. Preservative-free single-use vials. Alcon trials show improved tear breakup time (TBUT) for mixed dry eye.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/31907088",
       "price_usd": 24.99,
       "servings_per_container": 30,
       "serving_size": "1 vial",
@@ -94,6 +97,7 @@
       "category": "artificial-tear",
       "condition_ids": ["discomfort"],
       "evidence": "Lipid-enhanced artificial tear with flaxseed oil (omega-3) to stabilize the tear film. Good daytime option alongside warm compresses for evaporative dry eye (MGD).",
+      "evidence_url": "https://doi.org/10.1016/j.jtos.2020.01.004",
       "price_usd": 19.99,
       "servings_per_container": 30,
       "serving_size": "1 vial",
@@ -115,6 +119,131 @@
       ],
       "affiliate_urls": {
         "amazon": "https://www.amazon.com/s?k=Refresh+Mega-3+Advanced+preservative+free"
+      }
+    },
+    {
+      "id": "vitrocap-n",
+      "name": "VitroCap N",
+      "category": "supplement",
+      "condition_ids": ["floaters"],
+      "evidence": "Ankamah et al., TVST 2021;10(12):19. Double-blind RCT in symptomatic floaters: P<0.001 reduction in discomfort and objective opacity area; contrast sensitivity P=0.047.",
+      "evidence_url": "https://doi.org/10.1167/tvst.10.12.19",
+      "price_usd": 49.90,
+      "servings_per_container": 90,
+      "serving_size": "1 capsule",
+      "rating_avg": 4.2,
+      "review_count": 210,
+      "key_ingredients": {
+        "L-lysine": "125 mg",
+        "Vitamin C": "40 mg",
+        "Vitis vinifera extract": "26.3 mg",
+        "Zinc": "5 mg",
+        "Citrus aurantium extract": "100 mg"
+      },
+      "pros": [
+        "Closest match to study protocol",
+        "Double-blind RCT data",
+        "Objective opacity reduction outcome"
+      ],
+      "cons": [
+        "Small trial",
+        "Not FDA-approved for floaters",
+        "Single-center study"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/s?k=vitrocap+n+eye+supplement",
+        "direct": "https://www.ebiga-vision.com/vitrocap-n"
+      }
+    },
+    {
+      "id": "bromelain-papain-ficin-blend",
+      "name": "Bromelain + Papain + Ficin Enzyme Blend",
+      "category": "supplement",
+      "condition_ids": ["floaters"],
+      "evidence": "Takeuchi et al., Appl Sci 2020;10(17):5901. Prospective cohort, n=280, 3 months: 65.5–75.5% symptomatic vitreous opacity reduction vs placebo.",
+      "evidence_url": "https://doi.org/10.3390/app10175901",
+      "price_usd": 24.95,
+      "servings_per_container": 90,
+      "serving_size": "1 capsule",
+      "rating_avg": 4.0,
+      "review_count": 140,
+      "key_ingredients": {
+        "Bromelain": "190 mg",
+        "Papain": "95 mg",
+        "Ficin": "95 mg"
+      },
+      "pros": [
+        "Matches study dosing",
+        "Largest human cohort in this space",
+        "Dose-dependent response"
+      ],
+      "cons": [
+        "No exact branded product match",
+        "Ficin is rare in commercial blends",
+        "Open-label design"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/s?k=bromelain+papain+ficin",
+        "verified": "https://www.amazon.com/Natures-Life-Bromelain-Papain-Capsules/dp/B00020IG8G"
+      }
+    },
+    {
+      "id": "curcumin-bioavailable",
+      "name": "Curcumin + Piperine Bioavailable Supplement",
+      "category": "supplement",
+      "condition_ids": ["floaters"],
+      "evidence": "Malandrini et al., Vision 2025. Pilot study: curcumin-based supplement after Nd:YAG capsulotomy reduced symptomatic floaters and foreign-body sensation.",
+      "evidence_url": "https://doi.org/10.3390/vision9040098",
+      "price_usd": 19.99,
+      "servings_per_container": 90,
+      "serving_size": "1 capsule",
+      "rating_avg": 4.4,
+      "review_count": 980,
+      "key_ingredients": {
+        "Curcumin": "1500 mg",
+        "Piperine": "5 mg"
+      },
+      "pros": [
+        "Widely available",
+        "Bioavailable form",
+        "Pilot data in post-YAG population"
+      ],
+      "cons": [
+        "Pilot study only",
+        "Post-procedure population only",
+        "Not proven for de novo floaters"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/s?k=curcumin+piperine+bioavailable+supplement",
+        "naturewise": "https://www.amazon.com/NatureWise-Curcumin-Curcuminoids-BioPerine-Absorption/dp/B01BMDAVB6"
+      }
+    },
+    {
+      "id": "atropine-compounded-drops",
+      "name": "Compounded Atropine 0.01% Drops",
+      "category": "supplement",
+      "condition_ids": ["floaters"],
+      "evidence": "Du J, Sabbagh O, Do BK, et al. J Vitreoretin Dis 2025;9(6):831-835. Prospective cohort, n=44, 1 week: 59% satisfaction among completers; pupillary dilation is proposed mechanism.",
+      "evidence_url": "https://doi.org/10.1177/24741264251364819",
+      "price_usd": 29.99,
+      "servings_per_container": 30,
+      "serving_size": "1 drop",
+      "rating_avg": 3.9,
+      "review_count": 45,
+      "key_ingredients": {
+        "Atropine sulfate": "0.01%"
+      },
+      "pros": [
+        "Low concentration profile",
+        "Symptomatic relief pathway"
+      ],
+      "cons": [
+        "Off-label use",
+        "Short study duration",
+        "Requires compounding pharmacy"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/s?k=atropine+0.01%25+drops"
       }
     }
   ]

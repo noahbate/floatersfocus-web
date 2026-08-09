@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<BaseLayout title="Supplement Quality Guide — Floaters Focus" description="How to read supplement labels, spot fillers, verify forms (rTG vs ethyl ester), and check doses match clinical studies.">
+<BaseLayout title="Supplement Quality Guide — Floaters Focus" description="How to read supplement labels, spot fillers, verify forms (rTG vs ethyl ester), and check doses match clinical studies." publishedDate="2026-08-08" lastReviewed="2026-08-08">
   <Header currentPath="/guides" slot="header" />
   <Footer slot="footer" />
 
@@ -35,11 +35,11 @@ import Footer from '../../components/Footer.astro';
             Flip the bottle. Look at the <strong>Supplement Facts</strong> panel. If you see any of these red flags, put it back:
           </p>
           <ul class="space-y-3 list-disc list-inside text-text" role="list">
-            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>Proprietary blend</strong> — hides individual doses. You have no idea if you're getting a therapeutic amount.</li>
-            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>"Fish oil concentrate" without "rTG" or "re-esterified triglyceride"</strong> — almost certainly ethyl ester (poor absorption).</li>
-            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>Beta-carotene</strong> in an eye formula — increases lung cancer risk in smokers and recent quitters.</li>
-            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>Zinc >40 mg</strong> without copper — causes copper deficiency anemia over time.</li>
-            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0">✗</span> <strong>No third-party testing seal</strong> (NSF, USP, IFOS, ConsumerLab) — you're trusting the manufacturer's word.</li>
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0 mt-1">✗</span><div class="min-w-0"><strong>Proprietary blend</strong> — hides individual doses. You have no idea if you're getting a therapeutic amount.</div></li>
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0 mt-1">✗</span><div class="min-w-0"><strong>"Fish oil concentrate" without "rTG" or "re-esterified triglyceride"</strong> — almost certainly ethyl ester (poor absorption).</div></li>
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0 mt-1">✗</span><div class="min-w-0"><strong>Beta-carotene</strong> in an eye formula — increases lung cancer risk in smokers and recent quitters.</div></li>
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0 mt-1">✗</span><div class="min-w-0"><strong>Zinc &gt;40 mg</strong> without copper — causes copper deficiency anemia over time.</div></li>
+            <li class="flex items-start gap-3"><span class="text-red flex-shrink-0 mt-1">✗</span><div class="min-w-0"><strong>No third-party testing seal</strong> (NSF, USP, IFOS, ConsumerLab) — you're trusting the manufacturer's word.</div></li>
           </ul>
         </section>
 

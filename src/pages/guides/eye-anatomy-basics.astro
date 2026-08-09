@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<BaseLayout title="Eye Anatomy 101 — Floaters Focus" description="A friendly tour of the eye parts that matter for floaters, macular degeneration, and dry eye. No medical degree required.">
+<BaseLayout title="Eye Anatomy 101 — Floaters Focus" description="A friendly tour of the eye parts that matter for floaters, macular degeneration, and dry eye. No medical degree required." publishedDate="2026-08-08" lastReviewed="2026-08-08">
   <Header currentPath="/guides" slot="header" />
   <Footer slot="footer" />
 
@@ -199,37 +199,13 @@ import Footer from '../../components/Footer.astro';
         <!-- Summary -->
         <section class="bg-charcoal text-cream rounded-2xl p-8 md:p-12">
           <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">The Cheat Sheet</h2>
-          <div class="grid gap-6 md:grid-cols-3 text-center">
-            <div>
-              <div class="text-4xl mb-3">💧</div>
-              <h3 class="font-bold text-lg mb-2">Vitreous</h3>
-              <p class="text-warm-gray">Floaters live here. No drops reach it. Time or surgery only fixes.</p>
-            </div>
-            <div>
-              <div class="text-4xl mb-3">🎯</div>
-              <h3 class="font-bold text-lg mb-2">Macula</h3>
-              <p class="text-warm-gray">Central vision HQ. AREDS2 helps intermediate AMD. Wet AMD = injections.</p>
-            </div>
-            <div>
-              <div class="text-4xl mb-3">🛢️</div>
-              <h3 class="font-bold text-lg mb-2">Meibomian Glands</h3>
-              <p class="text-warm-gray">Oil factories in lids. MGD = 86% of dry eye. Heat + lipids + omega-3.</p>
-            </div>
-            <div>
-              <div class="text-4xl mb-3">🔍</div>
-              <h3 class="font-bold text-lg mb-2">Lens</h3>
-              <p class="text-warm-gray">Focuses light. Stiffens with age (presbyopia). Clouds (cataract) = surgery.</p>
-            </div>
-            <div>
-              <div class="text-4xl mb-3">🎨</div>
-              <h3 class="font-bold text-lg mb-2">Retina/RPE/Choroid</h3>
-              <p class="text-warm-gray">Sensor + support + fuel line. RPE fails first in AMD.</p>
-            </div>
-            <div>
-              <div class="text-4xl mb-3">👁️</div>
-              <h3 class="font-bold text-lg mb-2">Cornea</h3>
-              <p class="text-warm-gray">Clear front window. First refractive surface. Needs tears to stay smooth.</p>
-            </div>
+          <div class="max-w-2xl mx-auto space-y-3 text-warm-gray text-center">
+            <p><strong class="text-cream">Vitreous</strong> — Floaters live here. No drops reach it.</p>
+            <p><strong class="text-cream">Macula</strong> — Central vision HQ. AREDS2 helps intermediate AMD.</p>
+            <p><strong class="text-cream">Meibomian glands</strong> — Oil factories in the lids. MGD = most dry eye.</p>
+            <p><strong class="text-cream">Lens</strong> — Focuses light. Stiffens with age. Clouds → cataract surgery.</p>
+            <p><strong class="text-cream">Retina / RPE / Choroid</strong> — Sensor + support + fuel line. RPE fails first in AMD.</p>
+            <p><strong class="text-cream">Cornea</strong> — Clear front window. Needs tears to stay smooth.</p>
           </div>
         </section>
       </article>

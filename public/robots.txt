@@ -1,0 +1,12 @@
+---
+allow:
+  - OAI-SearchBot
+  - ChatGPT-User
+  - Claude-SearchBot
+  - Claude-User
+  - PerplexityBot
+  - Google-Extended
+disallow:
+  - /search?
+  - /?utm_
+sitemap: https://floatersfocus.org/sitemap.xml

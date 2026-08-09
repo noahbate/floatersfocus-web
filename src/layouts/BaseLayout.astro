@@ -4,11 +4,40 @@ interface Props {
   title: string;
   description?: string;
   canonicalURL?: string;
+  publishedDate?: string;
+  lastReviewed?: string;
+  authorName?: string;
 }
-const { title, description, canonicalURL } = Astro.props;
+const {
+  title,
+  description,
+  canonicalURL,
+  publishedDate,
+  lastReviewed,
+  authorName = "NP Bate, Ed.S."
+} = Astro.props;
 const siteTitle = "Floaters Focus";
 const fullTitle = `${title} | ${siteTitle}`;
 const defaultDescription = "Friendly, evidence-backed guidance for floaters, macular health, and eye discomfort. No medical jargon, no miracle cures—just real options that work.";
+const effectiveReviewed = lastReviewed || publishedDate || new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": fullTitle,
+  "description": description || defaultDescription,
+  "url": canonicalURL || "https://floatersfocus.org",
+  "author": {
+    "@type": "Person",
+    "name": authorName
+  },
+  ...(lastReviewed ? { dateReviewed: lastReviewed } : {}),
+  ...(publishedDate ? { datePublished: publishedDate } : {}),
+  "publisher": {
+    "@type": "Organization",
+    "name": "Floaters Focus",
+    "url": "https://floatersfocus.org"
+  }
+});
 ---
 
 <!doctype html>
@@ -16,21 +45,43 @@ const defaultDescription = "Friendly, evidence-backed guidance for floaters, mac
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
     <meta name="description" content={description || defaultDescription} />
     <link rel="canonical" href={canonicalURL || "https://floatersfocus.org"} />
     <title>{fullTitle}</title>
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description || defaultDescription} />
     <meta property="og:type" content="website" />
+    <meta name="author" content={authorName} />
+    {lastReviewed && <meta name="dateReviewed" content={lastReviewed} />}
+    {publishedDate && <meta name="datePublished" content={publishedDate} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description || defaultDescription} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={jsonLd} />
   </head>
   <body class="min-h-screen flex flex-col">
     <a href="#main-content" class="skip-link">Skip to main content</a>
+    <script is:inline>
+      (function() {
+        const key = 'floatersfocus-theme';
+        const stored = localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored === 'dark' || stored === 'light' ? stored : prefersDark ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem(key, theme);
+      })();
+    </script>
+    <div class="border-b border-gray-200 bg-white">
+      <div class="container mx-auto px-4 py-2 text-xs text-warm-gray">
+        <span>Author: {authorName}</span>
+        <span class="mx-2">•</span>
+        <span>Last reviewed: {effectiveReviewed}</span>
+      </div>
+    </div>
     <slot name="header" />
     <main id="main-content" class="flex-1">
       <slot />

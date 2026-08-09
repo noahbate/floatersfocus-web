@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="About Floaters Focus" description="Who we are, our mission, and our commitment to evidence-based eye health information.">
+<BaseLayout title="About Floaters Focus" description="Who we are, our mission, and our commitment to evidence-based eye health information." publishedDate="2026-08-08" lastReviewed="2026-08-08">
   <Header currentPath="/about" slot="header" />
   <Footer slot="footer" />
 
@@ -15,19 +15,31 @@ import Footer from '../components/Footer.astro';
           About Floaters Focus
         </h1>
         <p class="text-lg text-text leading-relaxed">
-          We built this because we were frustrated. Every time we had an eye question, the options were:
-          medical journal articles written for PhDs, or TikTok videos claiming castor oil cures glaucoma.
-          Nothing in between.
+          I built this because it didn't exist when I first experienced a PVD and retinal tear.
+          Six years later I had the second PVD. Both before age 55. I was definitely the youngest one in the waiting room.
+        </p>
+        <p class="text-lg text-text leading-relaxed mt-4">
+          But as we age, almost all of us will eventually experience this.
+          Be well informed and you can make some minor improvements. Every little bit helps give us back the sight we lost.
+        </p>
+        <p class="text-lg text-text leading-relaxed mt-4">
+          When you buy a data-backed product through our site, it helps us cover the costs to spread the word.
         </p>
       </header>
 
       <article class="prose prose-lg prose-charcoal max-w-none space-y-10">
         <section>
-          <h2 class="text-2xl font-bold text-charcoal mb-4">Our Mission</h2>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Why I Built This</h2>
           <p class="text-text leading-relaxed">
-            Translate peer-reviewed ophthalmology research into plain English so you can make confident,
-            affordable choices for your eyes.
+            I've been through posterior vitreous detachment twice, and I've sat in the waiting room
+            wondering whether what I was reading online was true or just another TikTok cure.
+            Floaters Focus is the bridge I wish I'd had: plain-English explanations backed by actual studies,
+            not hype.
           </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">What You'll Find Here</h2>
           <p class="text-text leading-relaxed">
             No miracle cures. No fear-mongering. No "one weird trick." Just:
           </p>
@@ -40,9 +52,9 @@ import Footer from '../components/Footer.astro';
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-charcoal mb-4">Our Evidence Standards</h2>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Evidence Standards</h2>
           <p class="text-text leading-relaxed mb-4">
-            We grade every claim using a simple hierarchy:
+            I grade every claim using a simple hierarchy:
           </p>
           <div class="grid gap-4 md:grid-cols-3">
             <div class="card card-bordered p-6 text-center">
@@ -59,7 +71,7 @@ import Footer from '../components/Footer.astro';
             </div>
           </div>
           <p class="text-text leading-relaxed mt-6">
-            We cite the actual studies (PMID, DOI) so you can verify. If we say "study shows,"
+            I cite the actual studies (PMID, DOI) so you can verify. If I say "study shows,"
             you can click through and read the abstract yourself.
           </p>
         </section>
@@ -67,11 +79,11 @@ import Footer from '../components/Footer.astro';
         <section>
           <h2 class="text-2xl font-bold text-charcoal mb-4">Affiliate Links — How We Stay Free</h2>
           <p class="text-text leading-relaxed mb-4">
-            When we recommend a product, we link to retailers (Amazon, Walmart, brand sites) using
-            affiliate tracking. If you buy through our link, we earn a small commission—<strong>at no extra cost to you.</strong>
+            When I recommend a product, I link to retailers (Amazon, Walmart, brand sites) using
+            affiliate tracking. If you buy through our link, I earn a small commission—<strong>at no extra cost to you.</strong>
           </p>
           <p class="text-text leading-relaxed mb-4">
-            This does <strong>not</strong> influence which products we recommend. Our process:
+            This does <strong>not</strong> influence which products I recommend. My process:
           </p>
           <ol class="list-decimal list-inside space-y-3 text-text" role="list">
             <li>Identify the evidence-based treatment for a condition</li>
@@ -80,8 +92,8 @@ import Footer from '../components/Footer.astro';
             <li>Add affiliate links for the ones that pass</li>
           </ol>
           <p class="text-text leading-relaxed mt-4">
-            If a better product comes along, we swap it. If a product is discontinued or reformulated,
-            we remove it. Our quarterly audit keeps things current.
+            If a better product comes along, I swap it. If a product is discontinued or reformulated,
+            I remove it. My quarterly audit keeps things current.
           </p>
         </section>
 
@@ -92,7 +104,7 @@ import Footer from '../components/Footer.astro';
               <strong>This website is for informational purposes only and does not constitute medical advice.</strong>
             </p>
             <p class="text-text leading-relaxed mb-3">
-              We are not doctors. We are not your doctors. Nothing on this site creates a doctor-patient relationship.
+              I am not a doctor. I am not your doctor. Nothing on this site creates a doctor-patient relationship.
               The information here is based on published research and major society guidelines, but it cannot replace
               a personalized examination by a licensed eye care professional.
             </p>
@@ -107,18 +119,18 @@ import Footer from '../components/Footer.astro';
         <section>
           <h2 class="text-2xl font-bold text-charcoal mb-4">Who's Behind This</h2>
           <p class="text-text leading-relaxed">
-            A small team of people who've dealt with floaters, dry eye, and family AMD ourselves.
-            We got tired of the gap between "here's a PubMed link" and "here's what to buy at Target."
-            So we built the bridge.
+            This site is built and maintained by <strong>NP Bate, Ed.S.</strong>
+            I'm not an ophthalmologist; I'm someone who's been through PVD and retinal tear,
+            and who spent years translating the research for myself because it wasn't available in one place.
           </p>
           <p class="text-text leading-relaxed mt-4">
-            Questions? Corrections? Study we missed? <a href="mailto:hello@floatersfocus.org" class="text-primary hover:underline">Email us</a>.
-            We read everything.
+            Questions? Corrections? Study I missed? <a href="mailto:hello@floatersfocus.org" class="text-primary hover:underline">Email me</a>.
+            I read everything.
           </p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-charcoal mb-4">Sources We Trust</h2>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Sources I Trust</h2>
           <ul class="space-y-2 text-text" role="list">
             <li><strong>American Academy of Ophthalmology (AAO)</strong> — Preferred Practice Patterns, EyeSmart</li>
             <li><strong>TFOS DEWS II / MGD Workshop</strong> — Dry eye & MGD global consensus</li>
@@ -131,4 +143,5 @@ import Footer from '../components/Footer.astro';
       </article>
     </div>
   </section>
+
 </BaseLayout>

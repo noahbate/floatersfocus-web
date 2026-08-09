@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Citations & Studies — Floaters Focus" description="The research behind our evidence-backed guidance: DOIs, PubMed IDs, and key trials for floaters, macular health, dry eye, and supplements." publishedDate="2026-08-08" lastReviewed="2026-08-08">
+  <Header currentPath="/citations" slot="header" />
+  <Footer slot="footer" />
+
+  <section class="py-12 md:py-20" aria-labelledby="citations-title">
+    <div class="container max-w-3xl">
+      <header class="mb-12">
+        <h1 id="citations-title" class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          Citations & Studies
+        </h1>
+        <p class="text-lg text-text leading-relaxed">
+          We link to the actual studies so you can verify. If we say "study shows," you can click through and read the abstract yourself.
+        </p>
+      </header>
+
+      <article class="prose prose-lg prose-charcoal max-w-none space-y-10">
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Macular Health / AMD</h2>
+          <ul class="space-y-2 text-text" role="list">
+            <li>Age-Related Eye Disease Study 2 (AREDS2) Research Group. <em>JAMA</em> 2013;309(19):2005-2015. doi: <a href="https://doi.org/10.1001/jama.2013.4997" target="_blank" rel="noopener">10.1001/jama.2013.4997</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Dry Eye</h2>
+          <ul class="space-y-2 text-text" role="list">
+            <li>PubMed 31907088 — referenced for lipid-containing artificial tears efficacy.</li>
+            <li>Gomes JA, et al. <em>J Ocul Ther Surg</em> 2020. doi: <a href="https://doi.org/10.1016/j.jtos.2020.01.004" target="_blank" rel="noopener">10.1016/j.jtos.2020.01.004</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Floater Supplements</h2>
+          <ul class="space-y-2 text-text" role="list">
+            <li>Ankamah E, Green-Gomez M, Roche W, et al. <em>TVST</em> 2021;10(12):19. doi: <a href="https://doi.org/10.1167/tvst.10.12.19" target="_blank" rel="noopener">10.1167/tvst.10.12.19</a></li>
+            <li>Takeuchi M, Shieh P-C, Horng C-T. <em>Appl Sci</em> 2020;10(17):5901. doi: <a href="https://doi.org/10.3390/app10175901" target="_blank" rel="noopener">10.3390/app10175901</a></li>
+            <li>Hammer M, Muuss M, Schickhardt S, et al. <em>IOVS</em> 2024;65(3):36. doi: <a href="https://doi.org/10.1167/iovs.65.3.36" target="_blank" rel="noopener">10.1167/iovs.65.3.36</a></li>
+            <li>Malandrini D, et al. <em>Vision</em> 2025;9(4):98. doi: <a href="https://doi.org/10.3390/vision9040098" target="_blank" rel="noopener">10.3390/vision9040098</a></li>
+            <li>Du J, Sabbagh O, Do BK, et al. <em>J Vitreoretin Dis</em> 2025;9(6):831-835. doi: <a href="https://doi.org/10.1177/24741264251364819" target="_blank" rel="noopener">10.1177/24741264251364819</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">Treatments We're Watching</h2>
+          <ul class="space-y-2 text-text" role="list">
+            <li>Falsini B, et al. <em>Invest Ophthalmol Vis Sci</em> 2010;51(12):6118-6124. doi: <a href="https://doi.org/10.1167/iovs.09-4995" target="_blank" rel="noopener">10.1167/iovs.09-4995</a></li>
+            <li>Piccardi M, et al. <em>Evid Based Complement Alternat Med</em> 2012;2012:429124. doi: <a href="https://doi.org/10.1155/2012/429124" target="_blank" rel="noopener">10.1155/2012/429124</a></li>
+            <li>Broadhead GK, et al. <em>BMJ Open Ophthalmol</em> 2024;9(1):e001399. doi: <a href="https://doi.org/10.1136/bmjophth-2023-001399" target="_blank" rel="noopener">10.1136/bmjophth-2023-001399</a></li>
+            <li>Evans JR. <em>Cochrane Database Syst Rev</em> 2013. doi: <a href="https://doi.org/10.1002/14651858.CD001775.pub2" target="_blank" rel="noopener">10.1002/14651858.CD001775.pub2</a></li>
+            <li>Giannaccare G, et al. <em>Mar Drugs</em> 2020;18(5):239. doi: <a href="https://doi.org/10.3390/md18050239" target="_blank" rel="noopener">10.3390/md18050239</a></li>
+            <li>Canter PH, Ernst E. <em>Surv Ophthalmol</em> 2004;49(1):38-50. doi: <a href="https://doi.org/10.1016/j.survophthal.2003.10.006" target="_blank" rel="noopener">10.1016/j.survophthal.2003.10.006</a></li>
+            <li>García-Bardera J, et al. <em>Front Ophthalmol</em> 2026. doi: <a href="https://doi.org/10.3389/fopht.2026.1812914" target="_blank" rel="noopener">10.3389/fopht.2026.1812914</a></li>
+            <li>Prinz J, et al. <em>Pharmaceuticals</em> 2023;16(5):762. doi: <a href="https://doi.org/10.3390/ph16050762" target="_blank" rel="noopener">10.3390/ph16050762</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-charcoal mb-4">How We Monitor for Updates</h2>
+          <p class="text-text leading-relaxed">
+            We run a weekly check for citation updates, corrections, and new research related to the studies above.
+            If a link moves, a DOI is corrected, or a key paper is superseded, we update this page and note the change.
+          </p>
+        </section>
+      </article>
+    </div>
+  </section>
+
+</BaseLayout>

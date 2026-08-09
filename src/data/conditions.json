@@ -7,7 +7,7 @@
       "slug": "floaters",
       "key_points": [
         "Most floaters are benign and fade with time (your brain learns to ignore them)",
-        "No drop or supplement reaches the vitreous to 'dissolve' them—the vitreous has no blood supply",
+        "No drop or supplement reliably dissolves floaters, but some oral formulations show modest symptomatic benefit",
         "YAG laser works for discrete Weiss rings (single large ring), not diffuse clouds",
         "Sudden shower + flashes + curtain = retinal tear (go to ER immediately)"
       ],
@@ -16,11 +16,38 @@
         "YAG laser vitreolysis for discrete Weiss ring >6 months post-PVD",
         "Pars plana vitrectomy for severe, refractory cases (cataract risk ~90%)"
       ],
+      "adjunctive_supplements": [
+        {
+          "name": "VitroCap N",
+          "protocol": "L-lysine 125 mg, Vit C 40 mg, Vitis vinifera extract 26.3 mg, zinc 5 mg, Citrus aurantium 100 mg",
+          "evidence": "Double-blind RCT (n=61, 6 months): P<0.001 reduction in subjective discomfort and objective opacity area; contrast sensitivity P=0.047.",
+          "commercial_match": "VitroCap N supplement"
+        },
+        {
+          "name": "Proteolytic enzyme mix",
+          "protocol": "190 mg bromelain + 95 mg papain + 95 mg ficin per capsule, 1–3 capsules/day",
+          "evidence": "Prospective cohort (n=280, 3 months): 65.5–75.5% SVO reduction vs placebo; dose-dependent response.",
+          "commercial_match": "Closest option: enteric-coated bromelain 190 mg + papain 95 mg with ficin if available"
+        },
+        {
+          "name": "Curcumin-based supplement (post-YAG)",
+          "protocol": "Curcumin-based formulation after Nd:YAG capsulotomy",
+          "evidence": "Pilot study (Malandrini et al., 2025): Significant reduction in symptomatic vitreous floaters and foreign-body sensation; improved visual quality.",
+          "commercial_match": "Curcumin supplement with piperine/bioenhancers"
+        },
+        {
+          "name": "Low-dose atropine 0.01% drops",
+          "protocol": "1 drop/day, off-label",
+          "evidence": "Small prospective cohort (n=44, ASRS 2025 pilot): 59% satisfaction after 1 week; pupillary dilation may reduce floater salience.",
+          "commercial_match": "Compounded 0.01% atropine drops"
+        }
+      ],
+      "adjunctive_notes": "These are low-risk oral/topical options with early human data. They are investigational, not FDA-approved for floaters, and should be considered adjuncts rather than replacements for observation or procedural treatment.",
       "what_doesnt_work": [
         "Castor oil drops (cannot reach vitreous; corneal toxicity risk)",
-        "Floater supplements (no vitreous bioavailability)",
+        "Generic 'floater' supplements without specific formulation data",
         "Eye exercises / Bates method (cannot change axial length)",
-        "Collagen or hyaluronic acid supplements"
+        "Collagen or hyaluronic acid supplements for floater reduction"
       ],
       "red_flags": [
         "Sudden onset of many new floaters (like a shaken snow globe)",
@@ -49,7 +76,7 @@
       "what_doesnt_work": [
         "AREDS2 for early AMD or prevention",
         "Beta-carotene (increases lung cancer in smokers)",
-        "Bilberry, saffron, astaxanthin for AMD (insufficient evidence)",
+        "Bilberry, saffron, astaxanthin for AMD (insufficient evidence — see our Treatments We're Watching guide)",
         "Stem cell clinics / unproven 'vision restoration' therapies"
       ],
       "red_flags": [

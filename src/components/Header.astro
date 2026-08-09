@@ -11,6 +11,8 @@ const navItems = [
   { href: '/conditions/discomfort', label: 'Eye Discomfort' },
   { href: '/guides', label: 'Guides' },
   { href: '/about', label: 'About' },
+  { href: '/citations', label: 'Citations' },
+  { href: '/contact', label: 'Contact' },
 ];
 ---
 
@@ -26,19 +28,37 @@ const navItems = [
         <span class="font-semibold text-lg text-charcoal">Floaters Focus</span>
       </a>
 
-      <button
-        id="mobile-menu-button"
-        type="button"
-        class="md:hidden p-2 -mr-2 text-charcoal hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        aria-label="Toggle navigation menu"
-      >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      <div class="flex items-center gap-1">
+        <button
+          id="theme-toggle"
+          type="button"
+          class="p-2 -mr-2 text-charcoal hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg id="theme-icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="md:hidden p-2 -mr-2 text-charcoal hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
 
       <ul
         id="mobile-menu"
@@ -80,21 +100,51 @@ const navItems = [
   </nav>
 
   <script is:inline>
-    const button = document.getElementById('mobile-menu-button');
-    const panel = document.getElementById('mobile-menu-panel');
-    const openIcon = document.getElementById('menu-icon-open');
-    const closeIcon = document.getElementById('menu-icon-close');
+    (function() {
+      const button = document.getElementById('mobile-menu-button');
+      const panel = document.getElementById('mobile-menu-panel');
+      const openIcon = document.getElementById('menu-icon-open');
+      const closeIcon = document.getElementById('menu-icon-close');
 
-    if (button && panel) {
-      button.addEventListener('click', () => {
-        const isOpen = !panel.classList.contains('hidden');
-        panel.classList.toggle('hidden');
-        button.setAttribute('aria-expanded', String(!isOpen));
-        if (openIcon && closeIcon) {
-          openIcon.classList.toggle('hidden');
-          closeIcon.classList.toggle('hidden');
+      if (button && panel) {
+        button.addEventListener('click', () => {
+          const isOpen = !panel.classList.contains('hidden');
+          panel.classList.toggle('hidden');
+          button.setAttribute('aria-expanded', String(!isOpen));
+          if (openIcon && closeIcon) {
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+          }
+        });
+      }
+
+      const themeButton = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-icon-sun');
+      const moonIcon = document.getElementById('theme-icon-moon');
+      const themeKey = 'floatersfocus-theme';
+
+      const updateThemeUI = (theme) => {
+        if (!sunIcon || !moonIcon) return;
+        if (theme === 'dark') {
+          sunIcon.classList.remove('hidden');
+          moonIcon.classList.add('hidden');
+        } else {
+          sunIcon.classList.add('hidden');
+          moonIcon.classList.remove('hidden');
         }
-      });
-    }
+      };
+
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      updateThemeUI(current);
+
+      if (themeButton) {
+        themeButton.addEventListener('click', () => {
+          const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem(themeKey, next);
+          updateThemeUI(next);
+        });
+      }
+    })();
   </script>
 </header>

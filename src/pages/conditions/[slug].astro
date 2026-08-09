@@ -12,6 +12,7 @@ interface Props {
 const { condition, products } = Astro.props;
 const pageTitle = `${condition.name} — Floaters Focus`;
 const pageDescription = condition.description;
+const conditionReviewed = condition.date_reviewed || condition.date_modified || "2026-08-08";
 
 // Generate static paths for each condition
 export async function getStaticPaths() {
@@ -28,12 +29,17 @@ export async function getStaticPaths() {
 }
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  publishedDate="2026-08-08"
+  lastReviewed={conditionReviewed}
+>
   <Header currentPath={`/conditions/${condition.slug}`} slot="header" />
   <Footer slot="footer" />
 
   <!-- Hero -->
-  <section class="bg-gradient-to-b from-blue/5 via-cream to-warm-white py-12 md:py-16" aria-labelledby="condition-title">
+  <section class="bg-white border-b border-gray-200 py-12 md:py-16" aria-labelledby="condition-title">
     <div class="container">
       <nav class="mb-6 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center gap-2 text-warm-gray" role="list">
@@ -65,7 +71,7 @@ export async function getStaticPaths() {
           {condition.red_flags.map(flag => (
             <li class="flex items-center gap-2 text-red font-medium text-sm">
               <svg class="w-5 h-5 flex-shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-10 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
               </svg>
               {flag}
             </li>
@@ -87,7 +93,7 @@ export async function getStaticPaths() {
         </p>
       </header>
 
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
+      <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 max-w-5xl mx-auto">
         {condition.key_points.map((point, i) => (
           <article class="card card-bordered group">
             <div class="flex items-start gap-3">
@@ -143,7 +149,7 @@ export async function getStaticPaths() {
           </p>
         </header>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+        <div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-5xl mx-auto">
           {products.map(product => (
             <article class="card card-bordered">
               <div class="flex items-start justify-between mb-4">
@@ -162,7 +168,7 @@ export async function getStaticPaths() {
               </div>
 
               <h3 class="text-xl font-bold text-charcoal mb-2">{product.name}</h3>
-              <p class="text-text mb-4 text-sm">{product.evidence}</p>
+              <p class="text-text mb-4 text-sm">{product.evidence} {product.evidence_url && (<a href={product.evidence_url} target="_blank" rel="noopener" class="text-primary hover:underline ml-1">[View study]</a>)}</p>
 
               <div class="flex items-baseline gap-2 mb-4">
                 <span class="text-2xl font-bold text-charcoal">${product.price_usd.toFixed(2)}</span>
@@ -222,6 +228,44 @@ export async function getStaticPaths() {
     </section>
   )}
 
+  <!-- Adjunctive Options -->
+  {condition.adjunctive_supplements && condition.adjunctive_supplements.length > 0 && (
+    <section class="py-12 md:py-16 bg-white" aria-labelledby="adjunctive-heading">
+      <div class="container">
+        <header class="text-center mb-10">
+          <h2 id="adjunctive-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-3">
+            Low-Risk Adjunctive Options
+          </h2>
+          <p class="text-text max-w-2xl mx-auto">
+            These oral/topical interventions have early human data for symptomatic floater relief.
+            They are investigational, not FDA-approved for floaters, and not replacements for observation or procedures.
+          </p>
+        </header>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+          {condition.adjunctive_supplements.map((item, i) => (
+            <article class="card card-bordered">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span class="text-teal font-bold text-lg">{i + 1}</span>
+                </div>
+                <div class="text-text leading-relaxed">
+                  <h3 class="text-xl font-semibold text-charcoal mb-2">{item.name}</h3>
+                  <p class="text-sm mb-2"><strong>Protocol:</strong> {item.protocol}</p>
+                  <p class="text-sm mb-2"><strong>Evidence:</strong> {item.evidence}</p>
+                  <p class="text-sm"><strong>Closest match:</strong> {item.commercial_match}</p>
+                </div>
+              </div>
+            </article>
+          ))}
+          {condition.adjunctive_notes && (
+            <p class="text-sm text-text-muted bg-cream border border-border rounded-lg p-4">{condition.adjunctive_notes}</p>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- What Doesn't Work -->
   <section class="py-12 md:py-16 bg-red/5" aria-labelledby="myths-heading">
     <div class="container">
@@ -234,7 +278,7 @@ export async function getStaticPaths() {
         </p>
       </header>
 
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
+      <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 max-w-5xl mx-auto">
         {condition.what_doesnt_work.map((myth, i) => (
           <article class="card card-bordered border-red/20">
             <div class="flex items-start gap-3">
@@ -301,4 +345,40 @@ export async function getStaticPaths() {
       </div>
     </div>
   </section>
+
+  <!-- Citation + structured data -->
+  <section class="py-8 bg-white border-t border-gray-200" aria-labelledby="author-review-heading">
+    <div class="container max-w-3xl">
+      <h2 id="author-review-heading" class="visually-hidden">Author and Review Information</h2>
+      <p class="text-xs text-warm-gray">
+        Medical information reviewed by <strong>NP Bate, Ed.S.</strong> • Last reviewed: {conditionReviewed} • Not a substitute for professional care.
+      </p>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": condition.name,
+      "description": condition.description,
+      "url": `https://floatersfocus.org/conditions/${condition.slug}`,
+      "author": {
+        "@type": "Person",
+        "name": "NP Bate, Ed.S."
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": condition.name
+      },
+      "dateReviewed": conditionReviewed,
+      "specialty": "Ophthalmology",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Floaters Focus",
+        "url": "https://floatersfocus.org"
+      }
+    })}
+  </script>
 </BaseLayout>

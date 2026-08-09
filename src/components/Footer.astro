@@ -1,39 +1,35 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
----
-
-<BaseLayout title="Footer — Floaters Focus">
-  <footer class="bg-white border-t border-gray-200 mt-12">
-    <div class="container mx-auto px-4 py-8">
-      <div class="grid gap-6 md:grid-cols-3">
-        <div>
-          <h2 class="text-lg font-semibold text-charcoal mb-2">Floaters Focus</h2>
-          <p class="text-sm text-text">
-            Evidence-backed guidance for floaters, macular health, and eye discomfort.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-sm font-semibold text-charcoal mb-2">Conditions</h3>
-          <ul class="space-y-1 text-sm">
-            <li><a href="/conditions/floaters" class="text-primary hover:underline">Floaters & PVD</a></li>
-            <li><a href="/conditions/macular" class="text-primary hover:underline">Macular Health (AMD)</a></li>
-            <li><a href="/conditions/discomfort" class="text-primary hover:underline">Dry Eye & Discomfort</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-sm font-semibold text-charcoal mb-2">Resources</h3>
-          <ul class="space-y-1 text-sm">
-            <li><a href="/guides" class="text-primary hover:underline">Guides</a></li>
-            <li><a href="/about" class="text-primary hover:underline">About</a></li>
-            <li><a href="/disclaimer" class="text-primary hover:underline">Medical Disclaimer</a></li>
-            <li><a href="mailto:hello@floatersfocus.org" class="text-primary hover:underline">Contact</a></li>
-          </ul>
-        </div>
+<footer class="bg-white border-t border-gray-200 mt-12">
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid gap-6 md:grid-cols-3">
+      <div>
+        <h2 class="text-lg font-semibold text-charcoal mb-2">Floaters Focus</h2>
+        <p class="text-sm text-text">
+          Evidence-backed guidance for floaters, macular health, and eye discomfort.
+        </p>
       </div>
-      <div class="border-t border-gray-200 mt-6 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-        <p class="text-xs text-text-muted">&copy; {new Date().getFullYear()} Floaters Focus. All rights reserved.</p>
-        <p class="text-xs text-text-muted">Affiliate disclosure: We may earn a commission from links on this site.</p>
+      <div>
+        <h3 class="text-sm font-semibold text-charcoal mb-2">Conditions</h3>
+        <ul class="space-y-1 text-sm" role="list">
+          <li><a href="/conditions/floaters" class="text-primary hover:underline">Floaters & PVD</a></li>
+          <li><a href="/conditions/macular" class="text-primary hover:underline">Macular Health (AMD)</a></li>
+          <li><a href="/conditions/discomfort" class="text-primary hover:underline">Dry Eye & Discomfort</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-charcoal mb-2">Resources</h3>
+        <ul class="space-y-1 text-sm" role="list">
+          <li><a href="/guides" class="text-primary hover:underline">Guides</a></li>
+          <li><a href="/about" class="text-primary hover:underline">About</a></li>
+          <li><a href="/citations" class="text-primary hover:underline">Citations</a></li>
+          <li><a href="/disclaimer" class="text-primary hover:underline">Medical Disclaimer</a></li>
+          <li><a href="/contact" class="text-primary hover:underline">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
-</BaseLayout>
+    <div class="border-t border-gray-200 mt-6 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <p class="text-xs text-text-muted">&copy; {new Date().getFullYear()} Floaters Focus. All rights reserved.</p>
+      <p class="text-xs text-text-muted">Affiliate disclosure: We may earn a commission from links on this site.</p>
+    </div>
+  </div>
+</footer>

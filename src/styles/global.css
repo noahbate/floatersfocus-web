@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* Light */
   --color-cream: #f8f9fa;
   --color-cream-dark: #e9ecef;
   --color-warm-gray: #6c757d;
@@ -8,9 +9,17 @@
   --color-charcoal: #212529;
   --color-charcoal-light: #343a40;
 
+  /* Dark */
+  --color-ink: #0f1115;
+  --color-ink-light: #181b21;
+  --color-ink-lighter: #1f232b;
+  --color-silver: #c8cdd5;
+  --color-silver-muted: #8b919a;
+  --color-silver-dim: #5a6069;
+
   --color-sage: #4a7c59;
-  --color-sage-light: #5d9c6e;
-  --color-sage-dark: #3d6b4c;
+  --color-sage-light: #7bc48f;
+  --color-sage-dark: #9edbaa;
 
   --color-terracotta: #c1785c;
   --color-terracotta-light: #d99a84;
@@ -26,19 +35,29 @@
 
   --color-rose: #c46a7a;
   --color-rose-light: #d9909c;
-  --color-rose-dark: #a04f5f;
+  --color-rose-dark: #ff8a9b;
 
+  /* Semantic - light */
   --color-bg: var(--color-cream);
   --color-bg-alt: var(--color-cream-dark);
   --color-text: var(--color-charcoal);
   --color-text-muted: var(--color-warm-gray);
-  --color-primary: var(--color-sage);
-  --color-primary-hover: var(--color-sage-dark);
-  --color-accent: var(--color-terracotta);
-  --color-accent-hover: var(--color-terracotta-dark);
-  --color-focus: var(--color-gold);
   --color-border: #dee2e6;
+  --color-surface: #ffffff;
 
+  /* Semantic - dark */
+  --color-bg-dark: var(--color-ink);
+  --color-bg-alt-dark: var(--color-ink-light);
+  --color-text-dark: #dce0e6;
+  --color-text-muted-dark: #b8bcc2;
+  --color-border-dark: #2f343d;
+  --color-surface-dark: var(--color-ink-lighter);
+
+  --color-primary: var(--color-sage);
+  --color-primary-hover: var(--color-sage-light);
+  --color-accent: var(--color-terracotta);
+  --color-accent-hover: var(--color-terracotta-light);
+  --color-focus: var(--color-gold);
   --color-success: var(--color-sage);
   --color-warning: var(--color-gold);
   --color-error: var(--color-rose);
@@ -115,6 +134,93 @@ body {
   line-height: var(--leading-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+[data-theme='dark'] body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+/* Dark mode element overrides */
+[data-theme='dark'] .bg-white,
+[data-theme='dark'] .bg-cream {
+  background-color: var(--color-bg-dark) !important;
+}
+[data-theme='dark'] .bg-cream-dark {
+  background-color: var(--color-ink-light) !important;
+}
+[data-theme='dark'] .bg-charcoal,
+[data-theme='dark'] .bg-charcoal-light,
+[data-theme='dark'] .bg-ink {
+  background-color: var(--color-ink-lighter) !important;
+}
+[data-theme='dark'] .text-charcoal,
+[data-theme='dark'] .text-charcoal-light {
+  color: var(--color-text-dark) !important;
+}
+[data-theme='dark'] .text-text {
+  color: var(--color-text-dark) !important;
+}
+[data-theme='dark'] .text-warm-gray,
+[data-theme='dark'] .text-text-muted {
+  color: var(--color-text-muted-dark) !important;
+}
+[data-theme='dark'] .border-gray-200,
+[data-theme='dark'] .border-gray-100 {
+  border-color: var(--color-border-dark) !important;
+}
+[data-theme='dark'] .border-amber\/30,
+[data-theme='dark'] .border-green\/20,
+[data-theme='dark'] .border-red\/20,
+[data-theme='dark'] .border-red\/30,
+[data-theme='dark'] .border-blue\/30 {
+  border-color: color-mix(in srgb, currentColor 25%, transparent) !important;
+}
+[data-theme='dark'] .card,
+[data-theme='dark'] .card-bordered {
+  background-color: var(--color-surface-dark) !important;
+  border-color: var(--color-border-dark) !important;
+}
+[data-theme='dark'] .bg-amber\/5,
+[data-theme='dark'] .bg-green\/5,
+[data-theme='dark'] .bg-red\/5,
+[data-theme='dark'] .bg-blue\/5,
+[data-theme='dark'] .bg-purple\/5 {
+  background-color: color-mix(in srgb, currentColor 8%, var(--color-ink-light)) !important;
+}
+[data-theme='dark'] .bg-amber\/10,
+[data-theme='dark'] .bg-blue\/10,
+[data-theme='dark'] .bg-green\/10,
+[data-theme='dark'] .bg-purple\/10 {
+  background-color: color-mix(in srgb, currentColor 14%, var(--color-ink-light)) !important;
+}
+[data-theme='dark'] .hover\:bg-gray-100:hover {
+  background-color: var(--color-ink-lighter) !important;
+}
+[data-theme='dark'] .bg-sage\/10 {
+  background-color: color-mix(in srgb, var(--color-sage) 14%, var(--color-ink-light)) !important;
+}
+[data-theme='dark'] .text-sage {
+  color: var(--color-sage-light) !important;
+}
+[data-theme='dark'] .text-gold {
+  color: var(--color-gold-light) !important;
+}
+[data-theme='dark'] .text-red,
+[data-theme='dark'] .text-error {
+  color: var(--color-rose-dark) !important;
+}
+[data-theme='dark'] .bg-red\/5,
+[data-theme='dark'] .border-red\/20,
+[data-theme='dark'] .border-red\/30 {
+  background-color: color-mix(in srgb, var(--color-gold) 8%, var(--color-ink-light)) !important;
+  border-color: color-mix(in srgb, var(--color-gold) 25%, transparent) !important;
+}
+[data-theme='dark'] .shadow-sm,
+[data-theme='dark'] .shadow-md,
+[data-theme='dark'] .shadow-lg {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.35), 0 4px 6px -1px rgb(0 0 0 / 0.35) !important;
 }
 
 .skip-link {
@@ -301,6 +407,18 @@ li {
 
 .card-bordered {
   border: 2px solid var(--color-border);
+}
+
+/* Improve wrapping with icon + text on small screens */
+li.flex > svg,
+li.flex > span:first-child {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+li.flex > span:last-child,
+li.flex > div:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 label {

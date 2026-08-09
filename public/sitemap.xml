@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://floatersfocus.org/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://floatersfocus.org/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://floatersfocus.org/conditions</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://floatersfocus.org/conditions/floaters</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://floatersfocus.org/conditions/macular</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://floatersfocus.org/conditions/discomfort</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://floatersfocus.org/guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://floatersfocus.org/guides/floater-supplements-evidence</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://floatersfocus.org/guides/pvd-survival-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://floatersfocus.org/guides/screen-setup-floaters</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://floatersfocus.org/guides/sudden-floater-emergency</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://floatersfocus.org/guides/sunglasses-floaters</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://floatersfocus.org/guides/supplement-quality</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://floatersfocus.org/guides/when-to-see-doctor</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://floatersfocus.org/guides/eye-anatomy-basics</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://floatersfocus.org/guides/treatments-watching</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://floatersfocus.org/citations</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://floatersfocus.org/contact</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://floatersfocus.org/disclaimer</loc><changefreq>quarterly</changefreq><priority>0.3</priority></url>
+</urlset>

@@ -1,0 +1,252 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Treatments We're Watching — Floaters Focus" description="Our watchlist of eye treatments with plausible mechanisms and early signals — but not enough evidence to recommend yet. Saffron, ginkgo, astaxanthin, bilberry, and manuka honey, reviewed honestly." publishedDate="2026-08-09" lastReviewed="2026-08-09">
+  <Header currentPath="/guides/treatments-watching" slot="header" />
+  <main class="flex-1">
+    <section class="py-6 border-b border-gray-200 bg-white">
+      <div class="container max-w-3xl mx-auto px-4">
+        <p class="text-xs text-warm-gray">
+          Medical information reviewed by <strong>NP Bate, Ed.S.</strong> • Last reviewed: 2026-08-09 • Not a substitute for professional care.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white border-b border-gray-200">
+      <div class="container mx-auto px-4">
+        <header class="max-w-3xl mx-auto text-center mb-12">
+          <h1 class="text-3xl md:text-4xl font-bold text-charcoal mb-4">Treatments We're Watching</h1>
+          <p class="text-lg text-text leading-relaxed">
+            This page is our watchlist. These are treatments with a plausible mechanism and some early signals—
+            but not enough evidence to recommend them yet. Nothing here is FDA-approved for the condition listed.
+            We update this page as the research moves.
+          </p>
+          <p class="mt-4 text-sm text-text-muted">
+            <strong>Bottom line up front:</strong> mechanism + early data = worth watching.
+            Reproducible, large trials = worth recommending. Every treatment below is in the first bucket.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-cream" aria-labelledby="saffron-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="saffron-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-2">
+            1. Saffron (Crocus sativus) — Macular Health / Early AMD
+          </h2>
+          <p class="text-sage font-semibold mb-6">Verdict: Watching — the strongest candidate on this page.</p>
+          <p class="text-text mb-4">
+            The world's most expensive spice. Its active compounds are crocin and crocetin, antioxidant carotenoids.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Mechanism (plausible)</h3>
+          <p class="text-text mb-4">
+            Crocin and crocetin are potent antioxidants and anti-inflammatory agents. Preclinical work shows they
+            protect retinal pigment epithelium (RPE) cells from oxidative stress—the same stress implicated in AMD.
+            Some evidence also suggests anti-angiogenic activity (relevant to wet AMD).
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Evidence</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li><strong>RCT, N=25, 20 mg/day, 3 months (crossover).</strong> Early AMD. Saffron improved retinal flicker sensitivity vs. placebo. Falsini B, et al. <em>Invest Ophthalmol Vis Sci</em> 2010;51(12):6118-6124. doi: <a href="https://doi.org/10.1167/iovs.09-4995" target="_blank" rel="noopener">10.1167/iovs.09-4995</a></li>
+            <li><strong>Open-label extension, N=29, 20 mg/day, ~14 months.</strong> Visual acuity improved ~2 Snellen lines; retinal sensitivity improved 0.3 log units; benefits sustained. Piccardi M, et al. <em>Evid Based Complement Alternat Med</em> 2012;2012:429124. doi: <a href="https://doi.org/10.1155/2012/429124" target="_blank" rel="noopener">10.1155/2012/429124</a></li>
+            <li><strong>RCT, BMJ Open Ophthalmology 2024.</strong> Saffron modestly improved multifocal ERG responses in AMD patients, including those already taking AREDS supplements. Broadhead GK, et al. <em>BMJ Open Ophthalmol</em> 2024;9(1):e001399. doi: <a href="https://doi.org/10.1136/bmjophth-2023-001399" target="_blank" rel="noopener">10.1136/bmjophth-2023-001399</a></li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Caveats</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>Every trial is small (25–93 participants) and short (3–14 months)</li>
+            <li>Endpoints are functional (ERG, acuity)—no trial has shown saffron slows structural progression (drusen, atrophy)</li>
+            <li>Some studies involve researchers with ties to saffron suppliers</li>
+            <li>Doses studied: 20–30 mg/day (≈8–12 threads); retail saffron varies wildly in crocin content—supplement quality is unregulated</li>
+            <li>Cost is significant; crocin-standardized extracts are the only way to approximate study doses</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Bottom Line</h3>
+          <p class="text-text mb-4">
+            The only treatment on this page with multiple small RCTs behind it. Genuinely promising—but "multiple small
+            RCTs" is not "proven." If you take AREDS2, saffron may be additive, but don't stop AREDS2 for it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white border-t border-gray-200" aria-labelledby="ginkgo-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="ginkgo-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-2">
+            2. Ginkgo biloba — Macular Health / AMD
+          </h2>
+          <p class="text-gold font-semibold mb-6">Verdict: Wait-and-see — plausible mechanism, insufficient evidence.</p>
+          <p class="text-text mb-4">
+            Extract of the maidenhair tree's leaves. Standardized extracts (EGb 761) are widely sold.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Mechanism (plausible)</h3>
+          <p class="text-text mb-4">
+            Increases retinal and choroidal blood flow, antagonizes platelet-activating factor (inflammation), and has
+            antioxidant activity. Vascular factors and oxidative damage are both implicated in AMD, so the mechanism
+            is biologically coherent.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Evidence</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li><strong>Cochrane systematic review (2013):</strong> Only 2 randomized trials (119 people total, 6 months, EGb 761 at 60–240 mg/day). Both reported <em>some</em> positive vision effects, but results could not be pooled and adverse effects/QoL were not reported. Conclusion: insufficient evidence. Evans JR. <em>Cochrane Database Syst Rev</em> 2013. doi: <a href="https://doi.org/10.1002/14651858.CD001775.pub2" target="_blank" rel="noopener">10.1002/14651858.CD001775.pub2</a></li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Caveats</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>Two small trials, 20+ years old, no replication since</li>
+            <li>Ginkgo inhibits platelet aggregation: <strong>bleeding risk</strong> with aspirin, warfarin, or before surgery</li>
+            <li>Retail ginkgo is often not standardized to EGb 761</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Bottom Line</h3>
+          <p class="text-text mb-4">
+            The mechanism is real; the human data is a whisper. Not enough to justify the bleeding risk for most
+            people. Watch.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-cream border-t border-gray-200" aria-labelledby="astaxanthin-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="astaxanthin-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-2">
+            3. Astaxanthin — Macular Health / General Eye Health
+          </h2>
+          <p class="text-sage font-semibold mb-6">Verdict: Watching — promising mechanism, thin human data.</p>
+          <p class="text-text mb-4">
+            A carotenoid found in salmon, krill, and microalgae. Unlike lutein and zeaxanthin, it
+            <strong>crosses the blood-retinal barrier</strong>, which is why it's of interest.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Mechanism (plausible)</h3>
+          <p class="text-text mb-4">
+            One of the most potent natural antioxidants; anti-inflammatory; improves retinal blood flow in small
+            studies. The ability to reach the retina directly sets it apart from most other carotenoids.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Evidence</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li><strong>Review of clinical applications (2020):</strong> Several small clinical trials suggest potential benefit in AMD, eye fatigue, and accommodation—but most are small, short, and use surrogate outcomes (blood flow, ERG, symptom scores). Giannaccare G, et al. <em>Mar Drugs</em> 2020;18(5):239. doi: <a href="https://doi.org/10.3390/md18050239" target="_blank" rel="noopener">10.3390/md18050239</a></li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Caveats</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>No trial has tested astaxanthin against an AMD progression endpoint (drusen growth, conversion to late AMD)</li>
+            <li>Most positive studies are industry-funded or small single-center</li>
+            <li>No established dose for AMD; common retail doses (4–12 mg/day) are not study-backed for this indication</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Bottom Line</h3>
+          <p class="text-text mb-4">
+            A real molecule with a real mechanism. But "reaches the retina" is not "treats AMD." Watching.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white border-t border-gray-200" aria-labelledby="bilberry-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="bilberry-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-2">
+            4. Bilberry (Vaccinium myrtillus) — Night Vision / Eye Health
+          </h2>
+          <p class="text-error font-semibold mb-6">Verdict: Skeptical — the famous claim failed rigorous testing.</p>
+          <p class="text-text mb-4">
+            European blueberries. The WWII RAF-pilots-eat-bilberry-jam story launched a supplement industry. Its
+            anthocyanins (delphinidins, cyanidins) are the supposed active compounds.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Mechanism (plausible in theory)</h3>
+          <p class="text-text mb-4">
+            Anthocyanins are antioxidants; some animal work suggests effects on rhodopsin regeneration and retinal
+            blood flow.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Evidence</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li><strong>Systematic review of placebo-controlled trials (2004):</strong> Bilberry anthocyanosides do <strong>not</strong> improve night vision in rigorous trials. The famous claim is not supported. Canter PH, Ernst E. <em>Surv Ophthalmol</em> 2004;49(1):38-50. doi: <a href="https://doi.org/10.1016/j.survophthal.2003.10.006" target="_blank" rel="noopener">10.1016/j.survophthal.2003.10.006</a></li>
+            <li>No meaningful human data for AMD outcomes.</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Caveats</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>The one thing bilberry is famous for (night vision) failed systematic review</li>
+            <li>No AMD-specific trials of consequence</li>
+            <li>Supplement quality varies; anthocyanin content unregulated</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Bottom Line</h3>
+          <p class="text-text mb-4">
+            Popular, not promising. Included because it's the most-bought "eye health" herb—and the evidence says the
+            marquee claim doesn't hold. If you enjoy bilberries as food, eat them. Don't buy the pills for vision.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-cream border-t border-gray-200" aria-labelledby="manuka-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="manuka-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-2">
+            5. Manuka Honey Eye Drops — Dry Eye
+          </h2>
+          <p class="text-sage font-semibold mb-6">Verdict: Watching — cheap and low-risk, but small studies.</p>
+          <p class="text-text mb-4">
+            Sterile eye drops made from Manuka honey (New Zealand), sold as medical-grade products (e.g., Optimel).
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Mechanism (plausible)</h3>
+          <p class="text-text mb-4">
+            Manuka honey has antibacterial (methylglyoxal), anti-inflammatory, and osmotic activity on the ocular
+            surface. For evaporative dry eye (the 86% type), the antibacterial angle targets lid flora implicated in
+            meibomian gland dysfunction.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Evidence</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li><strong>Prospective controlled study (2026):</strong> Manuka honey drops associated with greater improvement in post-cataract-surgery dry eye symptoms vs. standard care. García-Bardera J, et al. <em>Front Ophthalmol</em> 2026. doi: <a href="https://doi.org/10.3389/fopht.2026.1812914" target="_blank" rel="noopener">10.3389/fopht.2026.1812914</a></li>
+            <li><strong>Contact-lens-related dry eye (2017):</strong> Optimel Manuka+ well tolerated; dry eye symptoms improved. Wong D, et al. <em>Cont Lens Anterior Eye</em> 2017.</li>
+            <li><strong>Review (2023):</strong> Significant improvement in corneal staining and meibum quality reported after Manuka therapy. Prinz J, et al. <em>Pharmaceuticals</em> 2023;16(5):762. doi: <a href="https://doi.org/10.3390/ph16050762" target="_blank" rel="noopener">10.3390/ph16050762</a></li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Caveats</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>Small samples, short follow-up, mostly post-procedure or contact-lens populations</li>
+            <li><strong>Stinging/burning on instillation is common</strong>—the #1 reason people quit</li>
+            <li>Not a first-line therapy; warm compresses + lipid tears + omega-3 remain the proven starting point</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Bottom Line</h3>
+          <p class="text-text mb-4">
+            Low-risk, cheap, and the mechanism fits evaporative dry eye. But it stings and the trials are small.
+            If the OTC trifecta hasn't worked after 3 months, it's a reasonable conversation with your optometrist—
+            not a self-prescribed first move.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white border-t border-gray-200" aria-labelledby="method-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="method-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-4">Watchlist Methodology</h2>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li><strong>What gets on the list:</strong> a plausible mechanism + at least one human study (any design) or a compelling animal/in-vitro mechanism chain. The bar for <em>promotion off the list</em> is: replicated, larger trials with clinically meaningful endpoints.</li>
+            <li><strong>What gets removed:</strong> replicated null results, safety signals, or retractions—we update this page and note the change (same policy as our Citations page).</li>
+            <li><strong>What never goes on the list:</strong> anything with no biological plausibility, no human data, and a marketing page instead of a methods section.</li>
+          </ul>
+          <a href="/guides" class="btn btn-primary">All Guides</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer slot="footer" />
+</BaseLayout>

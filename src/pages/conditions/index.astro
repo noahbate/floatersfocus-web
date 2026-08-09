@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import conditionsData from '../../data/conditions.json';
+
+const conditions = conditionsData.conditions || [];
+---
+
+<BaseLayout title="Conditions — Floaters Focus" description="Evidence-based guides for floaters, macular health, dry eye, and more." publishedDate="2026-08-08" lastReviewed="2026-08-08">
+  <Header currentPath="/conditions" slot="header" />
+  <main class="flex-1">
+    <section class="py-12 md:py-16 bg-gradient-to-b from-blue/5 via-cream to-warm-white" aria-labelledby="conditions-title">
+      <div class="container">
+        <header class="max-w-3xl mx-auto text-center mb-12">
+          <h1 id="conditions-title" class="text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4">
+            Conditions
+          </h1>
+          <p class="text-lg md:text-xl text-text leading-relaxed">
+            Evidence-based overviews of common eye conditions, what actually works, and what doesn’t.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16" aria-labelledby="conditions-list-heading">
+      <div class="container">
+        <h2 id="conditions-list-heading" class="visually-hidden">All Conditions</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+          {conditions.map((condition) => (
+            <a href={`/conditions/${condition.slug}`} class="card card-bordered group">
+              <h3 class="text-xl font-bold text-charcoal mb-2 group-hover:text-primary transition-colors">
+                {condition.name}
+              </h3>
+              <p class="text-text text-sm leading-relaxed">{condition.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer slot="footer" />
+</BaseLayout>

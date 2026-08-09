@@ -29,6 +29,12 @@ const guides = [
     icon: '🕶️',
   },
   {
+    slug: 'floater-supplements-evidence',
+    title: 'Oral Floater Supplements: What the Evidence Shows',
+    description: 'VitroCap N and the bromelain/papain/ficin enzyme mix — the two most studied oral interventions for vitreous floaters.',
+    icon: '🧪',
+  },
+  {
     slug: 'supplement-quality',
     title: 'How to Read a Supplement Label',
     description: 'Spot fillers, check forms (rTG vs ethyl ester), verify doses match studies.',
@@ -41,6 +47,12 @@ const guides = [
     icon: '👁️',
   },
   {
+    slug: 'treatments-watching',
+    title: 'Treatments We\'re Watching',
+    description: 'Saffron, ginkgo, astaxanthin, bilberry, manuka honey — promising mechanisms and early signals, but not enough evidence to recommend yet.',
+    icon: '🔭',
+  },
+  {
     slug: 'when-to-see-doctor',
     title: 'When to See a Doctor (Full Guide)',
     description: 'Complete red flag list with photos, urgency levels, and what to expect.',
@@ -49,7 +61,7 @@ const guides = [
 ];
 ---
 
-<BaseLayout title="Guides & How-Tos — Floaters Focus" description="Deep-dive guides: reading supplement labels, eye anatomy basics, and when to see a doctor.">
+<BaseLayout title="Guides & How-Tos — Floaters Focus" description="Deep-dive guides: reading supplement labels, eye anatomy basics, and when to see a doctor." publishedDate="2026-08-08" lastReviewed="2026-08-08">
   <Header currentPath="/guides" slot="header" />
   <Footer slot="footer" />
 
@@ -64,7 +76,7 @@ const guides = [
         </p>
       </header>
 
-      <div class="grid gap-8 md:grid-cols-3 max-w-4xl mx-auto">
+      <div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-4xl mx-auto">
         {guides.map((guide) => (
           <a href={`/guides/${guide.slug}`} class="card card-bordered group flex flex-col">
             <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">{guide.icon}</div>
