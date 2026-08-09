@@ -29,7 +29,7 @@ import Footer from '../components/Footer.astro';
     <section id="conditions" class="py-12 md:py-16 bg-cream">
       <div class="container mx-auto px-4">
         <h2 class="text-2xl font-semibold text-charcoal mb-8">Start with what's bothering you</h2>
-        <div class="grid gap-6 md:grid-cols-3">
+        <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-4">
           <article class="card">
             <h3 class="text-xl font-semibold text-charcoal mb-2">Floaters & PVD</h3>
             <p class="text-sm text-text-muted mb-3">Posterior vitreous detachment—the usual suspect</p>
@@ -52,6 +52,18 @@ import Footer from '../components/Footer.astro';
               <li class="text-error"><strong>Red flag:</strong> Wavy lines, new blind spot, sudden blur = wet AMD</li>
             </ul>
             <a href="/conditions/macular" class="btn btn-primary w-full">Learn More</a>
+          </article>
+
+          <article class="card">
+            <h3 class="text-xl font-semibold text-charcoal mb-2">Macular Pucker (ERM)</h3>
+            <p class="text-sm text-text-muted mb-3">A membrane wrinkles the macula—wavy, blurred central vision</p>
+            <ul class="space-y-2 text-sm text-text mb-4">
+              <li>• Often follows a PVD—the gel leaves cells behind that form a membrane</li>
+              <li>• Roughly 1 in 11 adults; most cases mild or asymptomatic</li>
+              <li>• No drops or exercises remove it—surgery is elective</li>
+              <li class="text-error"><strong>Red flag:</strong> Sudden worsening distortion, flashes, or a curtain = call today</li>
+            </ul>
+            <a href="/conditions/macular-pucker" class="btn btn-primary w-full">Learn More</a>
           </article>
 
           <article class="card">
