@@ -1,60 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  /* Light */
-  --color-cream: #f8f9fa;
-  --color-cream-dark: #e9ecef;
-  --color-warm-gray: #6c757d;
-  --color-warm-gray-dark: #495057;
-  --color-charcoal: #212529;
-  --color-charcoal-light: #343a40;
+  /* Light — Clean Clinical palette (DESIGN.md) */
+  --color-cream: #f5f6f7;          /* paper-cool */
+  --color-cream-dark: #ebedef;     /* paper-deep */
+  --color-warm-gray: #6e767c;      /* muted */
+  --color-warm-gray-dark: #3d4348; /* ink-soft */
+  --color-charcoal: #0f1214;       /* ink */
+  --color-charcoal-light: #3d4348; /* ink-soft */
 
   /* Dark */
-  --color-ink: #0f1115;
-  --color-ink-light: #181b21;
-  --color-ink-lighter: #1f232b;
+  --color-ink: #0e1012;
+  --color-ink-light: #14171a;
+  --color-ink-lighter: #1a1e21;
   --color-silver: #c8cdd5;
   --color-silver-muted: #8b919a;
   --color-silver-dim: #5a6069;
 
-  --color-sage: #4a7c59;
-  --color-sage-light: #7bc48f;
-  --color-sage-dark: #9edbaa;
+  --color-sage: #3f6b4f;           /* clinical primary */
+  --color-sage-light: #84b792;     /* dark-mode primary */
+  --color-sage-dark: #2e4f3a;      /* primary hover */
 
   --color-terracotta: #c1785c;
   --color-terracotta-light: #d99a84;
   --color-terracotta-dark: #a05e46;
 
-  --color-gold: #d4a843;
-  --color-gold-light: #e8c06d;
-  --color-gold-dark: #b88d2d;
+  --color-gold: #b8860b;
+  --color-gold-light: #d4a843;
+  --color-gold-dark: #8a6508;
 
   --color-teal: #4a8c8c;
   --color-teal-light: #6db3b3;
   --color-teal-dark: #366b6b;
 
-  --color-rose: #c46a7a;
-  --color-rose-light: #d9909c;
+  --color-rose: #b3261e;           /* red-flag */
+  --color-rose-light: #e5484d;     /* dark red-flag */
   --color-rose-dark: #ff8a9b;
+
+  /* Verdict badge tints (clinical) */
+  --color-amber-soft: #fbf3e4;
+  --color-amber-watch: #8f5300;
+  --color-green-soft: #edf5ee;
+  --color-green-ok: #276b2c;
+  --color-red-soft: #fbedec;
 
   /* Semantic - light */
   --color-bg: var(--color-cream);
   --color-bg-alt: var(--color-cream-dark);
   --color-text: var(--color-charcoal);
   --color-text-muted: var(--color-warm-gray);
-  --color-border: #dee2e6;
+  --color-border: #d9dcdf;
   --color-surface: #ffffff;
 
   /* Semantic - dark */
   --color-bg-dark: var(--color-ink);
   --color-bg-alt-dark: var(--color-ink-light);
-  --color-text-dark: #dce0e6;
-  --color-text-muted-dark: #b8bcc2;
-  --color-border-dark: #2f343d;
+  --color-text-dark: #e8eaec;
+  --color-text-muted-dark: #b9bec3;
+  --color-border-dark: #33383e;
   --color-surface-dark: var(--color-ink-lighter);
 
   --color-primary: var(--color-sage);
-  --color-primary-hover: var(--color-sage-light);
+  --color-primary-hover: var(--color-sage-dark);
   --color-accent: var(--color-terracotta);
   --color-accent-hover: var(--color-terracotta-light);
   --color-focus: var(--color-gold);
@@ -63,8 +70,9 @@
   --color-error: var(--color-rose);
   --color-info: var(--color-teal);
 
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-serif: Georgia, Cambria, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --text-base: 1rem;
   --text-lg: 1.125rem;
@@ -88,16 +96,16 @@
   --space-16: 4rem;
   --space-20: 5rem;
 
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-focus: 0 0 0 3px var(--color-focus);
+  --shadow-sm: 0 1px 2px 0 rgb(15 18 20 / 0.04), 0 8px 24px rgb(15 18 20 / 0.06);
+  --shadow-md: 0 1px 2px 0 rgb(15 18 20 / 0.04), 0 8px 24px rgb(15 18 20 / 0.06), 0 2px 4px -2px rgb(15 18 20 / 0.05);
+  --shadow-lg: 0 2px 4px rgb(15 18 20 / 0.05), 0 24px 48px rgb(15 18 20 / 0.10);
+  --shadow-focus: 0 0 0 3px rgb(63 107 79 / 0.35);
 
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
@@ -230,7 +238,7 @@ body {
 }
 [data-theme='dark'] .text-red,
 [data-theme='dark'] .text-error {
-  color: var(--color-rose-dark) !important;
+  color: var(--color-rose-light) !important; /* #e5484d — clinical dark red-flag */
 }
 [data-theme='dark'] .bg-red\/5,
 [data-theme='dark'] .border-red\/20,
@@ -259,6 +267,13 @@ body {
   transition: top var(--transition-fast);
 }
 
+/* DOI / citation links — mono = verifiable (evidence-first branding) */
+.doi, a[href*="doi.org"] {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  word-break: break-all;
+}
+
 .skip-link:focus {
   top: var(--space-4);
   outline: none;
@@ -283,6 +298,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-charcoal);
   margin-top: var(--space-6);
   margin-bottom: var(--space-4);
+  letter-spacing: -0.02em; /* clinical compressed-heading tracking */
 }
 
 h1 { font-size: var(--text-3xl); }
@@ -351,11 +367,13 @@ li {
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-3) var(--space-6);
-  font-size: var(--text-base);
-  font-weight: 500;
-  line-height: 1.5;
-  border-radius: var(--radius-md);
+  padding: 0.875rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
   border: 1px solid transparent;
   cursor: pointer;
   text-decoration: none;
@@ -379,15 +397,26 @@ li {
   border-color: var(--color-primary-hover);
 }
 
+[data-theme='dark'] .btn-primary {
+  background: var(--color-sage-light); /* #84b792 — light sage on dark bg */
+  color: #0c120e;
+  border-color: var(--color-sage-light);
+}
+[data-theme='dark'] .btn-primary:hover:not(:disabled) {
+  background: var(--color-sage-dark);
+  border-color: var(--color-sage-dark);
+  color: #fff;
+}
+
 .btn-secondary {
-  background: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  background: var(--color-paper-cool, var(--color-cream));
+  color: var(--color-charcoal);
+  border-color: var(--color-border);
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-cream-dark);
+  color: var(--color-charcoal);
 }
 
 .btn-accent {
@@ -410,6 +439,35 @@ li {
 .btn-outline:hover:not(:disabled) {
   background: var(--color-bg-alt);
   border-color: var(--color-text);
+}
+
+/* Verdict badges — signature clinical trust signal */
+.verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.25rem 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+.verdict-watching { background: var(--color-amber-soft, #fbf3e4); color: var(--color-amber-watch, #8f5300); }
+.verdict-wait { background: var(--color-amber-soft, #fbf3e4); color: var(--color-amber-watch, #8f5300); }
+.verdict-proven { background: var(--color-green-soft, #edf5ee); color: var(--color-green-ok, #276b2c); }
+.verdict-skeptical { background: var(--color-red-soft, #fbedec); color: var(--color-rose); }
+[data-theme='dark'] .verdict-watching,
+[data-theme='dark'] .verdict-wait {
+  background: #332a18; color: #d9a04a;
+}
+[data-theme='dark'] .verdict-proven {
+  background: #1e2c20; color: #7fc687;
+}
+[data-theme='dark'] .verdict-skeptical {
+  background: #3a2223; color: var(--color-rose-light);
 }
 
 .card {

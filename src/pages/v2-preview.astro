@@ -1,0 +1,257 @@
+---
+// V2 DESIGN PREVIEW v2 — Clean Clinical direction.
+// Implements DESIGN.md ("Clean Clinical") tokens 1:1.
+// Real OCT retina scan hero (CC BY 2.0, Wikimedia Commons "Retina-OCT800.png").
+import '../styles/v2-preview.css';
+const conditions = [
+  {
+    name: "Floaters & PVD",
+    tagline: "Posterior vitreous detachment — the usual suspect",
+    points: [
+      "Most floaters are benign and fade with time (neuroadaptation)",
+      "No supplement is FDA-approved for floaters",
+      "YAG laser works for discrete Weiss rings, not diffuse clouds",
+    ],
+    redflag: "Sudden shower + flashes + curtain = retinal tear (ER now)",
+    href: "/conditions/floaters",
+  },
+  {
+    name: "Macular Health (AMD)",
+    tagline: "Age-related macular degeneration — early action matters",
+    points: [
+      "AREDS2 formula only helps intermediate AMD",
+      "Does NOT prevent AMD in healthy eyes",
+      "Smoking = 2–4× risk. Quitting is the best “supplement”",
+    ],
+    redflag: "Wavy lines, new blind spot, sudden blur = wet AMD",
+    href: "/conditions/macular",
+  },
+  {
+    name: "Macular Pucker (ERM)",
+    tagline: "A membrane wrinkles the macula — wavy, blurred central vision",
+    points: [
+      "Often follows a PVD — the gel leaves cells behind",
+      "Roughly 1 in 11 adults; most cases mild or asymptomatic",
+      "No drops or exercises remove it — surgery is elective",
+    ],
+    redflag: "Sudden worsening distortion, flashes, or a curtain = call today",
+    href: "/conditions/macular-pucker",
+  },
+  {
+    name: "Dry Eye & Discomfort",
+    tagline: "Burning, gritty, blurry — especially after screens",
+    points: [
+      "86% is evaporative (MGD) — oil glands clog",
+      "Trifecta: Lipid tears + Omega-3 rTG + Warm compresses",
+      "Prescription drops if OTC fails 3 months",
+    ],
+    redflag: "Don't: put straight castor oil in eyes",
+    href: "/conditions/discomfort",
+  },
+];
+const watchlist = [
+  { name: "Saffron", verdict: "watching", note: "Early AMD — small trials, functional endpoints" },
+  { name: "Ginkgo biloba", verdict: "wait", note: "Cochrane: insufficient evidence; bleeding risk" },
+  { name: "Astaxanthin", verdict: "watching", note: "Crosses blood-retinal barrier; no AMD endpoint tested" },
+  { name: "Bilberry", verdict: "skeptical", note: "RAF-pilot story failed a 2004 systematic review" },
+  { name: "Manuka honey", verdict: "watching", note: "MGD flora mechanism; small positive studies" },
+];
+const guides = [
+  { href: "/guides/eye-anatomy-basics", label: "Eye anatomy basics" },
+  { href: "/guides/pvd-survival-guide", label: "PVD survival guide" },
+  { href: "/guides/when-to-see-doctor", label: "When to see a doctor" },
+  { href: "/guides/supplement-quality", label: "How to read a supplement label" },
+  { href: "/guides/treatments-watching", label: "Treatments we're watching" },
+  { href: "/guides/screen-setup-floaters", label: "Screen setup for floaters" },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Floaters Focus · v2 Design Preview (Clinical)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script is:inline>
+      (function () {
+        const key = "floatersfocus-theme";
+        const stored = localStorage.getItem(key);
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = stored === "dark" || stored === "light" ? stored : prefersDark ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+        const btn = document.getElementById("theme-toggle");
+        if (btn) {
+          btn.textContent = theme === "dark" ? "☀ Light" : "☾ Dark";
+          btn.addEventListener("click", () => {
+            const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem(key, next);
+            btn.textContent = next === "dark" ? "☀ Light" : "☾ Dark";
+          });
+        }
+      })();
+    </script>
+
+    <div class="preview-banner">
+      <strong>v2 design preview — Clean Clinical direction.</strong> Built from DESIGN.md · not the live site ·
+      <a href="/">go back to the current site →</a>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">☾ Dark</button>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-kicker">Evidence-based eye health</span>
+          <h1>Eye health that makes sense — no fear, no miracle cures.</h1>
+          <p class="hero-lead">
+            Floaters driving you nuts? Macular degeneration in the family? Eyes feel like sandpaper after screens?
+            We translate the research into plain English, so you can make confident choices.
+          </p>
+          <div class="hero-ctas">
+            <a href="#conditions" class="btn btn-primary">Explore Conditions</a>
+            <a href="/guides/when-to-see-doctor" class="btn btn-secondary">When to See a Doctor</a>
+          </div>
+          <p class="hero-trust">Written by someone who's been through 2 PVDs, a retinal tear, and a pucker · every claim cited</p>
+        </div>
+        <figure class="hero-scan">
+          <img
+            src="/images/oct-scan.png"
+            alt="Optical coherence tomography (OCT) cross-section scan of a human retina showing its layered structure"
+            width="800" height="250" loading="eager"
+          />
+          <figcaption>OCT retinal scan — Image: medOCT-group, Wikimedia Commons (CC BY 2.0)</figcaption>
+        </figure>
+      </div>
+    </header>
+
+    <!-- ============ CONDITIONS ============ -->
+    <section id="conditions" class="section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Start here</div>
+          <h2>What's bothering you?</h2>
+          <p>Four conditions, four evidence-first guides. Straight talk on what works, what doesn't, and when it's urgent.</p>
+        </div>
+        <div class="cards-grid">
+          {conditions.map((c) => (
+            <article class="card">
+              <h3>{c.name}</h3>
+              <p class="tagline">{c.tagline}</p>
+              <ul>
+                {c.points.map((p) => <li>{p}</li>)}
+              </ul>
+              <p class="redflag"><strong>Red flag:</strong> {c.redflag}</p>
+              <a href={c.href} class="btn btn-primary">Learn More</a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WATCHLIST ============ -->
+    <section>
+      <div class="container">
+        <div class="section-head" style="margin-inline:auto;text-align:center">
+          <div class="section-kicker">Treatments we're watching</div>
+          <h2>Honest verdicts, real citations.</h2>
+          <p>The supplements everyone asks about — rated on the actual evidence, not the marketing.</p>
+        </div>
+        <div class="watchlist">
+          {watchlist.map((w) => (
+            <div class="watch-row">
+              <span class="name">{w.name}</span>
+              <span class="note">{w.note}</span>
+              <span class={`badge badge-${w.verdict}`}>{w.verdict === "wait" ? "Wait & see" : w.verdict}</span>
+            </div>
+          ))}
+        </div>
+        <p style="text-align:center;margin-top:28px;font-size:0.9375rem;color:var(--muted)">
+          <a href="/guides/treatments-watching">Full watchlist with DOIs →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ AMSLER SHOWCASE ============ -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-head" style="margin-inline:auto;text-align:center">
+          <div class="section-kicker">The 60-second eye test</div>
+          <h2>What your Amsler grid is telling you.</h2>
+          <p>One minute a week catches wet AMD and pucker changes early — when treatment still works.</p>
+        </div>
+        <figure class="amsler-grid">
+          <figure class="amsler-item">
+            <img src="/images/amsler-grid-normal.png" alt="Normal Amsler grid with straight lines" loading="lazy" width="600" height="600" />
+            <figcaption><strong>Normal</strong> — straight lines, no gray spots</figcaption>
+          </figure>
+          <figure class="amsler-item">
+            <img src="/images/amsler-grid-wavy.png" alt="Amsler grid with wavy distorted lines" loading="lazy" width="600" height="600" />
+            <figcaption><strong>Wavy lines</strong> — fluid or a pucker bending the retina</figcaption>
+          </figure>
+          <figure class="amsler-item">
+            <img src="/images/amsler-grid-scotoma.png" alt="Amsler grid with a gray blind spot" loading="lazy" width="600" height="600" />
+            <figcaption><strong>Gray spot</strong> — blocked-out area warrants a same-week exam</figcaption>
+          </figure>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ EBOOK CTA ============ -->
+    <section>
+      <div class="container">
+        <div class="ebook-card">
+          <h2>Get the free e-book</h2>
+          <p>
+            Everything on this site in one document — the emergency checklist, the PVD roadmap,
+            the evidence on supplements, and the treatments we're watching. 30 pages, free,
+            with every study linked.
+          </p>
+          <a href="/floaters-focus-ebook.pdf" class="btn btn-primary" download>Download the PDF →</a>
+          <p class="ebook-meta">free edition · floatersfocus.org · share it freely</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">Floaters Focus</div>
+            <p>Plain-English, evidence-first guidance for floaters, PVD, macular health, and dry eye.
+            Written by NP Bate — someone who's been through two PVDs, a retinal tear, and a macular pucker.</p>
+          </div>
+          <div>
+            <h4>Guides</h4>
+            <ul class="footer-links">
+              {guides.map((g) => <li><a href={g.href}>{g.label}</a></li>)}
+            </ul>
+          </div>
+          <div>
+            <h4>About</h4>
+            <ul class="footer-links">
+              <li><a href="/about">About & story</a></li>
+              <li><a href="/citations">Citations</a></li>
+              <li><a href="/conditions">All conditions</a></li>
+              <li><a href="/guides/when-to-see-doctor">When to see a doctor</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Floaters Focus · informational, not medical advice</span>
+          <span class="doi">doi.org/10.1016/s0161-6420(97)30190-0 · 10.1111/ceo.13914 · 10.1097/IAE.0000000000000406</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
