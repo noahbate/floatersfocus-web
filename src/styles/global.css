@@ -162,6 +162,11 @@ body {
 [data-theme='dark'] .text-text {
   color: var(--color-text-dark) !important;
 }
+/* Bare <p> (no utility color class) inherits light-mode charcoal otherwise —
+   invisible on dark surfaces (e.g. adjunctive card body text). */
+[data-theme='dark'] p {
+  color: var(--color-text-dark);
+}
 [data-theme='dark'] .text-warm-gray,
 [data-theme='dark'] .text-text-muted {
   color: var(--color-text-muted-dark) !important;
