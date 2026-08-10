@@ -160,6 +160,9 @@ body {
 [data-theme='dark'] .bg-cream {
   background-color: var(--color-bg-dark) !important;
 }
+[data-theme='dark'] .bg-white\/90 {
+  background-color: color-mix(in srgb, var(--color-bg-dark) 90%, transparent) !important;
+}
 [data-theme='dark'] .bg-cream-dark {
   background-color: var(--color-ink-light) !important;
 }
