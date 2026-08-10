@@ -55,7 +55,8 @@
         "Curtain or shadow creeping across vision from any side",
         "Vision loss or distortion (straight lines look wavy)"
       ],
-      "when_to_see_doctor": "New floaters with flashes? Go today. Sudden shower of floaters + curtain in vision? ER now\u2014retinal detachment can cause permanent vision loss in hours. Routine floaters that are stable for months? Annual dilated exam is fine."
+      "when_to_see_doctor": "New floaters with flashes? Go today. Sudden shower of floaters + curtain in vision? ER now\u2014retinal detachment can cause permanent vision loss in hours. Routine floaters that are stable for months? Annual dilated exam is fine.",
+      "myths_intro": "These are the ones I get asked about most, usually by someone who's already bought the bottle. I wish the answer were better."
     },
     {
       "id": "macular",
@@ -100,7 +101,8 @@
         "Sudden change in color perception",
         "Any sudden vision change in one eye"
       ],
-      "when_to_see_doctor": "If you're over 50: get a dilated exam every 1\u20132 years. If you have intermediate AMD: take AREDS2, use Amsler grid weekly, see retina specialist if lines go wavy. Wet AMD? Same-day specialist referral\u2014treatment window is days."
+      "when_to_see_doctor": "If you're over 50: get a dilated exam every 1\u20132 years. If you have intermediate AMD: take AREDS2, use Amsler grid weekly, see retina specialist if lines go wavy. Wet AMD? Same-day specialist referral\u2014treatment window is days.",
+      "myths_intro": "Every one of these was popular at some point. None of them survived contact with a randomized trial."
     },
     {
       "id": "pucker",
@@ -148,7 +150,8 @@
         "source_url": "https://www.brightfocus.org/resource/amsler-grid-eye-test/",
         "printable_url": "https://www.brightfocus.org/wp-content/uploads/2026/08/Amsler-Grid-Magnet-Aug2026_WCAG.pdf",
         "wavy_caption": "the contracting membrane wrinkles the retina, bending straight lines"
-      }
+      },
+      "myths_intro": "There's no shortage of people selling 'retina-repair' protocols. None of them can peel a membrane, and none of them are studied."
     },
     {
       "id": "iop",
@@ -210,7 +213,8 @@
         "Sudden vision loss in one eye (ER now)",
         "Rapidly worsening visual field or new blind spots (same-week exam)"
       ],
-      "when_to_see_doctor": "If you're on a glaucoma-suspect watchlist, keep every scheduled exam \u2014 that IS the treatment. IOP fluctuates through the day, so a single normal reading doesn't clear you. New headache + eye pain + nausea? ER now \u2014 angle closure can cause irreversible vision loss in hours."
+      "when_to_see_doctor": "If you're on a glaucoma-suspect watchlist, keep every scheduled exam \u2014 that IS the treatment. IOP fluctuates through the day, so a single normal reading doesn't clear you. New headache + eye pain + nausea? ER now \u2014 angle closure can cause irreversible vision loss in hours.",
+      "myths_intro": "Glaucoma suspects get sold a lot of fear and a lot of bottles. None of these change the one thing that matters: your monitored IOP."
     },
     {
       "id": "discomfort",
@@ -243,7 +247,8 @@
         "Foreign body sensation not improving",
         "Contact lens intolerance developing"
       ],
-      "when_to_see_doctor": "If OTC tears 4\u00d7/day for 3 months don't help: see an optometrist or ophthalmologist. Ask about MGD workup (meibography), prescription drops, or in-office treatments. Dry eye is treatable\u2014you don't have to live with it."
+      "when_to_see_doctor": "If OTC tears 4\u00d7/day for 3 months don't help: see an optometrist or ophthalmologist. Ask about MGD workup (meibography), prescription drops, or in-office treatments. Dry eye is treatable\u2014you don't have to live with it.",
+      "myths_intro": "The internet's dry-eye advice is 90% this list. A warm compress and the right drops do more than any of these."
     }
   ]
 }
