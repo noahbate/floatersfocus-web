@@ -151,39 +151,6 @@
       }
     },
     {
-      "id": "discomfort",
-      "name": "Dry Eye & Discomfort",
-      "description": "Burning, gritty, blurry vision\u2014especially after screens. Usually evaporative dry eye from clogged oil glands (MGD).",
-      "slug": "discomfort",
-      "key_points": [
-        "86% of dry eye is evaporative (MGD)\u2014oil glands clog, tears evaporate too fast",
-        "Trifecta: Lipid tears + Omega-3 rTG (2g+) + Warm compresses 2\u00d7/day",
-        "Prescription drops (Restasis, Xiidra, Tyrvaya) if OTC fails 3 months",
-        "Don't put straight castor oil in eyes (corneal toxicity, infection risk)"
-      ],
-      "evidence_based_treatments": [
-        "Lipid-containing artificial tears (Refresh Mega-3, Systane Complete, Blink Triple Care)",
-        "Omega-3 rTG form \u22652g EPA+DHA daily (Nordic Naturals, PRN De3) \u2014 takes 6\u201312 weeks",
-        "Warm compresses 10 min 2\u00d7/day + lid hygiene (hypochlorous spray)",
-        "Prescription: Cyclosporine (Restasis/Cequa), Lifitegrast (Xiidra), Varenicline (Tyrvaya)",
-        "In-office: IPL, Thermal pulsation (LipiFlow/TearCare), Meibomian gland probing"
-      ],
-      "what_doesnt_work": [
-        "Straight castor oil in eyes (toxic to cornea, infection risk)",
-        "Baby shampoo lid scrubs (destroys lipid layer, use hypochlorous)",
-        "Vasoconstrictor drops (Visine, Clear Eyes) \u2014 rebound redness",
-        "Ethyl ester fish oil (poor absorption)",
-        "Blue light glasses for dry eye (weak evidence)"
-      ],
-      "red_flags": [
-        "Eye pain + light sensitivity + vision change",
-        "Severe redness + discharge",
-        "Foreign body sensation not improving",
-        "Contact lens intolerance developing"
-      ],
-      "when_to_see_doctor": "If OTC tears 4\u00d7/day for 3 months don't help: see an optometrist or ophthalmologist. Ask about MGD workup (meibography), prescription drops, or in-office treatments. Dry eye is treatable\u2014you don't have to live with it."
-    },
-    {
       "id": "iop",
       "name": "High Eye Pressure (IOP)",
       "slug": "high-iop",
@@ -244,6 +211,39 @@
         "Rapidly worsening visual field or new blind spots (same-week exam)"
       ],
       "when_to_see_doctor": "If you're on a glaucoma-suspect watchlist, keep every scheduled exam \u2014 that IS the treatment. IOP fluctuates through the day, so a single normal reading doesn't clear you. New headache + eye pain + nausea? ER now \u2014 angle closure can cause irreversible vision loss in hours."
+    },
+    {
+      "id": "discomfort",
+      "name": "Dry Eye & Discomfort",
+      "description": "Burning, gritty, blurry vision\u2014especially after screens. Usually evaporative dry eye from clogged oil glands (MGD).",
+      "slug": "discomfort",
+      "key_points": [
+        "86% of dry eye is evaporative (MGD)\u2014oil glands clog, tears evaporate too fast",
+        "Trifecta: Lipid tears + Omega-3 rTG (2g+) + Warm compresses 2\u00d7/day",
+        "Prescription drops (Restasis, Xiidra, Tyrvaya) if OTC fails 3 months",
+        "Don't put straight castor oil in eyes (corneal toxicity, infection risk)"
+      ],
+      "evidence_based_treatments": [
+        "Lipid-containing artificial tears (Refresh Mega-3, Systane Complete, Blink Triple Care)",
+        "Omega-3 rTG form \u22652g EPA+DHA daily (Nordic Naturals, PRN De3) \u2014 takes 6\u201312 weeks",
+        "Warm compresses 10 min 2\u00d7/day + lid hygiene (hypochlorous spray)",
+        "Prescription: Cyclosporine (Restasis/Cequa), Lifitegrast (Xiidra), Varenicline (Tyrvaya)",
+        "In-office: IPL, Thermal pulsation (LipiFlow/TearCare), Meibomian gland probing"
+      ],
+      "what_doesnt_work": [
+        "Straight castor oil in eyes (toxic to cornea, infection risk)",
+        "Baby shampoo lid scrubs (destroys lipid layer, use hypochlorous)",
+        "Vasoconstrictor drops (Visine, Clear Eyes) \u2014 rebound redness",
+        "Ethyl ester fish oil (poor absorption)",
+        "Blue light glasses for dry eye (weak evidence)"
+      ],
+      "red_flags": [
+        "Eye pain + light sensitivity + vision change",
+        "Severe redness + discharge",
+        "Foreign body sensation not improving",
+        "Contact lens intolerance developing"
+      ],
+      "when_to_see_doctor": "If OTC tears 4\u00d7/day for 3 months don't help: see an optometrist or ophthalmologist. Ask about MGD workup (meibography), prescription drops, or in-office treatments. Dry eye is treatable\u2014you don't have to live with it."
     }
   ]
 }
