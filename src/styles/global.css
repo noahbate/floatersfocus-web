@@ -233,6 +233,14 @@ body {
 [data-theme='dark'] .text-sage {
   color: var(--color-sage-light) !important;
 }
+/* Links + .text-primary brighten to sage-light in dark mode (same principle as buttons —
+   dark sage #3f6b4f on ink surfaces fails contrast). */
+[data-theme='dark'] a {
+  color: var(--color-sage-light) !important;
+}
+[data-theme='dark'] .text-primary {
+  color: var(--color-sage-light) !important;
+}
 [data-theme='dark'] .text-gold {
   color: var(--color-gold-light) !important;
 }

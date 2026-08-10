@@ -247,6 +247,9 @@ export async function getStaticPaths() {
                   <h3 class="text-xl font-semibold text-charcoal mb-2">{item.name}</h3>
                   <p class="text-sm mb-2"><strong>Protocol:</strong> {item.protocol}</p>
                   <p class="text-sm mb-2"><strong>Evidence:</strong> {item.evidence}</p>
+                  {item.evidence_doi && (
+                    <p class="text-sm mb-2"><a href={`https://doi.org/${item.evidence_doi}`} target="_blank" rel="noopener" class="text-primary hover:underline doi">[View study] doi:{item.evidence_doi}</a></p>
+                  )}
                   <p class="text-sm"><strong>Closest match:</strong> {item.commercial_match}</p>
                 </div>
               </div>
