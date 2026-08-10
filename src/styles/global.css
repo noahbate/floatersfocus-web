@@ -234,11 +234,13 @@ body {
   color: var(--color-sage-light) !important;
 }
 /* Links + .text-primary brighten to sage-light in dark mode (same principle as buttons —
-   dark sage #3f6b4f on ink surfaces fails contrast). */
-[data-theme='dark'] a {
+   dark sage #3f6b4f on ink surfaces fails contrast). BUT exclude .btn: buttons carry their
+   own dark-mode colors (.btn-primary = light sage bg + dark text) and the !important here
+   would otherwise clobber the button's text (sage on sage = unreadable). */
+[data-theme='dark'] a:not(.btn) {
   color: var(--color-sage-light) !important;
 }
-[data-theme='dark'] .text-primary {
+[data-theme='dark'] .text-primary:not(.btn) {
   color: var(--color-sage-light) !important;
 }
 [data-theme='dark'] .text-gold {
@@ -436,6 +438,19 @@ li {
 .btn-accent:hover:not(:disabled) {
   background: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
+}
+
+/* Accent buttons need a dark-mode surface brighten too — terracotta #c1785c with white text
+   is ~3:1 on ink surfaces (fails AA). Same principle as .btn-primary. */
+[data-theme='dark'] .btn-accent {
+  background: var(--color-accent-hover); /* terracotta-light #d99a84 */
+  color: #0c120e;
+  border-color: var(--color-accent-hover);
+}
+[data-theme='dark'] .btn-accent:hover:not(:disabled) {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #fff;
 }
 
 .btn-outline {
