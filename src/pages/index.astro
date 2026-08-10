@@ -7,20 +7,34 @@ import Footer from '../components/Footer.astro';
 <BaseLayout title="Floaters Focus — Evidence-Based Eye Health" description="Floaters, PVD, macular health, and dry eye guidance backed by clinical evidence." publishedDate="2026-08-08" lastReviewed="2026-08-08">
   <Header currentPath="/" slot="header" />
   <main class="flex-1">
-    <!-- Hero -->
+    <!-- Hero — Clean Clinical -->
     <section class="bg-white border-b border-gray-200">
-      <div class="container mx-auto px-4 py-12 md:py-16">
-        <div class="max-w-3xl">
-          <h1 class="text-3xl md:text-4xl font-semibold text-charcoal mb-4">Eye health that makes sense.</h1>
-          <p class="text-lg text-text mb-6">
-            Floaters driving you nuts? Macular degeneration in the family? Eyes feel like sandpaper after screens?
-            We translate the research into plain English—so you can make confident choices.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="#conditions" class="btn btn-primary">Explore Conditions</a>
-            <a href="/guides/when-to-see-doctor" class="btn btn-secondary">When to See a Doctor</a>
+      <div class="container mx-auto px-4 py-12 md:py-20">
+        <div class="grid gap-10 md:grid-cols-2 items-center">
+          <div>
+            <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-4">Evidence-based eye health</p>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-charcoal mb-4 tracking-tight leading-tight">
+              Eye health that makes sense — no fear, no miracle cures.
+            </h1>
+            <p class="text-lg text-text mb-6">
+              Floaters driving you nuts? Macular degeneration in the family? Eyes feel like sandpaper after screens?
+              We translate the research into plain English—so you can make confident choices.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="#conditions" class="btn btn-primary">Explore Conditions</a>
+              <a href="/guides/when-to-see-doctor" class="btn btn-secondary">When to See a Doctor</a>
+            </div>
+            <p class="mt-4 text-sm text-text-muted">No miracle cures. No fear-mongering. Just science you can actually use.</p>
           </div>
-          <p class="mt-4 text-sm text-text-muted">No miracle cures. No fear-mongering. Just science you can actually use.</p>
+          <figure class="hidden md:block">
+            <img
+              src="/images/oct-scan.png"
+              alt="Optical coherence tomography (OCT) cross-section scan of a human retina showing its layered structure"
+              width="800" height="250" loading="eager"
+              class="w-full h-auto rounded-xl border border-gray-200 shadow-lg"
+            />
+            <figcaption class="text-xs text-text-muted mt-2 text-right font-mono">OCT retinal scan — Image: medOCT-group, Wikimedia Commons (CC BY 2.0)</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -28,10 +42,11 @@ import Footer from '../components/Footer.astro';
     <!-- Conditions -->
     <section id="conditions" class="py-12 md:py-16 bg-cream">
       <div class="container mx-auto px-4">
-        <h2 class="text-2xl font-semibold text-charcoal mb-8">Start with what's bothering you</h2>
+        <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-2">Start here</p>
+        <h2 class="text-2xl md:text-3xl font-semibold text-charcoal mb-8 tracking-tight">What's bothering you?</h2>
         <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-4">
           <article class="card">
-            <h3 class="text-xl font-semibold text-charcoal mb-2">Floaters & PVD</h3>
+            <h3 class="text-xl font-semibold text-charcoal mb-2 tracking-tight">Floaters & PVD</h3>
             <p class="text-sm text-text-muted mb-3">Posterior vitreous detachment—the usual suspect</p>
             <ul class="space-y-2 text-sm text-text mb-4">
               <li>• Most floaters are benign and fade with time (neuroadaptation)</li>
@@ -43,7 +58,7 @@ import Footer from '../components/Footer.astro';
           </article>
 
           <article class="card">
-            <h3 class="text-xl font-semibold text-charcoal mb-2">Macular Health (AMD)</h3>
+            <h3 class="text-xl font-semibold text-charcoal mb-2 tracking-tight">Macular Health (AMD)</h3>
             <p class="text-sm text-text-muted mb-3">Age-related macular degeneration—early action matters</p>
             <ul class="space-y-2 text-sm text-text mb-4">
               <li>• AREDS2 formula only helps intermediate AMD</li>
@@ -55,7 +70,7 @@ import Footer from '../components/Footer.astro';
           </article>
 
           <article class="card">
-            <h3 class="text-xl font-semibold text-charcoal mb-2">Macular Pucker (ERM)</h3>
+            <h3 class="text-xl font-semibold text-charcoal mb-2 tracking-tight">Macular Pucker (ERM)</h3>
             <p class="text-sm text-text-muted mb-3">A membrane wrinkles the macula—wavy, blurred central vision</p>
             <ul class="space-y-2 text-sm text-text mb-4">
               <li>• Often follows a PVD—the gel leaves cells behind that form a membrane</li>
@@ -67,7 +82,7 @@ import Footer from '../components/Footer.astro';
           </article>
 
           <article class="card">
-            <h3 class="text-xl font-semibold text-charcoal mb-2">Dry Eye & Discomfort</h3>
+            <h3 class="text-xl font-semibold text-charcoal mb-2 tracking-tight">Dry Eye & Discomfort</h3>
             <p class="text-sm text-text-muted mb-3">Burning, gritty, blurry—especially after screens</p>
             <ul class="space-y-2 text-sm text-text mb-4">
               <li>• 86% is evaporative (MGD)—oil glands clog</li>
@@ -86,8 +101,9 @@ import Footer from '../components/Footer.astro';
       <div class="container mx-auto px-4">
         <div class="grid gap-8 md:grid-cols-2">
           <div>
-            <h2 class="text-2xl font-semibold text-charcoal mb-3">Popular guides</h2>
-            <p class="text-text mb-4">Practical help for the most common questions we get.</p>
+            <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-2">Popular guides</p>
+            <h2 class="text-2xl font-semibold text-charcoal mb-3 tracking-tight">Practical help, plain English</h2>
+            <p class="text-text mb-4">The most common questions, answered with real evidence.</p>
             <ul class="space-y-2 text-sm">
               <li><a href="/guides/supplement-quality" class="text-primary hover:underline">How to read a supplement label</a></li>
               <li><a href="/guides/eye-anatomy-basics" class="text-primary hover:underline">Eye anatomy basics</a></li>
@@ -99,7 +115,8 @@ import Footer from '../components/Footer.astro';
             </ul>
           </div>
           <div>
-            <h2 class="text-2xl font-semibold text-charcoal mb-3">When it's urgent</h2>
+            <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-2">When it's urgent</p>
+            <h2 class="text-2xl font-semibold text-charcoal mb-3 tracking-tight">Some symptoms can't wait</h2>
             <p class="text-text mb-4">Some eye symptoms need a doctor today, not next week.</p>
             <a href="/guides/when-to-see-doctor" class="btn btn-accent">When to See a Doctor</a>
           </div>
