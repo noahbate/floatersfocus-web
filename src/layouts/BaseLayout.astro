@@ -76,6 +76,12 @@ const jsonLd = JSON.stringify({
       metaPixelId && (
         <>
           <script is:inline set:html={pixelScript} />
+          <script is:inline>
+            {`document.addEventListener('click', function(e) {
+  var a = e.target.closest && e.target.closest('a[href*="floaters-focus-ebook.pdf"]');
+  if (a && window.fbq) { fbq('track', 'Lead'); }
+});`}
+          </script>
           <noscript>
             <img height="1" width="1" style="display:none" alt=""
               src={`https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1`} />
