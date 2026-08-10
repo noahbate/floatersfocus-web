@@ -222,6 +222,44 @@ export async function getStaticPaths() {
   )}
 
   <!-- Product Recommendations -->
+  <!-- Adjunctive Options (evidence context BEFORE the storefront) -->
+  {condition.adjunctive_supplements && condition.adjunctive_supplements.length > 0 && (
+    <section class="py-12 md:py-16 bg-white" aria-labelledby="adjunctive-heading">
+      <div class="container">
+        <header class="text-center mb-10">
+          <h2 id="adjunctive-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-3">
+            Low-Risk Adjunctive Options
+          </h2>
+          <p class="text-text max-w-2xl mx-auto">
+            These oral/topical interventions have early human data for symptomatic floater relief.
+            They are investigational, not FDA-approved for floaters, and not replacements for observation or procedures.
+          </p>
+        </header>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+          {condition.adjunctive_supplements.map((item, i) => (
+            <article class="card card-bordered">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span class="text-teal font-bold text-lg">{i + 1}</span>
+                </div>
+                <div class="text-text leading-relaxed">
+                  <h3 class="text-xl font-semibold text-charcoal mb-2">{item.name}</h3>
+                  <p class="text-sm mb-2"><strong>Protocol:</strong> {item.protocol}</p>
+                  <p class="text-sm mb-2"><strong>Evidence:</strong> {item.evidence}</p>
+                  <p class="text-sm"><strong>Closest match:</strong> {item.commercial_match}</p>
+                </div>
+              </div>
+            </article>
+          ))}
+          {condition.adjunctive_notes && (
+            <p class="text-sm text-text-muted bg-cream border border-border rounded-lg p-4">{condition.adjunctive_notes}</p>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
   {products && products.length > 0 && (
     <section class="py-12 md:py-16" aria-labelledby="products-heading">
       <div class="container">
@@ -230,7 +268,8 @@ export async function getStaticPaths() {
             Products with Data Behind Them
           </h2>
           <p class="text-text max-w-2xl mx-auto">
-            These match the treatments above. We only list products with clinical evidence for their ingredients.
+            These match the adjunctive options and treatments above — we only list products with
+            clinical evidence for their ingredients.
             Affiliate links support the site at no cost to you.
           </p>
         </header>
@@ -309,44 +348,6 @@ export async function getStaticPaths() {
               <p class="text-xs text-warm-gray text-center mt-2">Affiliate link — we may earn a commission</p>
             </article>
           ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Adjunctive Options -->
-  {condition.adjunctive_supplements && condition.adjunctive_supplements.length > 0 && (
-    <section class="py-12 md:py-16 bg-white" aria-labelledby="adjunctive-heading">
-      <div class="container">
-        <header class="text-center mb-10">
-          <h2 id="adjunctive-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-3">
-            Low-Risk Adjunctive Options
-          </h2>
-          <p class="text-text max-w-2xl mx-auto">
-            These oral/topical interventions have early human data for symptomatic floater relief.
-            They are investigational, not FDA-approved for floaters, and not replacements for observation or procedures.
-          </p>
-        </header>
-
-        <div class="max-w-3xl mx-auto space-y-6">
-          {condition.adjunctive_supplements.map((item, i) => (
-            <article class="card card-bordered">
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span class="text-teal font-bold text-lg">{i + 1}</span>
-                </div>
-                <div class="text-text leading-relaxed">
-                  <h3 class="text-xl font-semibold text-charcoal mb-2">{item.name}</h3>
-                  <p class="text-sm mb-2"><strong>Protocol:</strong> {item.protocol}</p>
-                  <p class="text-sm mb-2"><strong>Evidence:</strong> {item.evidence}</p>
-                  <p class="text-sm"><strong>Closest match:</strong> {item.commercial_match}</p>
-                </div>
-              </div>
-            </article>
-          ))}
-          {condition.adjunctive_notes && (
-            <p class="text-sm text-text-muted bg-cream border border-border rounded-lg p-4">{condition.adjunctive_notes}</p>
-          )}
         </div>
       </div>
     </section>
