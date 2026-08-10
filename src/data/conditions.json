@@ -3,7 +3,7 @@
     {
       "id": "floaters",
       "name": "Floaters & PVD",
-      "description": "Posterior vitreous detachment—the gel in your eye shrinks and pulls away, leaving clumps that cast shadows.",
+      "description": "Posterior vitreous detachment\u2014the gel in your eye shrinks and pulls away, leaving clumps that cast shadows.",
       "slug": "floaters",
       "key_points": [
         "Most floaters are benign and fade with time (your brain learns to ignore them)",
@@ -12,7 +12,7 @@
         "Sudden shower + flashes + curtain = retinal tear (go to ER immediately)"
       ],
       "evidence_based_treatments": [
-        "Observation / neuroadaptation (60–90% improve subjectively by 6 months)",
+        "Observation / neuroadaptation (60\u201390% improve subjectively by 6 months)",
         "YAG laser vitreolysis for discrete Weiss ring >6 months post-PVD",
         "Pars plana vitrectomy for severe, refractory cases (cataract risk ~90%)"
       ],
@@ -25,8 +25,8 @@
         },
         {
           "name": "Proteolytic enzyme mix",
-          "protocol": "190 mg bromelain + 95 mg papain + 95 mg ficin per capsule, 1–3 capsules/day",
-          "evidence": "Prospective cohort (n=280, 3 months): 65.5–75.5% SVO reduction vs placebo; dose-dependent response.",
+          "protocol": "190 mg bromelain + 95 mg papain + 95 mg ficin per capsule, 1\u20133 capsules/day",
+          "evidence": "Prospective cohort (n=280, 3 months): 65.5\u201375.5% SVO reduction vs placebo; dose-dependent response.",
           "commercial_match": "Closest option: enteric-coated bromelain 190 mg + papain 95 mg with ficin if available"
         },
         {
@@ -55,7 +55,8 @@
         "Curtain or shadow creeping across vision from any side",
         "Vision loss or distortion (straight lines look wavy)"
       ],
-      "when_to_see_doctor": "New floaters with flashes? Go today. Sudden shower of floaters + curtain in vision? ER now—retinal detachment can cause permanent vision loss in hours. Routine floaters that are stable for months? Annual dilated exam is fine."
+      "when_to_see_doctor": "New floaters with flashes? Go today. Sudden shower of floaters + curtain in vision? ER now\u2014retinal detachment can cause permanent vision loss in hours. Routine floaters that are stable for months? Annual dilated exam is fine.",
+      "myths_intro": "These are the ones I get asked about most, usually by someone who's already bought the bottle. I wish the answer were better."
     },
     {
       "id": "macular",
@@ -63,35 +64,35 @@
       "description": "Age-related macular degeneration affects the central vision. Early action with the right formula matters.",
       "slug": "macular",
       "key_points": [
-        "AREDS2 formula ONLY helps intermediate AMD (large drusen ≥125µm or pigment changes)",
+        "AREDS2 formula ONLY helps intermediate AMD (large drusen \u2265125\u00b5m or pigment changes)",
         "Does NOT prevent AMD in healthy eyes, does NOT treat wet AMD",
-        "Smoking = 2–4× risk. Quitting is the single best 'supplement'",
-        "Wet AMD needs anti-VEGF injections—no supplement replaces this"
+        "Smoking = 2\u20134\u00d7 risk. Quitting is the single best 'supplement'",
+        "Wet AMD needs anti-VEGF injections\u2014no supplement replaces this"
       ],
       "evidence_based_treatments": [
-        "AREDS2 formula: Vit C 500mg, Vit E 400IU, Lutein 10mg, Zeaxanthin 2mg, Zinc 25–80mg, Copper 2mg",
+        "AREDS2 formula: Vit C 500mg, Vit E 400IU, Lutein 10mg, Zeaxanthin 2mg, Zinc 25\u201380mg, Copper 2mg",
         "Anti-VEGF injections for wet AMD (Eylea, Lucentis, Avastin, Vabysmo)",
         "Lifestyle: Mediterranean diet, leafy greens daily, exercise, BP control, UV protection"
       ],
       "amsler_grid": {
-        "intro": "The Amsler grid is an at-home eye test that can help detect early signs of retinal disease such as AMD. If you already have dry AMD, it helps you catch progression to the wet form at an early, treatable stage — when anti-VEGF injections can still dry up the leaking fluid and save vision.",
+        "intro": "The Amsler grid is an at-home eye test that can help detect early signs of retinal disease such as AMD. If you already have dry AMD, it helps you catch progression to the wet form at an early, treatable stage \u2014 when anti-VEGF injections can still dry up the leaking fluid and save vision.",
         "how_to_use": [
-          "Hold the grid about 12–14 inches away (book-reading distance), with reading glasses on if you wear them.",
+          "Hold the grid about 12\u201314 inches away (book-reading distance), with reading glasses on if you wear them.",
           "Cover one eye and stare at the black dot in the center of the grid.",
-          "Repeat with the other eye. Test each eye separately — with both eyes open, the good eye can mask changes in the bad one.",
+          "Repeat with the other eye. Test each eye separately \u2014 with both eyes open, the good eye can mask changes in the bad one.",
           "Do this once a week. If lines look wavy, dim, irregular, fuzzy, or a section seems blocked out, schedule an eye exam immediately."
         ],
         "what_changes_mean": "An eye without wet AMD usually sees all lines as straight. With wet AMD, fluid accumulates within or under the retina and can form a blister, making straight lines look curved (wavy). Sometimes the fluid interferes with retinal function enough to cause a gray, white, black, or red blind spot in or near the center of the visual field.",
-        "why_it_matters": "The fluid comes from new, leaky blood vessels in the retina. It can often be dried up by treatment with anti-VEGF injections (Beovu, Eylea, Lucentis, Avastin) — but only if caught early. Left untreated for months, wet AMD can scar the retina, causing irreversible vision loss. That is why weekly home monitoring matters.",
-        "baseline_note": "If your doctor tells you the grid looks fine, check it shortly after your exam to establish your personal baseline. Small areas of waviness can exist from large drusen. The warning sign is a new area, an enlarged area, or a new blind spot — that is when you call the retina specialist.",
-        "source_name": "BrightFocus Foundation — Macular Degeneration Research",
+        "why_it_matters": "The fluid comes from new, leaky blood vessels in the retina. It can often be dried up by treatment with anti-VEGF injections (Beovu, Eylea, Lucentis, Avastin) \u2014 but only if caught early. Left untreated for months, wet AMD can scar the retina, causing irreversible vision loss. That is why weekly home monitoring matters.",
+        "baseline_note": "If your doctor tells you the grid looks fine, check it shortly after your exam to establish your personal baseline. Small areas of waviness can exist from large drusen. The warning sign is a new area, an enlarged area, or a new blind spot \u2014 that is when you call the retina specialist.",
+        "source_name": "BrightFocus Foundation \u2014 Macular Degeneration Research",
         "source_url": "https://www.brightfocus.org/resource/amsler-grid-eye-test/",
         "printable_url": "https://www.brightfocus.org/wp-content/uploads/2026/08/Amsler-Grid-Magnet-Aug2026_WCAG.pdf"
       },
       "what_doesnt_work": [
         "AREDS2 for early AMD or prevention",
         "Beta-carotene (increases lung cancer in smokers)",
-        "Bilberry, saffron, astaxanthin for AMD (insufficient evidence — see our Treatments We're Watching guide)",
+        "Bilberry, saffron, astaxanthin for AMD (insufficient evidence \u2014 see our Treatments We're Watching guide)",
         "Stem cell clinics / unproven 'vision restoration' therapies"
       ],
       "red_flags": [
@@ -100,7 +101,8 @@
         "Sudden change in color perception",
         "Any sudden vision change in one eye"
       ],
-      "when_to_see_doctor": "If you're over 50: get a dilated exam every 1–2 years. If you have intermediate AMD: take AREDS2, use Amsler grid weekly, see retina specialist if lines go wavy. Wet AMD? Same-day specialist referral—treatment window is days."
+      "when_to_see_doctor": "If you're over 50: get a dilated exam every 1\u20132 years. If you have intermediate AMD: take AREDS2, use Amsler grid weekly, see retina specialist if lines go wavy. Wet AMD? Same-day specialist referral\u2014treatment window is days.",
+      "myths_intro": "Every one of these was popular at some point. None of them survived contact with a randomized trial."
     },
     {
       "id": "pucker",
@@ -109,69 +111,133 @@
       "slug": "macular-pucker",
       "date_reviewed": "2026-08-09",
       "key_points": [
-        "A translucent membrane grows on the macula's surface and shrinks, 'puckering' the retina — that wrinkling distorts what you see",
+        "A translucent membrane grows on the macula's surface and shrinks, 'puckering' the retina \u2014 that wrinkling distorts what you see",
         "Usually follows a posterior vitreous detachment: the gel peeling away leaves cells behind that grow into the membrane (70% of ERM patients had a PVD)",
-        "Very common — roughly 1 in 11 adults overall, rising steeply with age; most cases are mild or asymptomatic",
-        "No drops, supplements, or exercises can remove it — but observation is a legitimate plan for mild cases",
+        "Very common \u2014 roughly 1 in 11 adults overall, rising steeply with age; most cases are mild or asymptomatic",
+        "No drops, supplements, or exercises can remove it \u2014 but observation is a legitimate plan for mild cases",
         "Surgery (vitrectomy + membrane peel) is elective, not urgent, and helps most people who need it"
       ],
       "evidence_based_treatments": [
-        "Observation with periodic OCT monitoring — the standard plan for mild or asymptomatic ERM",
-        "Pars plana vitrectomy + epiretinal membrane peel for symptomatic distortion or vision loss (typically ≤20/50–20/70); most eyes gain vision, though the macula rarely returns to a perfect contour",
-        "Planned cataract surgery coordination — vitrectomy accelerates cataract formation, so many patients combine or sequence the two"
+        "Observation with periodic OCT monitoring \u2014 the standard plan for mild or asymptomatic ERM",
+        "Pars plana vitrectomy + epiretinal membrane peel for symptomatic distortion or vision loss (typically \u226420/50\u201320/70); most eyes gain vision, though the macula rarely returns to a perfect contour",
+        "Planned cataract surgery coordination \u2014 vitrectomy accelerates cataract formation, so many patients combine or sequence the two"
       ],
       "what_doesnt_work": [
-        "Eye exercises or vision therapy — nothing can 'stretch' a contracted membrane",
-        "AREDS2 or any supplement — that formula targets AMD, not ERM",
-        "Eye drops or injections — there is no medical (non-surgical) therapy for ERM",
-        "Amsler-grid practice — the grid monitors change; it does not treat the pucker"
+        "Eye exercises or vision therapy \u2014 nothing can 'stretch' a contracted membrane",
+        "AREDS2 or any supplement \u2014 that formula targets AMD, not ERM",
+        "Eye drops or injections \u2014 there is no medical (non-surgical) therapy for ERM",
+        "Amsler-grid practice \u2014 the grid monitors change; it does not treat the pucker"
       ],
       "red_flags": [
         "Sudden worsening of distortion, blur, or vision loss",
-        "New flashes or a shower of new floaters (retinal tear risk — especially with a PVD history)",
+        "New flashes or a shower of new floaters (retinal tear risk \u2014 especially with a PVD history)",
         "A curtain or shadow across vision",
         "New double vision in one eye"
       ],
-      "when_to_see_doctor": "Stable, mild pucker? Annual dilated exam with OCT is fine. Distortion or blur that interferes with reading, driving, or daily life? See a retina specialist — surgery is elective and most successful when vision is still relatively good, so don't wait until you can't function. Any red flag above? Call today, not next week.",
+      "when_to_see_doctor": "Stable, mild pucker? Annual dilated exam with OCT is fine. Distortion or blur that interferes with reading, driving, or daily life? See a retina specialist \u2014 surgery is elective and most successful when vision is still relatively good, so don't wait until you can't function. Any red flag above? Call today, not next week.",
       "amsler_grid": {
-        "intro": "The Amsler grid is a useful at-home tool for macular pucker (ERM). The pucker wrinkles the retina, so straight lines can appear wavy or bent — the grid helps you track whether that distortion is stable or worsening between office visits.",
+        "intro": "The Amsler grid is a useful at-home tool for macular pucker (ERM). The pucker wrinkles the retina, so straight lines can appear wavy or bent \u2014 the grid helps you track whether that distortion is stable or worsening between office visits.",
         "how_to_use": [
-          "Hold the grid about 12–14 inches away (book-reading distance), with reading glasses on if you wear them.",
+          "Hold the grid about 12\u201314 inches away (book-reading distance), with reading glasses on if you wear them.",
           "Cover one eye and stare at the black dot in the center of the grid.",
-          "Repeat with the other eye. Test each eye separately — with both eyes open, the good eye can mask changes in the bad one.",
+          "Repeat with the other eye. Test each eye separately \u2014 with both eyes open, the good eye can mask changes in the bad one.",
           "Do this once a week. If the wavy area grows, a new area appears, or a section seems blocked out, schedule an eye exam."
         ],
-        "what_changes_mean": "With macular pucker, the contracting membrane wrinkles the retina, which makes straight lines look wavy or bent — often with mild blur and sometimes objects appearing slightly different sizes between the two eyes. This distortion is usually stable or slowly progressive. A sudden increase in waviness, a new blind spot, or a gray area warrants an exam sooner rather than later.",
-        "why_it_matters": "Most puckers are mild and stable, and observation is a legitimate plan. The grid catches change: if distortion is worsening to the point it interferes with reading or driving, that is the conversation to have with a retina specialist about whether surgery (vitrectomy + membrane peel) is right for you. Surgery is elective — but it tends to work best when vision is still relatively good.",
-        "baseline_note": "Check the grid shortly after your exam to establish your personal baseline. Some waviness is expected with a pucker — that is the condition. The warning sign is a new area of distortion, an enlarged area, or a new blind spot.",
-        "source_name": "BrightFocus Foundation — Macular Degeneration Research",
+        "what_changes_mean": "With macular pucker, the contracting membrane wrinkles the retina, which makes straight lines look wavy or bent \u2014 often with mild blur and sometimes objects appearing slightly different sizes between the two eyes. This distortion is usually stable or slowly progressive. A sudden increase in waviness, a new blind spot, or a gray area warrants an exam sooner rather than later.",
+        "why_it_matters": "Most puckers are mild and stable, and observation is a legitimate plan. The grid catches change: if distortion is worsening to the point it interferes with reading or driving, that is the conversation to have with a retina specialist about whether surgery (vitrectomy + membrane peel) is right for you. Surgery is elective \u2014 but it tends to work best when vision is still relatively good.",
+        "baseline_note": "Check the grid shortly after your exam to establish your personal baseline. Some waviness is expected with a pucker \u2014 that is the condition. The warning sign is a new area of distortion, an enlarged area, or a new blind spot.",
+        "source_name": "BrightFocus Foundation \u2014 Macular Degeneration Research",
         "source_url": "https://www.brightfocus.org/resource/amsler-grid-eye-test/",
         "printable_url": "https://www.brightfocus.org/wp-content/uploads/2026/08/Amsler-Grid-Magnet-Aug2026_WCAG.pdf",
         "wavy_caption": "the contracting membrane wrinkles the retina, bending straight lines"
-      }
+      },
+      "myths_intro": "There's no shortage of people selling 'retina-repair' protocols. None of them can peel a membrane, and none of them are studied."
+    },
+    {
+      "id": "iop",
+      "name": "High Eye Pressure (IOP)",
+      "slug": "high-iop",
+      "description": "Elevated intraocular pressure puts you on the glaucoma-suspect watchlist. Most suspects never develop glaucoma, but IOP is the one risk factor you can influence.",
+      "key_points": [
+        "High IOP is a risk factor, not a diagnosis \u2014 most people with ocular hypertension never develop glaucoma",
+        "IOP is the ONLY modifiable risk factor for glaucoma; proven treatments (drops, laser) are what actually protect the optic nerve",
+        "Caffeine raises IOP acutely, and habitual heavy caffeine raises IOP mainly in people with high genetic risk (UK Biobank, n=121,374)",
+        "Supplements are adjuncts at best \u2014 none is proven to replace or match prescription IOP treatment"
+      ],
+      "evidence_based_treatments": [
+        "Monitoring / regular eye exams (visual field + OCT) \u2014 the core of glaucoma-suspect care",
+        "Prostaglandin analogue eye drops (e.g. latanoprost) \u2014 first-line, ~25\u201333% IOP reduction",
+        "Selective laser trabeculoplasty (SLT) \u2014 a proven alternative to drops for many patients",
+        "Filtering surgery (trabeculectomy / drainage devices) for advanced or refractory cases"
+      ],
+      "adjunctive_supplements": [
+        {
+          "name": "Nicotinamide (vitamin B3)",
+          "protocol": "3 g/day in trials \u2014 far above the ~16 mg RDA; not self-prescribed, discuss with your doctor first",
+          "evidence": "Phase 2 RCT (n=42): oral nicotinamide + pyruvate improved visual field vs placebo (De Moraes, JAMA Ophthalmol 2022). Crossover RCT (n=57): 3 g/day improved inner retinal function on ERG (Hui, Clin Exp Ophthalmol 2020). NOTE: neuroprotection \u2014 it does NOT lower IOP. AGS/AAO 2025 position: encouraging but not yet recommended; phase 3 trial (NAMinG) running.",
+          "commercial_match": "Generic nicotinamide 500 mg capsules (3 g/day = 6 capsules \u2014 again, talk to your doctor)",
+          "evidence_doi": "10.1001/jamaophthalmol.2021.4576"
+        },
+        {
+          "name": "Mirtogenol (French maritime pine bark + bilberry)",
+          "protocol": "40 mg pine bark + 80 mg bilberry extract, 1\u20132 tablets/day",
+          "evidence": "Small studies show modest IOP reduction (~3 mmHg over 3 months) in ocular hypertension, and it may potentiate latanoprost (Steigerwalt, Mol Vis 2008; Clin Ophthalmol 2010). Small trials, mostly one research group.",
+          "commercial_match": "Mirtogenol-branded supplement (pine bark + bilberry)",
+          "evidence_doi": "10.2147/opth.s9899"
+        },
+        {
+          "name": "Saffron",
+          "protocol": "30 mg/day saffron extract in trials",
+          "evidence": "Small RCT in POAG patients on drops: added modest IOP reduction (Jabbarpoor Bonyadi, BMC Complement Altern Med 2014). Single small trial \u2014 treat as hypothesis-generating.",
+          "commercial_match": "Saffron extract supplement (standardized to crocin)",
+          "evidence_doi": "10.1186/1472-6882-14-399"
+        },
+        {
+          "name": "Citicoline",
+          "protocol": "Oral 500\u20131000 mg/day, or 0.2% eye drops 3\u00d7/day in trials",
+          "evidence": "2023 systematic review/meta-analysis: no significant effect on IOP, visual field, or retinal nerve fiber preservation. Some individual trials show hopeful signals on visual function, but the pooled evidence says no. Skeptical.",
+          "commercial_match": "Citicoline (CDP-choline) capsules",
+          "evidence_doi": "10.1371/journal.pone.0291836"
+        }
+      ],
+      "adjunctive_notes": "None of these supplements is FDA-approved for high IOP or glaucoma, and none replaces prescribed treatment or regular monitoring. Caffeine reduction is the lifestyle change with the strongest supporting data \u2014 especially if you're genetically susceptible. Supplements should be discussed with your ophthalmologist before starting.",
+      "what_doesnt_work": [
+        "Eye exercises / Bates method (cannot change trabecular outflow or IOP)",
+        "Mega-dose vitamin C (weak historical data; kidney-stone risk at high doses)",
+        "Ginkgo for IOP (blood-flow studies in normal-tension glaucoma, not IOP lowering; bleeding risk)",
+        "Omega-3 for IOP (dry-eye evidence does not transfer to IOP)"
+      ],
+      "red_flags": [
+        "Severe eye pain + nausea/vomiting = possible angle-closure attack (ER now)",
+        "Halos around lights + red eye + blurred vision = acute angle closure (ER now)",
+        "Sudden vision loss in one eye (ER now)",
+        "Rapidly worsening visual field or new blind spots (same-week exam)"
+      ],
+      "when_to_see_doctor": "If you're on a glaucoma-suspect watchlist, keep every scheduled exam \u2014 that IS the treatment. IOP fluctuates through the day, so a single normal reading doesn't clear you. New headache + eye pain + nausea? ER now \u2014 angle closure can cause irreversible vision loss in hours.",
+      "myths_intro": "Glaucoma suspects get sold a lot of fear and a lot of bottles. None of these change the one thing that matters: your monitored IOP."
     },
     {
       "id": "discomfort",
       "name": "Dry Eye & Discomfort",
-      "description": "Burning, gritty, blurry vision—especially after screens. Usually evaporative dry eye from clogged oil glands (MGD).",
+      "description": "Burning, gritty, blurry vision\u2014especially after screens. Usually evaporative dry eye from clogged oil glands (MGD).",
       "slug": "discomfort",
       "key_points": [
-        "86% of dry eye is evaporative (MGD)—oil glands clog, tears evaporate too fast",
-        "Trifecta: Lipid tears + Omega-3 rTG (2g+) + Warm compresses 2×/day",
+        "86% of dry eye is evaporative (MGD)\u2014oil glands clog, tears evaporate too fast",
+        "Trifecta: Lipid tears + Omega-3 rTG (2g+) + Warm compresses 2\u00d7/day",
         "Prescription drops (Restasis, Xiidra, Tyrvaya) if OTC fails 3 months",
         "Don't put straight castor oil in eyes (corneal toxicity, infection risk)"
       ],
       "evidence_based_treatments": [
         "Lipid-containing artificial tears (Refresh Mega-3, Systane Complete, Blink Triple Care)",
-        "Omega-3 rTG form ≥2g EPA+DHA daily (Nordic Naturals, PRN De3) — takes 6–12 weeks",
-        "Warm compresses 10 min 2×/day + lid hygiene (hypochlorous spray)",
+        "Omega-3 rTG form \u22652g EPA+DHA daily (Nordic Naturals, PRN De3) \u2014 takes 6\u201312 weeks",
+        "Warm compresses 10 min 2\u00d7/day + lid hygiene (hypochlorous spray)",
         "Prescription: Cyclosporine (Restasis/Cequa), Lifitegrast (Xiidra), Varenicline (Tyrvaya)",
         "In-office: IPL, Thermal pulsation (LipiFlow/TearCare), Meibomian gland probing"
       ],
       "what_doesnt_work": [
         "Straight castor oil in eyes (toxic to cornea, infection risk)",
         "Baby shampoo lid scrubs (destroys lipid layer, use hypochlorous)",
-        "Vasoconstrictor drops (Visine, Clear Eyes) — rebound redness",
+        "Vasoconstrictor drops (Visine, Clear Eyes) \u2014 rebound redness",
         "Ethyl ester fish oil (poor absorption)",
         "Blue light glasses for dry eye (weak evidence)"
       ],
@@ -181,7 +247,8 @@
         "Foreign body sensation not improving",
         "Contact lens intolerance developing"
       ],
-      "when_to_see_doctor": "If OTC tears 4×/day for 3 months don't help: see an optometrist or ophthalmologist. Ask about MGD workup (meibography), prescription drops, or in-office treatments. Dry eye is treatable—you don't have to live with it."
+      "when_to_see_doctor": "If OTC tears 4\u00d7/day for 3 months don't help: see an optometrist or ophthalmologist. Ask about MGD workup (meibography), prescription drops, or in-office treatments. Dry eye is treatable\u2014you don't have to live with it.",
+      "myths_intro": "The internet's dry-eye advice is 90% this list. A warm compress and the right drops do more than any of these."
     }
   ]
 }

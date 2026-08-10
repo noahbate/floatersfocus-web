@@ -247,6 +247,9 @@ export async function getStaticPaths() {
                   <h3 class="text-xl font-semibold text-charcoal mb-2">{item.name}</h3>
                   <p class="text-sm mb-2"><strong>Protocol:</strong> {item.protocol}</p>
                   <p class="text-sm mb-2"><strong>Evidence:</strong> {item.evidence}</p>
+                  {item.evidence_doi && (
+                    <p class="text-sm mb-2"><a href={`https://doi.org/${item.evidence_doi}`} target="_blank" rel="noopener" class="text-primary hover:underline doi">[View study] doi:{item.evidence_doi}</a></p>
+                  )}
                   <p class="text-sm"><strong>Closest match:</strong> {item.commercial_match}</p>
                 </div>
               </div>
@@ -361,7 +364,7 @@ export async function getStaticPaths() {
           What Doesn't Work (Save Your Money)
         </h2>
         <p class="text-text max-w-2xl mx-auto">
-          Popular claims with zero credible evidence. We debunk them so you don't waste time or money.
+          {condition.myths_intro || "Popular claims with zero credible evidence. We debunk them so you don't waste time or money."}
         </p>
       </header>
 
