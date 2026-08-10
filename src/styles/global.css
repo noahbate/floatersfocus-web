@@ -142,6 +142,19 @@ body {
   color: var(--color-text-dark);
 }
 
+/* Universal dark-mode token remap: semantic tokens resolve to dark values
+   at the theme root, so ANY bare element using var(--color-text) /
+   var(--color-bg) / var(--color-border) flips automatically. This is the
+   structural fix — new components can't ship with invisible text. */
+[data-theme='dark'] {
+  --color-text: var(--color-text-dark);
+  --color-text-muted: var(--color-text-muted-dark);
+  --color-bg: var(--color-bg-dark);
+  --color-bg-alt: var(--color-bg-alt-dark);
+  --color-border: var(--color-border-dark);
+  --color-surface: var(--color-surface-dark);
+}
+
 /* Dark mode element overrides */
 [data-theme='dark'] .bg-white,
 [data-theme='dark'] .bg-cream {
