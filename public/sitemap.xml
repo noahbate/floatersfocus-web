@@ -6,6 +6,8 @@
   <url><loc>https://floatersfocus.org/conditions/floaters</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://floatersfocus.org/conditions/macular</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://floatersfocus.org/conditions/discomfort</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://floatersfocus.org/conditions/macular-pucker</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://floatersfocus.org/conditions/high-iop</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://floatersfocus.org/guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://floatersfocus.org/guides/floater-supplements-evidence</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://floatersfocus.org/guides/pvd-survival-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
