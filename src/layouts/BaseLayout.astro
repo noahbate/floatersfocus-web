@@ -98,7 +98,8 @@ const jsonLd = JSON.stringify({
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <script is:inline>
       (function() {
-        const key = 'floatersfocus-theme';
+        // v2 key: ignores old stored 'light' values from the pre-dark-default era.
+        const key = 'floatersfocus-theme-v2';
         const stored = localStorage.getItem(key);
         // Dark is the brand default for every device. A user's explicit toggle
         // (stored value) still wins; otherwise default to dark regardless of OS.
