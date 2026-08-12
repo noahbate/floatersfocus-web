@@ -100,8 +100,9 @@ const jsonLd = JSON.stringify({
       (function() {
         const key = 'floatersfocus-theme';
         const stored = localStorage.getItem(key);
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = stored === 'dark' || stored === 'light' ? stored : prefersDark ? 'dark' : 'light';
+        // Dark is the brand default for every device. A user's explicit toggle
+        // (stored value) still wins; otherwise default to dark regardless of OS.
+        const theme = stored === 'dark' || stored === 'light' ? stored : 'dark';
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem(key, theme);
       })();

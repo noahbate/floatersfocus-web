@@ -85,8 +85,8 @@ const guides = [
       (function () {
         const key = "floatersfocus-theme";
         const stored = localStorage.getItem(key);
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const theme = stored === "dark" || stored === "light" ? stored : prefersDark ? "dark" : "light";
+        // Dark is the brand default for every device.
+        const theme = stored === "dark" || stored === "light" ? stored : "dark";
         document.documentElement.setAttribute("data-theme", theme);
         const btn = document.getElementById("theme-toggle");
         if (btn) {
