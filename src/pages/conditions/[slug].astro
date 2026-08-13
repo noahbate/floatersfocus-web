@@ -108,6 +108,27 @@ export async function getStaticPaths() {
     </div>
   </section>
 
+  <!-- First Step callout (e.g. high-iop caffeine reduction) -->
+  {condition.first_step && (
+    <section class="py-12 md:py-16 bg-green/5 border-y border-green/20" aria-labelledby="firststep-heading">
+      <div class="container max-w-3xl">
+        <div class="card card-bordered border-green/30 bg-white">
+          <div class="p-6 md:p-8">
+            <h2 id="firststep-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-4">
+              {condition.first_step.heading}
+            </h2>
+            <p class="text-text leading-relaxed mb-4">{condition.first_step.body}</p>
+            {condition.first_step.evidence_doi && (
+              <p class="text-sm text-text-muted">
+                Source: <a href={`https://doi.org/${condition.first_step.evidence_doi}`} target="_blank" rel="noopener" class="text-primary hover:underline doi">doi:{condition.first_step.evidence_doi}</a> — J Curr Ophthalmol 2026, systematic review &amp; meta-analysis.
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- Evidence-Based Treatments -->
   <section class="py-12 md:py-16 bg-warm-white" aria-labelledby="treatments-heading">
     <div class="container">

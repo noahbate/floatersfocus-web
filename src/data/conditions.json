@@ -201,6 +201,11 @@
         }
       ],
       "adjunctive_notes": "None of these supplements is FDA-approved for high IOP or glaucoma, and none replaces prescribed treatment or regular monitoring. Caffeine reduction is the lifestyle change with the strongest supporting data \u2014 especially if you're genetically susceptible. Supplements should be discussed with your ophthalmologist before starting.",
+      "first_step": {
+        "heading": "Step one: cut the caffeine",
+        "body": "Start here, before anyone hands you a prescription pad. IOP is the one glaucoma risk factor you can actually change, and caffeine is the lever with the strongest evidence behind it. Caffeine raises eye pressure within about an hour of a strong cup \u2014 a 2026 meta-analysis of 16 randomized trials found that doses over ~100 mg (about one strong coffee) raised IOP in both healthy and glaucomatous eyes, while lower doses didn't significantly move it. It won't fix everyone's number, and it doesn't replace your doctor's care. But it's free, it's yours to control, and for some of us it's the difference between watching your pressure and a lifetime of daily drops. Would you give up the second cup to keep your sight? A reasonable person would.",
+        "evidence_doi": "10.4103/joco.joco_43_26"
+      },
       "what_doesnt_work": [
         "Eye exercises / Bates method (cannot change trabecular outflow or IOP)",
         "Mega-dose vitamin C (weak historical data; kidney-stone risk at high doses)",
