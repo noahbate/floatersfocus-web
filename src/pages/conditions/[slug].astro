@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import ProductCard from '../../components/ProductCard.astro';
 import conditionsData from '../../data/conditions.json';
 import productsData from '../../data/products.json';
 
@@ -300,77 +301,7 @@ export async function getStaticPaths() {
 
         <div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-5xl mx-auto">
           {products.map(product => (
-            <article class="card card-bordered">
-              <div class="flex items-start justify-between mb-4">
-                <span class={`text-sm px-3 py-1 rounded-full font-medium ${
-                  product.category === 'supplement' ? 'bg-blue/10 text-blue' :
-                  product.category === 'omega-3' ? 'bg-amber/10 text-amber' :
-                  product.category === 'artificial-tear' ? 'bg-green/10 text-green' :
-                  'bg-teal/10 text-teal'
-                }`}>
-                  {product.category.replace('-', ' ')}
-                </span>
-                <div class="flex items-center gap-1" aria-label={`${product.rating_avg} out of 5 stars`}>
-                  <span class="text-gold">{'★'.repeat(Math.floor(product.rating_avg))}{'☆'.repeat(5 - Math.floor(product.rating_avg))}</span>
-                  <span class="text-warm-gray text-sm">({product.review_count.toLocaleString()})</span>
-                </div>
-              </div>
-
-              <h3 class="text-xl font-bold text-charcoal mb-2">{product.name}</h3>
-              <p class="text-text mb-4 text-sm">{product.evidence} {product.evidence_url && (<a href={product.evidence_url} target="_blank" rel="noopener" class="text-primary hover:underline ml-1">[View study]</a>)}</p>
-
-              <div class="flex items-baseline gap-2 mb-4">
-                <span class="text-2xl font-bold text-charcoal">${product.price_usd.toFixed(2)}</span>
-                <span class="text-warm-gray text-sm">/ {product.servings_per_container} {product.serving_size.includes('softgel') || product.serving_size.includes('tablet') ? 'softgels' : 'servings'}</span>
-              </div>
-
-              <dl class="space-y-2 text-sm text-text mb-6">
-                <div class="flex justify-between">
-                  <dt class="text-warm-gray">Serving:</dt>
-                  <dd class="font-medium">{product.serving_size}</dd>
-                </div>
-                <div class="flex justify-between">
-                  <dt class="text-warm-gray">Key:</dt>
-                  <dd class="font-medium text-charcoal">
-                    {Object.entries(product.key_ingredients).slice(0, 3).map(([k, v]) => `${k} ${v}`).join(', ')}
-                    {Object.keys(product.key_ingredients).length > 3 && '...'}
-                  </dd>
-                </div>
-              </dl>
-
-              <div class="space-y-2 mb-6">
-                <h4 class="font-semibold text-charcoal flex items-center gap-1">
-                  <svg class="w-4 h-4 text-green" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-                  Pros
-                </h4>
-                <ul class="space-y-1 pl-5 list-disc" role="list">
-                  {product.pros.slice(0, 3).map(pro => (
-                    <li class="text-sm text-text">{pro}</li>
-                  ))}
-                </ul>
-
-                <h4 class="font-semibold text-charcoal flex items-center gap-1">
-                  <svg class="w-4 h-4 text-red" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-                  Cons
-                </h4>
-                <ul class="space-y-1 pl-5 list-disc" role="list">
-                  {product.cons.slice(0, 3).map(con => (
-                    <li class="text-sm text-text">{con}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <a
-                href={product.affiliate_urls.amazon || Object.values(product.affiliate_urls)[0]}
-                class="btn btn-primary w-full"
-                rel="noopener sponsored"
-                target="_blank"
-                aria-label={`View ${product.name} on Amazon (affiliate link)`}
-              >
-                Check Price
-              </a>
-              <p class="text-xs text-warm-gray text-center mt-2">Affiliate link — we may earn a commission</p>
-            </article>
+            <ProductCard product={product} />
           ))}
         </div>
       </div>
