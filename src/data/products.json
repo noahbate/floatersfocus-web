@@ -4,7 +4,9 @@
       "id": "preservision-areds2",
       "name": "PreserVision AREDS 2 Softgels",
       "category": "supplement",
-      "condition_ids": ["macular"],
+      "condition_ids": [
+        "macular"
+      ],
       "evidence": "The exact vitamin/mineral formula from the NIH AREDS2 trial. Softgels absorb better than tablets. No beta-carotene, so safe for smokers.",
       "evidence_url": "https://doi.org/10.1001/jama.2013.4997",
       "price_usd": 28.99,
@@ -35,8 +37,11 @@
       "id": "nordic-ultimate-omega-2x",
       "name": "Nordic Naturals Ultimate Omega 2X",
       "category": "omega-3",
-      "condition_ids": ["discomfort", "macular"],
-      "evidence": "High-EPA re-esterified triglyceride (rTG) form — ~70% better absorption than drugstore ethyl ester. IFOS 5-star third-party tested. Matches the ≥2g EPA+DHA dry-eye dose.",
+      "condition_ids": [
+        "discomfort",
+        "macular"
+      ],
+      "evidence": "High-EPA re-esterified triglyceride (rTG) form \u2014 ~70% better absorption than drugstore ethyl ester. IFOS 5-star third-party tested. Matches the \u22652g EPA+DHA dry-eye dose.",
       "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/26075346",
       "price_usd": 48.95,
       "servings_per_container": 60,
@@ -55,7 +60,7 @@
       ],
       "cons": [
         "Pricier than ethyl ester",
-        "Not a quick fix (6–12 weeks)"
+        "Not a quick fix (6\u201312 weeks)"
       ],
       "affiliate_urls": {
         "amazon": "https://www.amazon.com/dp/B06XPPP4M2?tag=floatersfocus-20"
@@ -65,7 +70,9 @@
       "id": "systane-complete-pf",
       "name": "Systane Complete PF",
       "category": "artificial-tear",
-      "condition_ids": ["discomfort"],
+      "condition_ids": [
+        "discomfort"
+      ],
       "evidence": "Nano-droplet lipid technology that spreads evenly over the tear film. Preservative-free single-use vials. Alcon trials show improved tear breakup time (TBUT) for mixed dry eye.",
       "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/31907088",
       "price_usd": 24.99,
@@ -95,7 +102,9 @@
       "id": "refresh-mega-3",
       "name": "Refresh Mega-3 Advanced",
       "category": "artificial-tear",
-      "condition_ids": ["discomfort"],
+      "condition_ids": [
+        "discomfort"
+      ],
       "evidence": "Lipid-enhanced artificial tear with flaxseed oil (omega-3) to stabilize the tear film. Good daytime option alongside warm compresses for evaporative dry eye (MGD).",
       "evidence_url": "https://doi.org/10.2147/OPTO.S350185",
       "price_usd": 19.99,
@@ -125,10 +134,12 @@
       "id": "vitrocap-n",
       "name": "VitroCap N",
       "category": "supplement",
-      "condition_ids": ["floaters"],
+      "condition_ids": [
+        "floaters"
+      ],
       "evidence": "Ankamah et al., TVST 2021;10(12):19. Double-blind RCT in symptomatic floaters: P<0.001 reduction in discomfort and objective opacity area; contrast sensitivity P=0.047.",
       "evidence_url": "https://doi.org/10.1167/tvst.10.12.19",
-      "price_usd": 49.90,
+      "price_usd": 49.9,
       "servings_per_container": 90,
       "serving_size": "1 capsule",
       "rating_avg": 4.2,
@@ -151,16 +162,18 @@
         "Single-center study"
       ],
       "affiliate_urls": {
-        "amazon": "https://www.amazon.com/s?k=vitrocap+n+eye+supplement",
-        "direct": "https://www.ebiga-vision.com/vitrocap-n"
+        "amazon": "https://www.amazon.com/s?k=VitroCap+N+eye+supplement&tag=floatersfocus-20",
+        "direct": "https://www.ebiga-vision.com/en/vitrocapn-eye-supplement-for-floaters/"
       }
     },
     {
       "id": "bromelain-papain-ficin-blend",
       "name": "Bromelain + Papain + Ficin Enzyme Blend",
       "category": "supplement",
-      "condition_ids": ["floaters"],
-      "evidence": "Takeuchi et al., Appl Sci 2020;10(17):5901. Prospective cohort, n=280, 3 months: 65.5–75.5% symptomatic vitreous opacity reduction vs placebo.",
+      "condition_ids": [
+        "floaters"
+      ],
+      "evidence": "Takeuchi et al., Appl Sci 2020;10(17):5901. Prospective cohort, n=280, 3 months: 65.5\u201375.5% symptomatic vitreous opacity reduction vs placebo.",
       "evidence_url": "https://doi.org/10.3390/app10175901",
       "price_usd": 24.95,
       "servings_per_container": 90,
@@ -191,7 +204,9 @@
       "id": "curcumin-bioavailable",
       "name": "Curcumin + Piperine Bioavailable Supplement",
       "category": "supplement",
-      "condition_ids": ["floaters"],
+      "condition_ids": [
+        "floaters"
+      ],
       "evidence": "Malandrini et al., Vision 2025. Pilot study: curcumin-based supplement after Nd:YAG capsulotomy reduced symptomatic floaters and foreign-body sensation.",
       "evidence_url": "https://doi.org/10.3390/vision9040098",
       "price_usd": 19.99,
@@ -222,7 +237,9 @@
       "id": "atropine-compounded-drops",
       "name": "Compounded Atropine 0.01% Drops",
       "category": "supplement",
-      "condition_ids": ["floaters"],
+      "condition_ids": [
+        "floaters"
+      ],
       "evidence": "Du J, Sabbagh O, Do BK, et al. J Vitreoretin Dis 2025;9(6):831-835. Prospective cohort, n=44, 1 week: 59% satisfaction among completers; pupillary dilation is proposed mechanism.",
       "evidence_url": "https://doi.org/10.1177/24741264251364819",
       "price_usd": 29.99,
@@ -243,7 +260,135 @@
         "Requires compounding pharmacy"
       ],
       "affiliate_urls": {
-        "amazon": "https://www.amazon.com/s?k=atropine+0.01%25+drops"
+        "amazon": "https://www.amazon.com/s?k=atropine+0.01%25+eye+drops&tag=floatersfocus-20"
+      },
+      "availability_note": "Prescription-only: compounded 0.01% atropine drops are dispensed by a compounding pharmacy, not sold OTC on Amazon. The Amazon link is for reference only and not commissionable."
+    },
+    {
+      "id": "now-nicotinamide-500",
+      "name": "NOW Foods Niacinamide (Vitamin B-3) 500 mg",
+      "category": "supplement",
+      "condition_ids": [
+        "iop"
+      ],
+      "evidence": "Nicotinamide (vitamin B3) is the adjunct with the strongest emerging neuroprotection data: a Phase 2 RCT (n=42, De Moraes, JAMA Ophthalmol 2022) improved visual field vs placebo, and a crossover RCT (n=57) improved inner retinal function on ERG (Hui, Clin Exp Ophthalmol 2020). It does NOT lower IOP \u2014 the goal is protecting the optic nerve. Trial dose is 3 g/day = 6 of these capsules, far above the RDA \u2014 discuss with your doctor first.",
+      "evidence_url": "https://doi.org/10.1001/jamaophthalmol.2021.4576",
+      "price_usd": 7.95,
+      "servings_per_container": 100,
+      "serving_size": "1 capsule",
+      "rating_avg": 4.6,
+      "review_count": 746,
+      "key_ingredients": {
+        "Niacinamide (B-3)": "500 mg"
+      },
+      "pros": [
+        "Cheap \u2014 the 3 g trial dose costs pennies a day",
+        "Niacinamide form doesn't cause the niacin flush",
+        "NOW is third-party tested"
+      ],
+      "cons": [
+        "Neuroprotection only \u2014 does NOT lower IOP",
+        "Trial dose is 6 capsules/day, far above RDA",
+        "Discuss with your ophthalmologist first"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/dp/B00RVJ3TJC?tag=floatersfocus-20"
+      }
+    },
+    {
+      "id": "le-eye-pressure-mirtogenol",
+      "name": "Life Extension Eye Pressure Support with Mirtogenol",
+      "category": "supplement",
+      "condition_ids": [
+        "iop"
+      ],
+      "evidence": "Mirtogenol is the patented pine bark + bilberry combination studied in ocular hypertension: modest IOP reduction (~3 mmHg over 3 months) and possible potentiation of latanoprost (Steigerwalt, Mol Vis 2008; Clin Ophthalmol 2010). Small trials, mostly one research group \u2014 treat as adjunctive, not a replacement for monitoring or drops.",
+      "evidence_url": "https://doi.org/10.2147/opth.s9899",
+      "price_usd": 25.49,
+      "servings_per_container": 30,
+      "serving_size": "1 capsule",
+      "rating_avg": 4.5,
+      "review_count": 1156,
+      "key_ingredients": {
+        "Bilberry extract": "80 mg",
+        "French maritime pine bark": "40 mg"
+      },
+      "pros": [
+        "Matches the studied Mirtogenol dosing",
+        "Life Extension holds the Mirtogenol license",
+        "May add to latanoprost effect"
+      ],
+      "cons": [
+        "Small trials, mostly one research group",
+        "~3 mmHg is modest \u2014 won't replace drops",
+        "Talk to your doctor before starting"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/dp/B004YWZP50?tag=floatersfocus-20"
+      }
+    },
+    {
+      "id": "nd-saffron-30mg",
+      "name": "Nootropics Depot High Potency Saffron Extract (30 mg)",
+      "category": "supplement",
+      "condition_ids": [
+        "iop"
+      ],
+      "evidence": "The studied dose is 30 mg/day saffron extract, and this product is standardized to \u22657.5% crocins to match it. One small RCT in POAG patients on drops found added modest IOP reduction (Jabbarpoor Bonyadi, BMC Complement Altern Med 2014). Single trial \u2014 treat as hypothesis-generating.",
+      "evidence_url": "https://doi.org/10.1186/1472-6882-14-399",
+      "price_usd": 26.99,
+      "servings_per_container": 60,
+      "serving_size": "1 capsule",
+      "rating_avg": 4.4,
+      "review_count": 415,
+      "key_ingredients": {
+        "Saffron extract": "30 mg",
+        "Crocins": "\u22657.5%",
+        "Safranals": "\u22651%"
+      },
+      "pros": [
+        "Exact 30 mg studied dose",
+        "Standardized to \u22657.5% crocins",
+        "Third-party tested"
+      ],
+      "cons": [
+        "Single small RCT \u2014 hypothesis-generating",
+        "Pricier than generic saffron",
+        "Doesn't replace monitoring or drops"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/dp/B0B69MGMFW?tag=floatersfocus-20"
+      }
+    },
+    {
+      "id": "jarrow-citicoline-cdp",
+      "name": "Jarrow Formulas Citicoline (CDP-Choline) 250 mg",
+      "category": "supplement",
+      "condition_ids": [
+        "iop"
+      ],
+      "evidence": "The 2023 systematic review/meta-analysis found no significant effect of citicoline on IOP, visual field, or retinal nerve fiber preservation; some individual trials show hopeful visual-function signals, but the pooled evidence says no. We're skeptical \u2014 listed because the page's adjunctive section covers it.",
+      "evidence_url": "https://doi.org/10.1371/journal.pone.0291836",
+      "price_usd": 44.94,
+      "servings_per_container": 120,
+      "serving_size": "1 capsule",
+      "rating_avg": 4.5,
+      "review_count": 2562,
+      "key_ingredients": {
+        "Citicoline (CDP-choline)": "250 mg"
+      },
+      "pros": [
+        "Established brand, good value per serving",
+        "Trial range 500\u20131000 mg/day = 2\u20134 capsules",
+        "Third-party tested"
+      ],
+      "cons": [
+        "Pooled meta-analysis: no significant effect",
+        "Skeptical verdict \u2014 not a proven IOP treatment",
+        "Discuss with your doctor"
+      ],
+      "affiliate_urls": {
+        "amazon": "https://www.amazon.com/dp/B004JO4EFU?tag=floatersfocus-20"
       }
     }
   ]
