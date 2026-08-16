@@ -11,9 +11,80 @@ interface Props {
   products: any[];
 }
 const { condition, products } = Astro.props;
-const pageTitle = `${condition.name} — Floaters Focus`;
+const pageTitle = condition.name;
 const pageDescription = condition.description;
 const conditionReviewed = condition.date_reviewed || condition.date_modified || "2026-08-08";
+
+const medicalJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": condition.name,
+  "description": condition.description,
+  "url": `https://floatersfocus.org/conditions/${condition.slug}`,
+  "author": {
+    "@type": "Person",
+    "name": "NP Bate, Ed.S."
+  },
+  "about": {
+    "@type": "MedicalCondition",
+    "name": condition.name
+  },
+  "dateReviewed": conditionReviewed,
+  "specialty": "Ophthalmology",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Floaters Focus",
+    "url": "https://floatersfocus.org"
+  }
+});
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": `What is ${condition.name.toLowerCase()}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": condition.description
+      }
+    },
+    ...(condition.key_points && condition.key_points.length > 0 ? [{
+      "@type": "Question",
+      "name": `What should I know about ${condition.name.toLowerCase()}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": condition.key_points.join(" ")
+      }
+    }] : []),
+    ...(condition.red_flags && condition.red_flags.length > 0 ? [{
+      "@type": "Question",
+      "name": `When is ${condition.name.toLowerCase()} an emergency?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": condition.red_flags.join(" ")
+      }
+    }] : []),
+    ...(condition.when_to_see_doctor ? [{
+      "@type": "Question",
+      "name": `When should I see a doctor for ${condition.name.toLowerCase()}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": condition.when_to_see_doctor
+      }
+    }] : []),
+    ...(condition.what_doesnt_work && condition.what_doesnt_work.length > 0 ? [{
+      "@type": "Question",
+      "name": `What doesn't work for ${condition.name.toLowerCase()}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": condition.what_doesnt_work.join(" ")
+      }
+    }] : [])
+  ]
+});
 
 // Generate static paths for each condition
 export async function getStaticPaths() {
@@ -398,29 +469,7 @@ export async function getStaticPaths() {
     </div>
   </section>
 
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": condition.name,
-      "description": condition.description,
-      "url": `https://floatersfocus.org/conditions/${condition.slug}`,
-      "author": {
-        "@type": "Person",
-        "name": "NP Bate, Ed.S."
-      },
-      "about": {
-        "@type": "MedicalCondition",
-        "name": condition.name
-      },
-      "dateReviewed": conditionReviewed,
-      "specialty": "Ophthalmology",
-      "inLanguage": "en",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Floaters Focus",
-        "url": "https://floatersfocus.org"
-      }
-    })}
-  </script>
+  <script type="application/ld+json" set:html={medicalJsonLd} />
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
 </BaseLayout>
