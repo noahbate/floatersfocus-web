@@ -105,6 +105,10 @@ const jsonLd = JSON.stringify({
   </head>
   <body class="min-h-screen flex flex-col">
     <a href="#main-content" class="skip-link">Skip to main content</a>
+    <script>
+      import { inject } from '@vercel/analytics';
+      inject();
+    </script>
     <script is:inline>
       (function() {
         // v2 key: ignores old stored 'light' values from the pre-dark-default era.
