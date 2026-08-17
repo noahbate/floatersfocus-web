@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SpeedInsights from '@vercel/speed-insights/astro';
 const metaPixelId = import.meta.env.PUBLIC_META_PIXEL_ID || '';
 const pixelScript = metaPixelId
   ? `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -133,5 +134,6 @@ const jsonLd = JSON.stringify({
       <slot />
     </main>
     <slot name="footer" />
+    <SpeedInsights />
   </body>
 </html>
