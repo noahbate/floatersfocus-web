@@ -2,61 +2,53 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import GuideIcon from '../components/GuideIcon.astro';
 
 const guides = [
   {
     slug: 'sudden-floater-emergency',
     title: 'Sudden Dark Floater in One Eye? Start Here',
     description: 'Woke up with a new floater? Panic level: high. Here\'s what it likely is, the red flags, and what to do right now.',
-    icon: '🚨',
   },
   {
     slug: 'pvd-survival-guide',
     title: 'The PVD Survival Guide',
     description: 'Just diagnosed with PVD? The honest, data-backed truth about what to expect, neuroadaptation, and getting your life back.',
-    icon: '📖',
   },
   {
     slug: 'screen-setup-floaters',
     title: 'Screen Setup for Floaters',
     description: 'Dark mode, font scaling, IDE tweaks — make your digital life floater-friendly.',
-    icon: '🖥️',
   },
   {
     slug: 'sunglasses-floaters',
     title: 'Sunglasses for Floaters',
     description: 'High-contrast tints, polarization, and specific lenses that make floaters vanish outdoors.',
-    icon: '🕶️',
   },
   {
     slug: 'floater-supplements-evidence',
     title: 'Oral Floater Supplements: What the Evidence Shows',
     description: 'VitroCap N and the bromelain/papain/ficin enzyme mix — the two most studied oral interventions for vitreous floaters.',
-    icon: '🧪',
   },
   {
     slug: 'supplement-quality',
     title: 'How to Read a Supplement Label',
     description: 'Spot fillers, check forms (rTG vs ethyl ester), verify doses match studies.',
-    icon: '🔍',
   },
   {
     slug: 'eye-anatomy-basics',
     title: 'Eye Anatomy 101',
     description: 'Vitreous, macula, meibomian glands—what they are and why they matter.',
-    icon: '👁️',
   },
   {
     slug: 'treatments-watching',
     title: 'Treatments We\'re Watching',
     description: 'Saffron, ginkgo, astaxanthin, bilberry, manuka honey — promising mechanisms and early signals, but not enough evidence to recommend yet.',
-    icon: '🔭',
   },
   {
     slug: 'when-to-see-doctor',
     title: 'When to See a Doctor (Full Guide)',
     description: 'Complete red flag list with photos, urgency levels, and what to expect.',
-    icon: '🚨',
   },
 ];
 ---
@@ -72,14 +64,14 @@ const guides = [
           Guides & How-Tos
         </h1>
         <p class="text-lg text-text max-w-2xl mx-auto">
-          Deeper dives on the topics that matter. Plain English, evidence-backed, no fluff.
+          Deeper dives into our eye health topics, in plain English,
         </p>
       </header>
 
       <div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-4xl mx-auto">
         {guides.map((guide) => (
           <a href={`/guides/${guide.slug}`} class="card card-bordered group flex flex-col">
-            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">{guide.icon}</div>
+            <GuideIcon slug={guide.slug} className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform" />
             <h2 class="text-xl font-bold text-charcoal mb-2 group-hover:text-primary transition-colors">
               {guide.title}
             </h2>
