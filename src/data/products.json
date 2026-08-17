@@ -367,7 +367,7 @@
       "condition_ids": [
         "iop"
       ],
-      "evidence": "The 2023 systematic review/meta-analysis found no significant effect of citicoline on IOP, visual field, or retinal nerve fiber preservation; some individual trials show hopeful visual-function signals, but the pooled evidence says no. We're skeptical \u2014 listed because the page's adjunctive section covers it.",
+      "evidence": "The 2023 systematic review/meta-analysis found no significant effect of citicoline on IOP, visual field, or retinal nerve fiber preservation; some individual trials show hopeful visual-function signals, but the pooled evidence says no. We're including this as some individual trials showed hopeful signals.",
       "evidence_url": "https://doi.org/10.1371/journal.pone.0291836",
       "price_usd": 44.94,
       "servings_per_container": 120,
