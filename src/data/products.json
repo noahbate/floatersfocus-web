@@ -334,7 +334,7 @@
       "condition_ids": [
         "iop"
       ],
-      "evidence": "The studied dose is 30 mg/day saffron extract, and this product is standardized to \u22657.5% crocins to match it. One small RCT in POAG patients on drops found added modest IOP reduction (Jabbarpoor Bonyadi, BMC Complement Altern Med 2014). Single trial \u2014 treat as hypothesis-generating.",
+      "evidence": "The studied dose is 30 mg/day saffron extract, and this product is standardized to \u22657.5% crocins to match it. One small RCT in POAG patients on drops found added modest IOP reduction (Jabbarpoor Bonyadi, BMC Complement Altern Med 2014). Single trial.",
       "evidence_url": "https://doi.org/10.1186/1472-6882-14-399",
       "price_usd": 26.99,
       "servings_per_container": 60,
@@ -352,7 +352,7 @@
         "Third-party tested"
       ],
       "cons": [
-        "Single small RCT \u2014 hypothesis-generating",
+        "Single small RCT",
         "Pricier than generic saffron",
         "Doesn't replace monitoring or drops"
       ],
