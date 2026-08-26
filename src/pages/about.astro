@@ -129,7 +129,7 @@ import Footer from '../components/Footer.astro';
             and who spent years translating the research for myself because it wasn't available in one place.
           </p>
           <p class="text-text leading-relaxed mt-4">
-            Questions? Corrections? Study I missed? <a href="mailto:hello@floatersfocus.org" class="text-primary hover:underline">Email me</a>.
+            Questions? Corrections? Study I missed? <a href="mailto:floatersfocusorg@gmail.com" class="text-primary hover:underline">Email me</a>.
             I read everything.
           </p>
         </section>
@@ -138,7 +138,7 @@ import Footer from '../components/Footer.astro';
           <h2 class="text-2xl font-bold text-charcoal mb-4">Contact</h2>
           <p class="text-text leading-relaxed mb-6">
             Questions, corrections, or a study I missed? I read everything — email goes
-            straight to <a href="mailto:hello@floatersfocus.org" class="text-primary hover:underline">hello@floatersfocus.org</a>,
+            straight to <a href="mailto:floatersfocusorg@gmail.com" class="text-primary hover:underline">floatersfocusorg@gmail.com</a>,
             or use the form below and your email client will open pre-filled.
           </p>
           <form id="contact-form" class="card card-bordered space-y-6">
@@ -172,9 +172,9 @@ import Footer from '../components/Footer.astro';
               const subject = encodeURIComponent(form.subject.value.trim());
               const message = encodeURIComponent(form.message.value.trim());
               const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-              const mailto = `mailto:hello@floatersfocus.org?subject=${subject}&body=${body}`;
+              const mailto = `mailto:floatersfocusorg@gmail.com?subject=${subject}&body=${body}`;
               window.location.href = mailto;
-              status.textContent = 'If your email client did not open, email hello@floatersfocus.org directly.';
+              status.textContent = 'If your email client did not open, email floatersfocusorg@gmail.com directly.';
             });
           </script>
         </section>
