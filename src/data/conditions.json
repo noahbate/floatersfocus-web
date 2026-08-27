@@ -16,6 +16,12 @@
         "YAG laser vitreolysis for discrete Weiss ring >6 months post-PVD",
         "Pars plana vitrectomy for severe, refractory cases (cataract risk ~90%)"
       ],
+      "related_guide": {
+        "title": "The Full Risk-Benefit Breakdown",
+        "description": "Vitrectomy vs YAG laser, weighed side by side with the actual complication rates from the studies. Includes the 'who is even a candidate' gate.",
+        "slug": "floater-surgery-options",
+        "cta": "Read the surgery options guide"
+      },
       "adjunctive_supplements": [
         {
           "name": "VitroCap N",

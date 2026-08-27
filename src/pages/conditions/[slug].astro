@@ -225,6 +225,20 @@ export async function getStaticPaths() {
           </article>
         ))}
       </div>
+
+      {condition.related_guide && (
+        <div class="max-w-3xl mx-auto mt-6">
+          <a href={`/guides/${condition.related_guide.slug}`} class="card card-bordered border-green/30 bg-green/5 group flex flex-col sm:flex-row sm:items-center gap-3 p-5 hover:border-green/60 transition-colors">
+            <div class="flex-1">
+              <h3 class="text-lg font-bold text-charcoal mb-1 group-hover:text-primary transition-colors">
+                {condition.related_guide.title}
+              </h3>
+              <p class="text-text text-sm leading-relaxed">{condition.related_guide.description}</p>
+            </div>
+            <span class="btn btn-primary whitespace-nowrap shrink-0">{condition.related_guide.cta} →</span>
+          </a>
+        </div>
+      )}
     </div>
   </section>
 

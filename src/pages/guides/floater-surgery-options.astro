@@ -1,0 +1,263 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Floater Surgery Options: YAG Laser vs Vitrectomy, Risks and Benefits"
+  description="The honest, evidence-backed look at the two procedures people actually seek for floaters: YAG laser vitreolysis and vitrectomy. What they fix, what they cost, and the real complication rates."
+  publishedDate="2026-08-27"
+  lastReviewed="2026-08-27"
+>
+  <Header currentPath="/guides/floater-surgery-options" slot="header" />
+  <main class="flex-1">
+    <section class="py-6 border-b border-gray-200 bg-white">
+      <div class="container max-w-3xl mx-auto px-4">
+        <p class="text-xs text-warm-gray">
+          Medical information reviewed by <strong>NP Bate, Ed.S.</strong> • Last reviewed: 2026-08-27 • Not a substitute for professional care.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white border-b border-gray-200">
+      <div class="container mx-auto px-4">
+        <header class="max-w-3xl mx-auto text-center mb-12">
+          <h1 class="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            Floater Surgery Options: Weighing the Risks and Benefits
+          </h1>
+          <p class="text-lg text-text leading-relaxed">
+            Two procedures exist for floaters, and people on the forums are constantly asking which one to get.
+            The honest answer is: it depends on the floater, and both options carry real trade-offs you should
+            understand before you sit in any chair.
+          </p>
+          <p class="mt-4 text-sm text-text-muted">
+            <strong>Bottom line up front:</strong> the only procedure with a sham-controlled trial behind it is YAG laser,
+            and it works for one specific type of floater (a single Weiss ring), not the whole cloud. Vitrectomy is the only
+            option that actually removes floaters, but it is real surgery with a near-certain cataract trade-off in most
+            eyes. For most people, observation and letting the brain adapt is still the right first move.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-cream" aria-labelledby="candidate-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="candidate-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-4">
+            Before We Start: Who Is Even a Candidate?
+          </h2>
+          <p class="text-text mb-6">
+            Nobody should be talking about surgery in the first months after floaters appear. A fresh PVD
+            settles on its own for 60 to 90 percent of people within six months, as the floater sinks and your
+            brain learns to ignore what it can't see through. Most retina surgeons apply an informal "six-month
+            rule": wait, let the eye settle, then reassess. If the floaters are still wrecking your quality of life
+            after that, a procedure is on the table.
+          </p>
+          <p class="text-text mb-6">
+            And before any of this: a sudden shower of new floaters, flashes, or a shadow creeping across your vision
+            is a possible retinal tear. That is an urgent exam, not a consultation about elective surgery.
+          </p>
+          <div class="space-y-3">
+            <div class="bg-green/5 border-l-4 border-green rounded-r-lg p-4">
+              <p class="text-text">
+                <strong>Reasonable candidate:</strong> stable floaters for 6+ months that interfere with reading,
+                driving, or work, and you understand the risks below.
+              </p>
+            </div>
+            <div class="bg-red/5 border-l-4 border-red rounded-r-lg p-4">
+              <p class="text-text">
+                <strong>Not a candidate yet:</strong> new or changing floaters, floaters with flashes, or anyone who
+                thinks this will fix a different problem (like blur or dry eye).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white border-t border-gray-200" aria-labelledby="yag-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="yag-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-4">
+            Option 1: YAG Laser Vitreolysis (the "laser")
+          </h2>
+          <p class="text-text mb-6">
+            A laser (Nd:YAG, 1064 nm) is aimed at the floater through the pupil with a contact lens on the eye.
+            Pulses of energy vaporize the floater into smaller pieces or gas, so it's less noticeable or sinks out
+            of the line of sight. It's an in-office procedure, no incisions, and you're out the door the same day.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">What the Evidence Shows</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>Shah CP, Heier JS. <em>JAMA Ophthalmol</em> 2017. doi: <a href="https://doi.org/10.1001/jamaophthalmol.2017.2388" target="_blank" rel="noopener">10.1001/jamaophthalmol.2017.2388</a></li>
+            <li>Design: Randomized, sham-controlled trial — the strongest study ever done on this procedure</li>
+            <li>N = 52 eyes with symptomatic <strong>Weiss rings</strong> (the single large ring floater), followed 6 months</li>
+            <li>Subjective improvement: <strong>54% in the laser group vs 9% in sham</strong> (P &lt; 0.001)</li>
+            <li>53% reported significant or complete improvement vs 0% in sham</li>
+            <li>Objective masked grading: 94% of treated eyes showed improved or resolved floaters on photos</li>
+            <li>No clinically relevant adverse events in the trial (details below)</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">The Catch</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>This trial only enrolled people with a <strong>discrete Weiss ring</strong>. Diffuse clouds, strands, and
+              "cobwebs" were excluded — and that's exactly what most people with PVD floaters actually have.</li>
+            <li>Success is partial, not complete. On average patients felt floaters were about 54% better, and nearly
+              half reported less than significant improvement.</li>
+            <li>Older data is weaker: Delaney et al. (2002) found only 38% of patients had moderate or better benefit
+              at lower laser powers. The Cochrane review (2017) judged the overall evidence <strong>low-certainty</strong>.</li>
+            <li>It's often repeatable (a second session), which tells you the first one didn't fully fix it.</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Risks</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>Laser energy travels through the eye, so the lens, retina, and optic nerve are in the beam path.</li>
+            <li>The Shah trial reported no clinically relevant complications, but it was <strong>underpowered for rare ones</strong> —
+              the authors note a 95% confidence there is no more than about an 8% risk of a serious adverse event.</li>
+            <li>Documented complications in the wider literature: retinal tear or detachment (rare, &lt;1% in most series),
+              cataract or lens pitting (one case in the trial), transient pressure spikes, and floaters that get worse
+              or split into more floaters.</li>
+            <li>Damaged eyes are higher risk: history of retinal tear, high myopia, glaucoma, or prior retinal surgery
+              makes YAG riskier — many surgeons decline these patients.</li>
+          </ul>
+
+          <div class="bg-green/5 border-l-4 border-green rounded-r-lg p-4">
+            <p class="text-text">
+              <strong>Best fit:</strong> one stable, central, ring-shaped floater (Weiss ring) at least 6 months after PVD,
+              in an otherwise healthy eye. <strong>Poor fit:</strong> diffuse cloud-like floaters, recent PVD, high myopia,
+              or a history of retinal problems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-cream border-t border-gray-200" aria-labelledby="vitrectomy-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="vitrectomy-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-4">
+            Option 2: Pars Plana Vitrectomy (the "surgery")
+          </h2>
+          <p class="text-text mb-6">
+            A vitrectomy removes the vitreous gel (and with it, the floaters) through tiny incisions, using
+            micro-instruments — 25- or 27-gauge, roughly the width of a few human hairs. Modern "limited"
+            vitrectomy for floaters leaves a small cushion of gel behind the lens, specifically to slow the
+            cataract that surgery otherwise accelerates. It's done in an operating room, usually under local
+            anesthesia, and it is the only option that actually takes the floaters out.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">What the Evidence Shows</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>Sebag J, et al. <em>Ophthalmol Retina</em> 2018. doi: <a href="https://doi.org/10.1016/j.oret.2018.03.011" target="_blank" rel="noopener">10.1016/j.oret.2018.03.011</a></li>
+            <li>Design: Case series, 195 eyes, 25-gauge limited vitrectomy, mean follow-up ~33 months (some eyes 5+ years)</li>
+            <li>Vitreous echodensity decreased <strong>94.1%</strong> (P &lt; 0.0001); quality-of-life (VFQ) improved 19.3%</li>
+            <li>Contrast sensitivity — the vision quality floaters steal — normalized at every time point checked</li>
+            <li>No endophthalmitis; 3 retinal tears and 3 retinal detachments, <strong>all successfully repaired</strong></li>
+            <li>Cataract surgery was needed in <strong>21 of 124 phakic eyes (16.9%)</strong>, on average 13 months after vitrectomy</li>
+          </ul>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li>Schulz-Key S, et al. <em>Acta Ophthalmol</em> 2011. doi: <a href="https://doi.org/10.1111/j.1755-3768.2009.01682.x" target="_blank" rel="noopener">10.1111/j.1755-3768.2009.01682.x</a></li>
+            <li>Design: 73 eyes, mean follow-up 37 months — the long-term view</li>
+            <li>Patient satisfaction: <strong>88%</strong></li>
+            <li>Of phakic eyes, <strong>60% went on to cataract surgery</strong> during follow-up</li>
+            <li>Retinal detachment: 1 immediate (1.3%) plus 4 late detachments 24-44 months out (5.5%)</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Risks</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li><strong>Cataract is the price of admission.</strong> Even with limited vitrectomy, roughly 17% of healthy-lens
+              eyes need cataract surgery within about a year; older full-vitrectomy series put it at 60% or higher.
+              For anyone under ~55 with a clear lens, you are likely trading floaters for a future cataract surgery.</li>
+            <li>Retinal tear or detachment: roughly 1.5% in modern limited series (3 of 195 in Sebag, all repaired), but
+              as high as ~5-7% long-term in older full-vitrectomy data (Schulz-Key). Detachment is the serious one — it can
+              permanently threaten vision if not caught fast.</li>
+            <li>Endophthalmitis (severe internal infection): rare, under 0.1%, but the most feared complication because it
+              can cause permanent vision loss.</li>
+            <li>Other: vitreous hemorrhage (usually clears), macular pucker, recurrent floaters from a new PVD, and the small
+              but real risks of any intraocular surgery.</li>
+            <li>Older patients with already-clouded lenses are, counterintuitively, better surgical candidates — the cataract
+              trade-off is much less meaningful when the lens was on its way out anyway.</li>
+          </ul>
+
+          <div class="bg-red/5 border-l-4 border-red rounded-r-lg p-4">
+            <p class="text-text">
+              <strong>Best fit:</strong> severe, diffuse floaters that have failed to improve over 6+ months and are genuinely
+              disabling — especially someone already pseudophakic (has an artificial lens) or near cataract age. <strong>Poor fit:</strong>
+              mild floaters, young patients with clear lenses, or anyone with a history of retinal detachment in that eye.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white border-t border-gray-200" aria-labelledby="comparison-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="comparison-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-4">
+            Side by Side
+          </h2>
+          <div class="space-y-3">
+            <div class="bg-green/5 border-l-4 border-green rounded-r-lg p-4">
+              <p class="text-text"><strong>What it fixes:</strong> YAG handles a single discrete ring or dot. Vitrectomy removes all floaters, including diffuse clouds.</p>
+            </div>
+            <div class="bg-green/5 border-l-4 border-green rounded-r-lg p-4">
+              <p class="text-text"><strong>How well:</strong> YAG patients average ~54% improvement (vs 9% sham) and many need a repeat session. Vitrectomy is ~94% effective by imaging and 88% satisfaction.</p>
+            </div>
+            <div class="bg-red/5 border-l-4 border-red rounded-r-lg p-4">
+              <p class="text-text"><strong>Biggest risk:</strong> YAG: retinal tear (rare), lens damage, or floaters that worsen. Vitrectomy: near-certain cataract acceleration, plus a small but real retinal detachment risk (1.5-6%).</p>
+            </div>
+            <div class="bg-red/5 border-l-4 border-red rounded-r-lg p-4">
+              <p class="text-text"><strong>Recovery:</strong> YAG is in-office, done in minutes, back to work same day. Vitrectomy is a real procedure with a day or two of rest and weeks of activity limits.</p>
+            </div>
+            <div class="bg-amber/5 border-l-4 border-amber rounded-r-lg p-4">
+              <p class="text-text"><strong>Evidence strength:</strong> YAG has one sham-controlled RCT (n=52, Weiss rings only) but low-certainty overall evidence. Vitrectomy has no sham trial and relies on large case series — good, but not randomized.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-cream border-t border-gray-200" aria-labelledby="decision-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="decision-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-4">
+            How I'd Think About It
+          </h2>
+          <p class="text-text mb-6">
+            I get the temptation. Floaters are maddening, and when someone tells you there's a laser or a surgery
+            that can make them gone, it's hard not to fixate on it. Here's the framework I'd want a family member
+            to use.
+          </p>
+          <ul class="space-y-2 text-text mb-6 list-disc pl-5">
+            <li><strong>Wait six months.</strong> Most floaters settle on their own. Decide after the eye has stopped changing, not in the middle of it.</li>
+            <li><strong>Identify the floater honestly.</strong> One ring in the middle of your vision = YAG is a legitimate conversation. A cloud that shifts every time you move = YAG will probably disappoint you, and vitrectomy is the only real option.</li>
+            <li><strong>Know your lens status.</strong> If you're young with a clear lens, vitrectomy means planning a cataract surgery within a couple of years. If you're already pseudophakic or in your 60s+, that trade-off mostly disappears and vitrectomy looks much more reasonable.</li>
+            <li><strong>Ask your surgeon their own numbers.</strong> How many floater procedures have they done? What's their complication rate? A surgeon who's cagey about that is a red flag.</li>
+            <li><strong>Start with the supplements evidence if you're not ready for either.</strong> There's a small but real evidence base for oral options — see our <a href="/guides/floater-supplements-evidence" class="text-primary underline">floater supplements guide</a>.</li>
+          </ul>
+          <p class="text-text">
+            Both procedures exist because a minority of people have floaters bad enough that the risk is worth it.
+            For everyone else, neuroadaptation is free, permanent, and has zero complications. That's not a cop-out —
+            it's the standard of care.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 bg-white border-t border-gray-200" aria-labelledby="citations-heading">
+      <div class="container max-w-3xl">
+        <h2 id="citations-heading" class="text-2xl font-bold text-charcoal mb-4">Sources</h2>
+        <ul class="space-y-2 text-sm text-text list-disc pl-5">
+          <li>Shah CP, Heier JS. YAG Laser Vitreolysis vs Sham YAG Vitreolysis for Symptomatic Vitreous Floaters: A Randomized Clinical Trial. <em>JAMA Ophthalmol</em> 2017. doi: <a href="https://doi.org/10.1001/jamaophthalmol.2017.2388" target="_blank" rel="noopener">10.1001/jamaophthalmol.2017.2388</a></li>
+          <li>Delaney YM, Oyinloye A, Benjamin L. Nd:YAG vitreolysis and pars plana vitrectomy: surgical treatment for vitreous floaters. <em>Eye</em> 2002. doi: <a href="https://doi.org/10.1038/sj.eye.6700026" target="_blank" rel="noopener">10.1038/sj.eye.6700026</a></li>
+          <li>Kokavec J, Wu Z, Sherwin JC, Ang AJS, et al. Nd:YAG laser vitreolysis versus pars plana vitrectomy for vitreous floaters. <em>Cochrane Database Syst Rev</em> 2017. doi: <a href="https://doi.org/10.1002/14651858.CD011676.pub2" target="_blank" rel="noopener">10.1002/14651858.CD011676.pub2</a></li>
+          <li>Sebag J, Yee KMP, Nguyen JH, et al. Long-Term Safety and Efficacy of Limited Vitrectomy for Vision Degrading Vitreopathy. <em>Ophthalmol Retina</em> 2018. doi: <a href="https://doi.org/10.1016/j.oret.2018.03.011" target="_blank" rel="noopener">10.1016/j.oret.2018.03.011</a></li>
+          <li>Schulz-Key S, Carlsson JO, Crafoord S. Longterm follow-up of pars plana vitrectomy for vitreous floaters. <em>Acta Ophthalmol</em> 2011. doi: <a href="https://doi.org/10.1111/j.1755-3768.2009.01682.x" target="_blank" rel="noopener">10.1111/j.1755-3768.2009.01682.x</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <Footer slot="footer" />
+</BaseLayout>
