@@ -18,7 +18,7 @@ const navItems = [
 
 <header {...attrs} class="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
   <nav class="container mx-auto px-4" aria-label="Main navigation">
-    <div class="flex items-center justify-between h-16">
+    <div class="flex items-center justify-between min-h-16">
       <a href="/" class="flex items-center gap-2.5">
         <svg class="w-7 h-7 text-sage" aria-hidden="true" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <!-- Hand-drawn eye: almond outline with a second stroke for the wobble of a real pen -->
@@ -49,6 +49,32 @@ const navItems = [
           </svg>
         </button>
 
+        <div class="relative" id="text-size-wrap">
+          <button
+            id="text-size-button"
+            type="button"
+            class="p-2 -mr-1 text-charcoal hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md flex items-center gap-1"
+            aria-label="Text size"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="text-size-menu"
+            title="Text size"
+          >
+            <span class="text-lg leading-none font-semibold" aria-hidden="true">A</span>
+            <svg class="w-3 h-3 text-warm-gray" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div
+            id="text-size-menu"
+            class="hidden absolute right-0 top-full mt-2 z-50 w-44 rounded-lg border border-gray-200 bg-white shadow-md p-1"
+            aria-label="Text size"
+          >
+            <button data-size="" aria-pressed="false" class="block w-full text-left px-3 py-2 rounded-md text-sm font-medium text-charcoal hover:bg-gray-100">A · Normal</button>
+            <button data-size="lg" aria-pressed="false" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-charcoal hover:bg-gray-100">A+ · Large</button>
+            <button data-size="xl" aria-pressed="false" class="block w-full text-left px-3 py-2 rounded-md text-lg font-medium text-charcoal hover:bg-gray-100">A++ · Larger</button>
+            <button data-size="xxl" aria-pressed="false" class="block w-full text-left px-3 py-2 rounded-md text-xl font-medium text-charcoal hover:bg-gray-100">A+++ · Largest</button>
+          </div>
+        </div>
+
         <button
           id="mobile-menu-button"
           type="button"
@@ -66,7 +92,7 @@ const navItems = [
 
       <ul
         id="mobile-menu"
-        class="hidden md:flex md:items-center gap-1"
+        class="hidden md:flex md:flex-wrap md:items-center gap-1"
         role="menubar"
       >
         {navItems.map(item => (
@@ -148,6 +174,59 @@ const navItems = [
           localStorage.setItem(themeKey, next);
           updateThemeUI(next);
         });
+      }
+
+      // ---- Text size control (low-vision readers, 2026-08-28) ----
+      const sizeButton = document.getElementById('text-size-button');
+      const sizeMenu = document.getElementById('text-size-menu');
+      const sizeWrap = document.getElementById('text-size-wrap');
+      const sizeKey = 'floatersfocus-text-size';
+      const sizeLabels = { '': 'Normal', lg: 'Large', xl: 'Larger', xxl: 'Largest' };
+
+      const currentSize = () => document.documentElement.getAttribute('data-text-size') || '';
+
+      const updateSizeUI = () => {
+        const cur = currentSize();
+        const items = sizeMenu ? sizeMenu.querySelectorAll('[data-size]') : [];
+        items.forEach((it) => {
+          const on = (it.getAttribute('data-size') || '') === cur;
+          it.setAttribute('aria-pressed', String(on));
+          it.classList.toggle('bg-sage/10', on);
+          it.classList.toggle('text-sage', on);
+        });
+        if (sizeButton) {
+          sizeButton.setAttribute('aria-label', `Text size: ${sizeLabels[cur]}. Choose a size.`);
+        }
+      };
+
+      const setSize = (size) => {
+        document.documentElement.setAttribute('data-text-size', size || '');
+        if (size) localStorage.setItem(sizeKey, size);
+        else localStorage.removeItem(sizeKey);
+        updateSizeUI();
+      };
+
+      if (sizeButton && sizeMenu) {
+        sizeButton.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = !sizeMenu.classList.contains('hidden');
+          sizeMenu.classList.toggle('hidden', isOpen);
+          sizeButton.setAttribute('aria-expanded', String(!isOpen));
+        });
+        sizeMenu.addEventListener('click', (e) => {
+          const btn = e.target.closest('[data-size]');
+          if (!btn) return;
+          setSize(btn.getAttribute('data-size') || '');
+          sizeMenu.classList.add('hidden');
+          sizeButton.setAttribute('aria-expanded', 'false');
+        });
+        document.addEventListener('click', (e) => {
+          if (sizeWrap && !sizeWrap.contains(e.target)) {
+            sizeMenu.classList.add('hidden');
+            sizeButton.setAttribute('aria-expanded', 'false');
+          }
+        });
+        updateSizeUI();
       }
     })();
   </script>

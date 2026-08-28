@@ -120,6 +120,14 @@ const jsonLd = JSON.stringify({
         const theme = stored === 'dark' || stored === 'light' ? stored : 'dark';
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem(key, theme);
+
+        // Text size for low-vision readers (2026-08-28): '' (normal), lg, xl, xxl.
+        // Applied pre-paint so there's no flash at the wrong size.
+        const tKey = 'floatersfocus-text-size';
+        const tStored = localStorage.getItem(tKey);
+        if (tStored === 'lg' || tStored === 'xl' || tStored === 'xxl') {
+          document.documentElement.setAttribute('data-text-size', tStored);
+        }
       })();
     </script>
     <div class="border-b border-gray-200 bg-white">

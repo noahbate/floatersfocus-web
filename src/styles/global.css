@@ -123,6 +123,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Text-size control for low-vision readers (2026-08-28). Scales the root rem so
+   the whole layout grows proportionally (Tailwind v4 sizes are rem-based).
+   Set pre-paint in BaseLayout + from the header A-menu; persisted in localStorage. */
+html[data-text-size='lg'] { font-size: 1.12rem; }
+html[data-text-size='xl'] { font-size: 1.25rem; }
+html[data-text-size='xxl'] { font-size: 1.4rem; }
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
