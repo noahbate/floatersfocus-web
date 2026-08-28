@@ -7,12 +7,12 @@ import Footer from '../components/Footer.astro';
 <BaseLayout title="Evidence-Based Eye Health" description="Floaters, PVD, macular health, and dry eye guidance backed by clinical evidence." publishedDate="2026-08-08" lastReviewed="2026-08-08">
   <Header currentPath="/" slot="header" />
   <main class="flex-1">
-    <!-- Hero — Clean Clinical -->
+    <!-- Hero — Clean Clinical, hand-annotated -->
     <section class="bg-white border-b border-gray-200">
       <div class="container mx-auto px-4 py-12 md:py-20">
         <div class="grid gap-10 md:grid-cols-2 items-center">
           <div>
-            <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-4">Evidence-based eye health</p>
+            <p class="font-hand text-xl md:text-2xl text-terracotta -rotate-1 mb-4">field notes on floaters, retinas &amp; dry eyes, since 2020</p>
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-charcoal mb-4 tracking-tight leading-tight">
               Eye health that makes sense, no fear, no miracle cures.
             </h1>
@@ -26,13 +26,17 @@ import Footer from '../components/Footer.astro';
             </div>
             <p class="mt-4 text-sm text-text-muted">I read the studies so you don't have to. Every claim on this site links to the actual paper — <a href="/disclaimer" class="text-primary hover:underline">see our medical disclaimer</a>.</p>
           </div>
-          <figure class="hidden md:block">
+          <figure class="hidden md:block relative">
             <img
               src="/images/oct-scan.png"
               alt="Optical coherence tomography (OCT) cross-section scan of a human retina showing its layered structure"
               width="800" height="250" loading="eager"
               class="w-full h-auto rounded-xl border border-gray-200 shadow-lg"
             />
+            <!-- Taped handwritten field note pinned to the scan -->
+            <div class="absolute bottom-4 left-4 rotate-[-2deg] pen-note px-4 py-2 max-w-[250px]">
+              <p class="text-charcoal text-lg leading-snug">field notes: the bright band is your retina. the dark space in front is the gel your floaters drift through.</p>
+            </div>
             <figcaption class="text-xs text-text-muted mt-2 text-right font-mono">OCT retinal scan, Image: medOCT-group, Wikimedia Commons (CC BY 2.0)</figcaption>
           </figure>
         </div>
@@ -42,19 +46,29 @@ import Footer from '../components/Footer.astro';
     <!-- Conditions -->
     <section id="conditions" class="py-12 md:py-16 bg-cream">
       <div class="container mx-auto px-4">
-        <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-2">Start here</p>
+        <p class="font-hand text-2xl text-sage -rotate-1 mb-1">start here</p>
         <h2 class="text-2xl md:text-3xl font-semibold text-charcoal mb-8 tracking-tight">What's bothering you?</h2>
         <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-          <article class="card">
-            <h3 class="text-xl font-semibold text-charcoal mb-2 tracking-tight">Floaters & PVD</h3>
-            <p class="text-sm text-text-muted mb-3">Posterior vitreous detachment, the usual suspect</p>
-            <ul class="space-y-2 text-sm text-text mb-4">
-              <li>• Most floaters are benign and fade with time (neuroadaptation)</li>
-              <li>• No supplement is FDA-approved for floaters, and efficacy alone does not equal regulatory approval</li>
-              <li>• YAG laser works for discrete Weiss rings, not diffuse clouds</li>
-              <li class="text-error"><strong>Red flag:</strong> Sudden shower + flashes + curtain = retinal tear (ER now)</li>
-            </ul>
-            <a href="/conditions/floaters" class="btn btn-primary w-full">Learn More</a>
+          <!-- Featured card — the one the whole site is about -->
+          <article class="card xl:col-span-2 flex flex-col lg:flex-row lg:items-start gap-5">
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-charcoal mb-2 tracking-tight">Floaters &amp; PVD</h3>
+              <p class="text-sm text-text-muted mb-3">Posterior vitreous detachment, the usual suspect</p>
+              <ul class="space-y-2 text-sm text-text mb-4">
+                <li>• Most floaters are benign and fade with time (neuroadaptation)</li>
+                <li>• No supplement is FDA-approved for floaters, and efficacy alone does not equal regulatory approval</li>
+                <li>• YAG laser works for discrete Weiss rings, not diffuse clouds</li>
+                <li class="text-error"><strong>Red flag:</strong> Sudden shower + flashes + curtain = retinal tear (ER now)</li>
+              </ul>
+              <a href="/conditions/floaters" class="btn btn-primary">Start with floaters</a>
+            </div>
+            <svg class="hidden lg:block w-28 h-28 shrink-0 self-center text-sage" aria-hidden="true" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <!-- hand-drawn eye with the floater that started this site -->
+              <path d="M3.5 18c4.3-6.7 9.6-9.8 12.6-9.8S27.6 11.3 32.5 18c-4.9 6.7-10.1 9.8-13.1 9.8S7.8 24.7 3.5 18Z" />
+              <path d="M6.2 18.4c4-6 8.6-8.9 10.9-9" opacity="0.45" />
+              <circle cx="18" cy="18" r="5.6" fill="currentColor" stroke="none" opacity="0.92" />
+              <path d="M16 16.2c.8-.7 1.8-.1 2.3 1 .5 1.1 1.5 1.8 2.5 1.2" stroke="#ffffff" stroke-width="1.6" opacity="0.95" fill="none" />
+            </svg>
           </article>
 
           <article class="card">
@@ -66,7 +80,7 @@ import Footer from '../components/Footer.astro';
               <li>• Smoking = 2–4× risk. Quitting is the best “supplement”</li>
               <li class="text-error"><strong>Red flag:</strong> Wavy lines, new blind spot, sudden blur = wet AMD</li>
             </ul>
-            <a href="/conditions/macular" class="btn btn-primary w-full">Learn More</a>
+            <a href="/conditions/macular" class="text-primary font-medium hover:underline inline-flex items-center gap-1">Read the AMD page →</a>
           </article>
 
           <article class="card">
@@ -78,7 +92,7 @@ import Footer from '../components/Footer.astro';
               <li>• No drops or exercises remove it—surgery is elective</li>
               <li class="text-error"><strong>Red flag:</strong> Sudden worsening distortion, flashes, or a curtain = call today</li>
             </ul>
-            <a href="/conditions/macular-pucker" class="btn btn-primary w-full">Learn More</a>
+            <a href="/conditions/macular-pucker" class="text-primary font-medium hover:underline inline-flex items-center gap-1">The retina membrane →</a>
           </article>
 
           <article class="card">
@@ -90,11 +104,11 @@ import Footer from '../components/Footer.astro';
               <li>• B3 (nicotinamide) shows real neuroprotection promise, phase 3 trial running</li>
               <li class="text-error"><strong>Red flag:</strong> Eye pain + nausea + halos = angle closure (ER now)</li>
             </ul>
-            <a href="/conditions/high-iop" class="btn btn-primary w-full">Learn More</a>
+            <a href="/conditions/high-iop" class="text-primary font-medium hover:underline inline-flex items-center gap-1">Pressure &amp; glaucoma →</a>
           </article>
 
           <article class="card">
-            <h3 class="text-xl font-semibold text-charcoal mb-2 tracking-tight">Dry Eye & Discomfort</h3>
+            <h3 class="text-xl font-semibold text-charcoal mb-2 tracking-tight">Dry Eye &amp; Discomfort</h3>
             <p class="text-sm text-text-muted mb-3">Burning, gritty, blurry, especially after screens</p>
             <ul class="space-y-2 text-sm text-text mb-4">
               <li>• 86% is evaporative (MGD)—oil glands clog</li>
@@ -102,7 +116,7 @@ import Footer from '../components/Footer.astro';
               <li>• Prescription drops if OTC fails 3 months</li>
               <li class="text-error"><strong>Don't:</strong> Put straight castor oil in eyes</li>
             </ul>
-            <a href="/conditions/discomfort" class="btn btn-primary w-full">Learn More</a>
+            <a href="/conditions/discomfort" class="text-primary font-medium hover:underline inline-flex items-center gap-1">Dry eye relief →</a>
           </article>
         </div>
       </div>
@@ -113,7 +127,6 @@ import Footer from '../components/Footer.astro';
       <div class="container mx-auto px-4">
         <div class="grid gap-8 md:grid-cols-2">
           <div>
-            <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-2">Popular guides</p>
             <h2 class="text-2xl font-semibold text-charcoal mb-3 tracking-tight">Practical help, plain English</h2>
             <p class="text-text mb-4">The guides I wish existed when my own PVD showed up uninvited in 2020.</p>
             <ul class="space-y-2 text-sm">
@@ -127,7 +140,6 @@ import Footer from '../components/Footer.astro';
             </ul>
           </div>
           <div>
-            <p class="text-xs font-semibold tracking-widest uppercase text-sage mb-2">When it's urgent</p>
             <h2 class="text-2xl font-semibold text-charcoal mb-3 tracking-tight">Some symptoms can't wait</h2>
             <p class="text-text mb-4">A shower of new floaters, flashes, or a shadow creeping across your vision can mean a torn retina. That's an ER visit, not a Google search.</p>
             <a href="/guides/when-to-see-doctor" class="btn btn-accent">When to See a Doctor</a>
