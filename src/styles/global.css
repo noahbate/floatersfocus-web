@@ -596,20 +596,9 @@ body::after {
   }
 }
 
-/* Taped typewritten note pinned to an image or section */
-.pen-note {
-  font-family: var(--font-type);
-  font-weight: 400;
-  line-height: 1.35;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  border-radius: 2px;
-}
-[data-theme='dark'] .pen-note {
-  background: var(--color-ink-lighter);
-  border-color: var(--color-border-dark);
-}
+/* Taped note styling removed 2026-08-28 — Noah disliked the taped-note device on the
+   OCT hero; it was replaced with a proper figcaption description. If a taped-note
+   look returns later, reinstate .pen-note (mono, bg, 1px border, shadow-sm, radius 2px). */
 
 @media print {
   .no-print {

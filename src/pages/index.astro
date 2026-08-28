@@ -26,18 +26,17 @@ import Footer from '../components/Footer.astro';
             </div>
             <p class="mt-4 text-sm text-text-muted">I read the studies so you don't have to. Every claim on this site links to the actual paper — <a href="/disclaimer" class="text-primary hover:underline">see our medical disclaimer</a>.</p>
           </div>
-          <figure class="hidden md:block relative">
+          <figure class="hidden md:block">
             <img
               src="/images/oct-scan.png"
               alt="Optical coherence tomography (OCT) cross-section scan of a human retina showing its layered structure"
               width="800" height="250" loading="eager"
               class="w-full h-auto rounded-xl border border-gray-200 shadow-lg"
             />
-            <!-- Taped handwritten field note pinned to the scan -->
-            <div class="absolute bottom-4 left-4 rotate-[-2deg] pen-note px-4 py-2 max-w-[250px]">
-              <p class="text-charcoal text-lg leading-snug">field notes: the bright band is your retina. the dark space in front is the gel your floaters drift through.</p>
-            </div>
-            <figcaption class="text-xs text-text-muted mt-2 text-right font-mono">OCT retinal scan, Image: medOCT-group, Wikimedia Commons (CC BY 2.0)</figcaption>
+            <figcaption class="mt-3 text-sm text-text-muted">
+              The bright band running through the middle is your retina. The dark space in front of it is the vitreous gel your floaters drift through.
+              <span class="block mt-1 text-xs font-mono">OCT retinal scan, Image: medOCT-group, Wikimedia Commons (CC BY 2.0)</span>
+            </figcaption>
           </figure>
         </div>
       </div>
