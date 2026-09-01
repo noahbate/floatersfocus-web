@@ -59,22 +59,14 @@ import Footer from '../components/Footer.astro';
         <section>
           <h2 class="text-2xl font-bold text-charcoal mb-4">Evidence Standards</h2>
           <p class="text-text leading-relaxed mb-4">
-            I grade every claim using a simple hierarchy:
+            Every claim gets a grade from this hierarchy:
           </p>
-          <div class="grid gap-4 md:grid-cols-3">
-            <div class="card card-bordered p-6 text-center">
-              <div class="text-3xl font-bold text-green mb-2">Grade A</div>
-              <p class="text-text"><strong>RCT + Guideline:</strong> Multiple randomized controlled trials + AAO/TFOS/AREDS guidelines</p>
-            </div>
-            <div class="card card-bordered p-6 text-center">
-              <div class="text-3xl font-bold text-amber mb-2">Grade B</div>
-              <p class="text-text"><strong>RCT (limited):</strong> One or a few RCTs, or conflicting results</p>
-            </div>
-            <div class="card card-bordered p-6 text-center">
-              <div class="text-3xl font-bold text-red mb-2">Grade C/D/F</div>
-              <p class="text-text"><strong>Observational / Animal / Theory only:</strong> Not enough for a recommendation</p>
-            </div>
-          </div>
+          <ul class="space-y-3 text-text leading-relaxed mb-4">
+            <li><strong class="text-green">Grade A — randomized controlled trials plus AAO/TFOS/AREDS guidelines.</strong> Rare in this field. When we have it, we cite it.</li>
+            <li><strong class="text-amber">Grade B — one or a few RCTs, or conflicting results.</strong> Promising, but hold your enthusiasm.</li>
+            <li><strong class="text-red">Grade C — mechanism plus small trials.</strong> We say plainly when that's all there is.</li>
+            <li><strong class="text-red">Grade F — contradicted by the evidence.</strong> We name it anyway, because someone on social media is selling it.</li>
+          </ul>
           <p class="text-text leading-relaxed mt-6">
             I cite the actual studies (PMID, DOI) so you can verify. If I say "study shows,"
             you can click through and read the abstract yourself.
