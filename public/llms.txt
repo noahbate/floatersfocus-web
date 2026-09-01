@@ -1,0 +1,39 @@
+# Floaters Focus
+
+> Evidence-based eye health guidance for floaters, PVD, macular degeneration, macular pucker, high eye pressure, and dry eye. Plain-English explanations where every claim links to the actual study (DOI). Written and reviewed by NP Bate, Ed.S., who has been through PVD twice, a retinal tear, and a macular pucker. Content is medically reviewed and dated; last full review 2026-09-01. Not a substitute for professional care.
+
+## Start here
+
+- [Sudden Dark Floater in One Eye? Start Here](https://floatersfocus.org/guides/sudden-floater-emergency): woke up with a new floater — what it likely is, the red flags that mean ER now, exactly what to do next.
+- [When to See an Eye Doctor](https://floatersfocus.org/guides/when-to-see-doctor): urgency levels for eye symptoms, from ER-now to routine.
+- [PVD Survival Guide](https://floatersfocus.org/guides/pvd-survival-guide): first-person, data-backed roadmap for the weeks and months after a posterior vitreous detachment diagnosis.
+
+## Conditions
+
+- [Floaters & PVD](https://floatersfocus.org/conditions/floaters): what floaters are, evidence-based treatments, what doesn't work, red flags.
+- [Macular Health (AMD)](https://floatersfocus.org/conditions/macular): AREDS2 evidence, who it helps, risk factors.
+- [Macular Pucker (ERM)](https://floatersfocus.org/conditions/macular-pucker): epiretinal membrane, observation vs elective surgery, Amsler grid self-check.
+- [High Eye Pressure (IOP)](https://floatersfocus.org/conditions/high-iop): glaucoma-suspect guidance; caffeine/IOP evidence, proven protectors, adjuncts with DOI links.
+- [Dry Eye & Discomfort](https://floatersfocus.org/conditions/discomfort): evaporative-dry-eye trifecta (lipid tears, omega-3 rTG, warm compresses).
+
+## Guides
+
+- [Floater Surgery Options: YAG Laser vs Vitrectomy](https://floatersfocus.org/guides/floater-surgery-options): the only sham-controlled trial (Shah 2017, JAMA Ophthalmol), vitrectomy trade-offs, six-month rule, candidate checklist.
+- [Floater Supplements: What the Evidence Actually Shows](https://floatersfocus.org/guides/floater-supplements-evidence): VitroCap N and bromelain/papain/ficin, graded evidence.
+- [Treatments We're Watching](https://floatersfocus.org/guides/treatments-watching): saffron, ginkgo, astaxanthin, bilberry, manuka honey — plausible mechanisms, insufficient evidence, reviewed honestly.
+- [Screen Setup for Floaters](https://floatersfocus.org/guides/screen-setup-floaters), [Sunglasses for Floaters](https://floatersfocus.org/guides/sunglasses-floaters): practical relief.
+- [Supplement Quality Guide](https://floatersfocus.org/guides/supplement-quality): forms, doses, third-party testing.
+- [Eye Anatomy 101](https://floatersfocus.org/guides/eye-anatomy-basics): the parts that matter, no medical degree required.
+
+## Reference
+
+- [Citations & Studies](https://floatersfocus.org/citations): every study cited on the site, with DOIs, grouped by topic.
+- [Products](https://floatersfocus.org/products): products matching the studied formulas; affiliate disclosure.
+- [About](https://floatersfocus.org/about): why the site exists, evidence-grading hierarchy (A/B/C–F), how affiliate links work.
+- [Free E-Book (PDF)](https://floatersfocus.org/floaters-focus-ebook.pdf): the full site as a 34-page document with every study linked.
+
+## For machines
+
+- [Sitemap](https://floatersfocus.org/sitemap.xml)
+- robots.txt explicitly allows OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, GPTBot, Applebot-Extended.
+- Condition pages emit MedicalWebPage + FAQPage JSON-LD; every page carries author and dateReviewed meta.

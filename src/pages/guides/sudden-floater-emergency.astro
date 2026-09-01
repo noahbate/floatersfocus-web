@@ -2,11 +2,43 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "I woke up with a new dark floater in one eye. What should I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any new floater warrants a dilated eye exam within a few days — only a doctor looking through a fully dilated pupil can confirm the retina is safe. Most new floaters are a harmless posterior vitreous detachment, but a tear must be ruled out. Go to the ER now for a sudden shower of floaters, flashes, or a dark curtain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What eye symptoms mean I should go to the emergency room immediately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A sudden shower of hundreds of new floaters, camera-like flashes of light in peripheral vision, a dark shadow or curtain moving across your vision, sudden severe eye pain with nausea and halos around lights (possible angle-closure glaucoma), or sudden total vision loss. These can mean retinal tear, detachment, or angle closure — all emergencies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are floaters a sign of retinal detachment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not — most floaters are shadows from the vitreous gel separating from the retina (PVD), which is a normal part of aging. But the same process can tear the retina in a minority of cases, which is why new floaters always need a dilated exam. Flashes plus a curtain or shadow strongly suggest a tear or detachment."
+      }
+    }
+  ]
+});
 ---
 
-<BaseLayout title="Sudden Dark Floater in One Eye? Start Here" description="Woke up with a new dark floater? Panic level: high. Here's what it likely is (PVD), the red flags that mean ER now, and exactly what to do next." publishedDate="2026-08-08" lastReviewed="2026-08-08">
+<BaseLayout title="Sudden Dark Floater in One Eye? Start Here" description="Woke up with a new dark floater? Panic level: high. Here's what it likely is (PVD), the red flags that mean ER now, and exactly what to do next." publishedDate="2026-08-08" lastReviewed="2026-09-01">
   <Header currentPath="/guides" slot="header" />
   <Footer slot="footer" />
+  <script type="application/ld+json" set:html={faqJsonLd} />
 
   <section class="py-12 md:py-20" aria-labelledby="emergency-title">
     <div class="container max-w-3xl">

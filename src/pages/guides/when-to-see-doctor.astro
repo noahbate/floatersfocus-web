@@ -2,16 +2,48 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What eye symptoms need emergency care right now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Go to the ER or call your eye doctor immediately for: a sudden shower of new floaters, camera-like flashes of light, a dark curtain or shadow crossing your vision, sudden vision loss, or severe eye pain with nausea and halos around lights. These can signal retinal tear, retinal detachment, or angle-closure glaucoma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long can I wait to see a doctor for a new floater?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single new floater without flashes or a shadow needs a dilated eye exam within a few days, not weeks. Only a dilated exam can confirm the retina is intact. If the floater comes with flashes, a shower of dots, or a curtain, treat it as same-day emergency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can eye problems be symptomless until they're serious?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The back of the eye has no pain receptors, and diseases like glaucoma and early macular degeneration can progress silently. That's why regular dilated exams matter even when nothing feels wrong, and why urgency levels in this guide are based on symptoms plus risk, not pain."
+      }
+    }
+  ]
+});
 ---
 
-<BaseLayout title="When to See an Eye Doctor" description="Red flags, urgency levels, and what to expect. Don't guess with your vision—know when to go." publishedDate="2026-08-08" lastReviewed="2026-08-08">
+<BaseLayout title="When to See an Eye Doctor" description="Red flags, urgency levels, and what to expect. Don't guess with your vision—know when to go." publishedDate="2026-08-08" lastReviewed="2026-09-01">
   <Header currentPath="/guides" slot="header" />
   <Footer slot="footer" />
+  <script type="application/ld+json" set:html={faqJsonLd} />
 
   <section class="py-6 border-b border-gray-200 bg-white">
     <div class="container max-w-3xl mx-auto px-4">
       <p class="text-xs text-warm-gray">
-        Medical information reviewed by <strong>NP Bate, Ed.S.</strong> • Last reviewed: 2026-08-08 • Not a substitute for professional care.
+        Medical information reviewed by <strong>NP Bate, Ed.S.</strong> • Last reviewed: 2026-09-01 • Not a substitute for professional care.
       </p>
     </div>
   </section>
