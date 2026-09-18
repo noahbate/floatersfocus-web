@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<BaseLayout title="Treatments We're Watching" description="Our watchlist of eye treatments with plausible mechanisms and early signals, but not enough evidence to recommend yet. Saffron, ginkgo, astaxanthin, bilberry, and manuka honey, reviewed honestly." publishedDate="2026-08-09" lastReviewed="2026-08-09">
+<BaseLayout title="Treatments We're Watching" description="Our watchlist of eye treatments with plausible mechanisms and early signals, but not enough evidence to recommend yet. Saffron, ginkgo, astaxanthin, bilberry, manuka honey, and red light therapy, reviewed honestly." publishedDate="2026-08-09" lastReviewed="2026-09-18">
   <Header currentPath="/guides/treatments-watching" slot="header" />
   <main class="flex-1">
     <section class="py-6 border-b border-gray-200 bg-white">
@@ -21,7 +21,8 @@ import Footer from '../../components/Footer.astro';
           <h1 class="text-3xl md:text-4xl font-bold text-charcoal mb-4">Treatments We're Watching</h1>
           <p class="text-lg text-text leading-relaxed">
             This page is our watchlist. These are treatments with a plausible mechanism and some early signals,
-            but not enough evidence to recommend them yet. Nothing here is FDA-approved for the condition listed.
+            but not enough evidence to recommend them yet. Most of these are not FDA-approved for the condition
+            listed, and where a device has been authorized we say so and describe what that authorization covers.
             We update this page as the research moves.
           </p>
           <p class="mt-4 text-sm text-text-muted">
@@ -240,7 +241,62 @@ import Footer from '../../components/Footer.astro';
       </div>
     </section>
 
-    <section class="py-12 md:py-16 bg-white border-t border-gray-200" aria-labelledby="method-heading">
+    <section class="py-12 md:py-16 bg-white border-t border-gray-200" aria-labelledby="redlight-heading">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 id="redlight-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-2">
+            6. Red Light Therapy (Photobiomodulation), Macular Health &amp; Floaters
+          </h2>
+          <p class="verdict verdict-watching mb-6">Watching. One FDA-authorized in-office device, and pooled trials that find no significant benefit.</p>
+          <p class="text-text mb-4">
+            Two very different things travel under this name. One is an in-office, prescription-only device with a
+            real FDA authorization behind it. The other is the red panels, masks, and handheld torches sold online,
+            which have none. The evidence applies mostly to the first, and only partly. For floaters it applies not
+            at all.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Mechanism (plausible)</h3>
+          <p class="text-text mb-4">
+            Red and near-infrared light (roughly 590 to 850 nm) is absorbed by cytochrome c oxidase in the
+            mitochondrial respiratory chain. The proposed effect is more efficient energy production and less
+            oxidative stress, and the retina is one of the most mitochondria-dense tissues in the body. That is a
+            real mechanism, not marketing. It also defines the limit: mitochondria sit inside cells, so light
+            applied from outside the eye has no route to break up collagen strands floating in the vitreous gel.
+          </p>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Evidence</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li><strong>FDA De Novo authorization (DEN230083):</strong> the Valeda Light Delivery System (590, 660, 850 nm) is authorized to improve visual acuity in patients with best-corrected vision of 20/32 to 20/70 who have dry AMD with at least 3 medium drusen, large drusen, or non-central geographic atrophy, and no neovascular or center-involving disease. It is a prescription device, delivered in the clinic as nine sessions over 3 to 5 weeks, repeated every 4 months. FDA's own summary of the benefit: about one line of visual acuity on the eye chart after roughly two years. <a href="https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN230083.pdf" target="_blank" rel="noopener">FDA decision summary (PDF)</a></li>
+            <li><strong>LIGHTSITE III, 13 months (2024):</strong> 100 participants, 148 eyes, double-masked and sham-controlled. It met its primary endpoint: a 2.4-letter difference between groups at month 13 (P = 0.02), with treated eyes gaining 5.4 letters. Boyer D, et al. <em>Retina</em> 2024;44(3). doi: <a href="https://doi.org/10.1097/IAE.0000000000003980" target="_blank" rel="noopener">10.1097/IAE.0000000000003980</a></li>
+            <li><strong>LIGHTSITE III, 24 months (2026):</strong> the primary endpoint was met again at month 21 (+6.2 letters with treatment, P = 0.0036), progression to geographic atrophy was lower in the treated arm (6.8% vs 24.0%, P = 0.007), and no signs of phototoxicity appeared. But only 4.4% of treated eyes reached a gain of 15 letters or more, the size usually needed for a change patients notice, and the trial was run by the device maker. Jaffe GJ, et al. <em>Retina</em> 2026;46(5). doi: <a href="https://doi.org/10.1097/IAE.0000000000004822" target="_blank" rel="noopener">10.1097/IAE.0000000000004822</a></li>
+            <li><strong>Independent meta-analysis (2025):</strong> pooling 6 randomized studies (360 patients, 477 eyes), the authors found no significant improvement in visual acuity (SMD -0.30, 95% CI -0.85 to 0.26, P = 0.30), drusen volume, geographic atrophy, retinal thickness, or microperimetry, with no overall excess of adverse events. Chen KY, et al. <em>Ophthalmol Ther</em> 2025;14(5). doi: <a href="https://doi.org/10.1007/s40123-025-01119-w" target="_blank" rel="noopener">10.1007/s40123-025-01119-w</a></li>
+            <li><strong>670 nm at home (2020):</strong> 31 people with intermediate AMD plus 11 healthy older adults used a 670 nm torch for 2 minutes daily for 12 months. Night vision improved in the healthy group, and nothing changed in the AMD group, functionally or structurally. This is the design most home devices copy, and it did not work in the condition most buyers have. Grewal MK, et al. <em>J Clin Med</em> 2020;9(4):1001. doi: <a href="https://doi.org/10.3390/jcm9041001" target="_blank" rel="noopener">10.3390/jcm9041001</a></li>
+            <li><strong>Single 3-minute exposures (2021):</strong> color contrast thresholds improved for about a week after one 670 nm exposure in adults aged 37 to 70. Small study, one research group, a laboratory measurement rather than vision you would notice, and no independent replication. Shinhmar H, et al. <em>Sci Rep</em> 2021;11:22872. doi: <a href="https://doi.org/10.1038/s41598-021-02311-1" target="_blank" rel="noopener">10.1038/s41598-021-02311-1</a></li>
+            <li><strong>Consumer devices for myopia, a safety signal:</strong> two red-light instruments sold for childhood myopia exceeded recognized exposure limits within about 3 minutes of viewing. Ostrin LA, Schill AW. <em>Ophthalmic Physiol Opt</em> 2024;44(2). doi: <a href="https://doi.org/10.1111/opo.13272" target="_blank" rel="noopener">10.1111/opo.13272</a>. A case of retinal damage after repeated low-level red-light treatment has also been published: Liu H, et al. <em>JAMA Ophthalmol</em> 2023;141(7). doi: <a href="https://doi.org/10.1001/jamaophthalmol.2023.1548" target="_blank" rel="noopener">10.1001/jamaophthalmol.2023.1548</a>. Repeated low-level red light is not FDA-approved in the United States.</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Caveats</h3>
+          <ul class="space-y-2 text-sm text-text mb-6 list-disc pl-5">
+            <li><strong>No evidence for floaters.</strong> No trials, no case series, and no mechanism to suggest benefit, because a therapy that acts on mitochondria inside cells cannot reach the vitreous collagen that causes floaters.</li>
+            <li><strong>The studied device is not the device being sold.</strong> Home panels and masks differ in wavelength, power, beam size, and dose. The authorization covers one prescription device used in a clinic.</li>
+            <li><strong>Dose has a ceiling.</strong> Photobiomodulation follows a biphasic dose response, so past a certain point more light does not mean more benefit. The two myopia instruments above are the documented example of overshoot.</li>
+            <li><strong>The authorization is narrow, and it does not replace standard care.</strong> It covers a specific AMD stage and vision range. FDA notes that treatment was not studied beyond 54 treatments per eye, that benefit may not persist after stopping, and that patients should avoid treatment within 30 days of photosensitizing drugs. Injections for wet AMD and AREDS2 for progression risk remain the proven moves.</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-charcoal mb-3">Bottom Line</h3>
+          <p class="text-text mb-4">
+            This is the rare case where the mechanism is real and the marketing still outruns the data. One
+            in-office device is authorized, and FDA describes its benefit as about one line of vision after two
+            years, while independent pooling of the trials finds no significant gain, and the at-home versions
+            that dominate the internet have no authorization and a documented dose risk. For dry AMD it is a
+            conversation with a retina specialist, not a purchase. For floaters, which is what this site is
+            mostly about, it is nothing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-cream border-t border-gray-200" aria-labelledby="method-heading">
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto">
           <h2 id="method-heading" class="text-2xl md:text-3xl font-bold text-charcoal mb-4">Watchlist Methodology</h2>
